@@ -2,11 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript is working!');
 
     const track = document.getElementById("image-track");
+    const images = document.querySelectorAll("#image-track .image");
 
     if (!track) {
         console.error("Element with id 'image-track' not found.");
         return;
     }
+
+    // Calculate the track width based on the number of images
+    const imageWidth = 40; // 40vmin (same as .image width)
+    const gapWidth = 4; // 4vmin (same as .image gap)
+    const numberOfImages = images.length;
+    const trackWidth = (imageWidth * numberOfImages) + (gapWidth * (numberOfImages - 1));
+
+    // Set the track width
+    track.style.width = `${trackWidth}vmin`;
 
     // Mouse down only within the image track
     track.onmousedown = e => {
@@ -37,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         track.dataset.percentage = nextPercentage;
 
-        const animationDuration = 1200 / dragSpeed; // Increase duration as drag speed decreases
+        const animationDuration = 10000 / dragSpeed; // Increase duration as drag speed decreases
 
         // Adjust the track animation speed
         track.animate({

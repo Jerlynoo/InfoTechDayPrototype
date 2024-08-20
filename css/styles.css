@@ -8,8 +8,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* Adjusted to move content upwards */
-    height: 100vh;
     text-align: center;
 }
 
@@ -347,26 +345,28 @@ h2 {
 
 /* CAROUSEL ITEMS */
 #carousel-container {
-    width: 60%; /* Adjust the width as needed */
-    max-width: 80%; /* Set a maximum width */
-    margin: 0 auto; /* Center the carousel container */
-    padding: 0 20px; /* Add padding to ensure the images don't touch the sides */
-    box-sizing: border-box; /* Ensure padding is included in width calculations */
+    width: 90%; /* or any other suitable width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding to ensure images don't touch the sides */
+    z-index: 1;
+    overflow: hidden; /* Hide overflow */
+    height: 50vmin; /* Match the height of the images */
 }
 
 #image-track {
     display: flex;
     gap: 4vmin;
     position: relative;
-    left: 50%;
+    left: 0;
     top: 50%;
-    transform: translate(0%, -50%);
-    user-select: none; /* -- Prevent image highlighting -- */
+    transform: translateY(-50%);
+    user-select: none;
+    width: auto; /* Automatically calculate width in JavaScript */
 }
 
-#image-track>.image {
+#image-track .image {
     width: 40vmin;
-    height: 56vmin;
+    height: 50vmin;
     object-fit: cover;
     object-position: center;
 }
