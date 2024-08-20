@@ -7,7 +7,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;  /* Adjusted to move content upwards */
+    justify-content: flex-start;
+    /* Adjusted to move content upwards */
     height: 100vh;
     text-align: center;
 }
@@ -31,14 +32,17 @@ h2 {
     justify-content: center;
     gap: 20px;
     font-size: 48px;
-    margin-top: 80px;  /* Added margin to space out from the header */
+    margin-top: 80px;
+    /* Added margin to space out from the header */
 }
 
 .event-info {
     margin-top: 150px;
-    width: 80%;  /* Adjust width to fit content */
+    width: 80%;
+    /* Adjust width to fit content */
     text-align: center;
-    padding: 0 10px;  /* Add padding for better text readability */
+    padding: 0 10px;
+    /* Add padding for better text readability */
 }
 
 .event-info p {
@@ -50,7 +54,8 @@ h2 {
     font-size: 20px;
     margin-top: 50px;
     text-align: justify;
-    line-height: 1.5;  /* Improve readability */
+    line-height: 1.5;
+    /* Improve readability */
     padding: 0 30px;
 }
 
@@ -92,4 +97,276 @@ h2 {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+
+/* COUNTDOWN ITEMS */
+:root {
+    --dark-rgb: 23 28 28;
+    --darker-rgb: 8 13 7;
+
+    --blue-purple: 173 83 255;
+    /* Lighter and more fluorescent blueish-purple shade */
+    --background-rgb: 30 30 30;
+    /* Slightly lighter background */
+    --theme-rgb: var(--blue-purple);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    height: 80%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shapes {
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+    margin: 1rem;
+    border: 0.15rem dashed rgb(var(--theme-rgb) / 30%);
+    pointer-events: none;
+}
+
+@keyframes float {
+
+    from,
+    to {
+        translate: 0% 0%;
+    }
+
+    50% {
+        translate: 0% 10%;
+    }
+}
+
+#prize {
+    width: 100rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 2;
+    background-color: rgb(var(--darker-rgb));
+    border: 1.5rem solid rgb(255 255 255 / 2.5%);
+    padding: 10rem 4rem;
+    box-shadow: 0rem 0rem 10rem 4rem rgb(0 0 0 / 75%);
+    backdrop-filter: blur(1rem);
+}
+
+#prize-labels {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#prize-labels .label {
+    flex: 1;
+    text-align: center;
+    color: rgb(var(--theme-rgb));
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+#prize-label,
+#prize-text {
+    color: rgb(var(--theme-rgb));
+    text-align: center;
+}
+
+#prize-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 3rem;
+    opacity: 0.75;
+}
+
+#prize-label>span {
+    display: inline-flex;
+}
+
+#prize-label>.asterisk {
+    padding-top: 0.25em;
+    line-height: 0.5em;
+}
+
+#prize-text {
+    display: flex;
+    gap: 1rem;
+    height: 10rem;
+    line-height: 10rem;
+    font-size: 11rem;
+}
+
+#prize-text>.digit {
+    width: 8rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 0.25rem solid rgb(var(--theme-rgb));
+}
+
+#prize-text>.digit>.digit-track {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: translateY(0rem);
+    transition: transform 3000ms cubic-bezier(.1, .67, 0, 1);
+}
+
+.prize-filter {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    pointer-events: none;
+}
+
+@keyframes pan-lines {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 0% -100%;
+    }
+}
+
+#prize-lines {
+    background: linear-gradient(rgb(var(--darker-rgb) / 15%) 0%,
+            rgb(var(--darker-rgb) / 75%) 28%,
+            rgb(var(--darker-rgb) / 15%) 56%,
+            rgb(var(--darker-rgb) / 5%) 56%,
+            rgb(var(--darker-rgb) / 5%) 100%);
+    background-size: 100% 7px;
+    z-index: 2;
+    animation: pan-lines 360s infinite linear;
+}
+
+#prize-shadow {
+    background: radial-gradient(rgb(var(--theme-rgb) / 1%) 20%,
+            rgb(var(--darker-rgb) / 80%) 70%);
+    z-index: 3;
+}
+
+#actions-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    bottom: 2rem;
+    z-index: 10;
+}
+
+#actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: rgb(0 0 0 / 50%);
+    border: 1px solid rgb(255 255 255 / 5%);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(1rem);
+}
+
+#actions button {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0rem 1.5rem;
+    background-color: rgb(255 255 255 / 5%);
+    border-radius: 0.25rem;
+    border: 1px solid rgb(255 255 255 / 5%);
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}
+
+#actions button:is(:hover, :focus-visible) {
+    background-color: rgb(255 255 255 / 7%);
+}
+
+#actions button:focus-visible {
+    border-color: rgb(255 255 255 / 15%);
+}
+
+#redo-button>i {
+    padding-top: 0.2rem;
+}
+
+@media(max-width: 1700px) {
+    #prize {
+        scale: 0.75;
+    }
+}
+
+@media(max-width: 1300px) {
+    #prize {
+        scale: 0.5;
+    }
+}
+
+@media(max-width: 900px) {
+    #prize {
+        scale: 0.3;
+    }
+}
+
+@media(max-width: 600px) {
+    #prize {
+        scale: 0.2;
+    }
+}
+
+/* CAROUSEL ITEMS */
+#carousel-container {
+    width: 60%; /* Adjust the width as needed */
+    max-width: 80%; /* Set a maximum width */
+    margin: 0 auto; /* Center the carousel container */
+    padding: 0 20px; /* Add padding to ensure the images don't touch the sides */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-track>.image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: center;
 }
