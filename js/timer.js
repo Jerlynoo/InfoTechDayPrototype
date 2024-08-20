@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript is working!');
-    
+
     const MINIMUM_ADDITIONAL_ITERATION_COUNT = 2;
 
-    // Define the target date and time
-    const targetDate = Date('2025-01-23T15:00:00');
+    const targetDate = new Date('2025-01-23T15:00:00');
 
     const config = {
         additionalIterationCount: Math.max(MINIMUM_ADDITIONAL_ITERATION_COUNT, 3),
         transitionDuration: 3000,
         digits: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-        time: 0  // Initialize with 0
+        time: 0,
+        animationDone: false
     };
 
     const formatTime = (seconds) => {
-        if (isNaN(seconds) || seconds < 0) return '000:00:00:00'; // Handle invalid values
+        if (isNaN(seconds) || seconds < 0) return '000:00:00:00';
 
-        const days = Math.floor(seconds / 86400).toString().padStart(2, '0');
+        const days = Math.floor(seconds / 86400).toString().padStart(3, '0');
         const hours = Math.floor((seconds % 86400) / 3600).toString().padStart(2, '0');
         const minutes = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
         const secs = (seconds % 60).toString().padStart(2, '0');
@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         trackElement.innerText = digits.join(" ");
-
         trackElement.style.transitionDuration = `${config.transitionDuration}ms`;
 
         digitElement.appendChild(trackElement);
@@ -73,18 +72,25 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const animate = () => {
+        const totalDigits = config.digits.length;
         getTracks().forEach((track, index) => {
             const digit = getTimeDigitByIndex(index),
                 iterations = determineIterations(index),
-                activeDigit = ((iterations - 1) * 10) + digit;
+                activeDigit = ((iterations - 1) * totalDigits) + digit;
 
-            track.style.translate = `0rem ${activeDigit * -10}rem`;
+            track.style.transform = `translateY(-${activeDigit * 10}rem)`;
         });
+
+        setTimeout(() => {
+            config.animationDone = true;
+            // Set the final countdown time after animation
+            updateCountdownDisplay();
+        }, config.transitionDuration);
     };
 
     const resetTrackPosition = track => {
         track.style.transitionDuration = "0ms";
-        track.style.translate = "0rem 0rem";
+        track.style.transform = "translateY(0rem)";
         track.offsetHeight;
         track.style.transitionDuration = `${config.transitionDuration}ms`;
     };
@@ -93,39 +99,48 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const track of getTracks()) resetTrackPosition(track);
     };
 
+    const updateCountdownDisplay = () => {
+        const prizeText = getPrizeText();
+        prizeText.innerHTML = getFormattedTime().split('').map((char, index) =>
+            isNaN(char) ? `<span class="character">${char}</span>` : `<span class="digit">${char}</span>`).join('');
+    };
+
     const startCountdown = () => {
-        const now = new Date();
-        const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
+        if (config.animationDone) {
+            const now = new Date();
+            const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
 
-        config.time = timeRemaining; // Update config.time with the calculated remaining time
-        resetAnimation();
-        animate();
+            config.time = timeRemaining;
 
-        if (timeRemaining > 0) {
-            setTimeout(startCountdown, 1000); // Update countdown every second
+            resetAnimation();
+            animate();
+
+            if (timeRemaining > 0) {
+                setTimeout(startCountdown, 1000);
+            } else {
+                console.log('Countdown completed');
+            }
         } else {
-            // Handle countdown completion if needed
-            console.log('Countdown completed');
+            setTimeout(startCountdown, 100);
         }
     };
 
     window.onload = () => {
+        const now = new Date();
+        const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
+        config.time = timeRemaining;
+
         setup();
-        startCountdown();
+        resetAnimation();
+        animate();
+
+        setTimeout(startCountdown, config.transitionDuration);
 
         const handleRedo = () => {
-            // Reset the countdown and start again
-            const now = new Date();
-            const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
-            
-            config.time = timeRemaining; // Reset time to the remaining time
-            resetAnimation();
-            animate();
-            
-            console.log('Countdown restarted');
+            location.reload(); // Reloads the page
+            console.log('Page reloaded');
         };
-        
-        // Ensure handleRedo is available globally by attaching it to the window object
+
         window.handleRedo = handleRedo;
     };
 });

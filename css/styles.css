@@ -127,7 +127,7 @@ button {
 }
 
 #prize {
-    width: 88rem;
+    width: 100rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,8 +205,8 @@ button {
     position: absolute;
     left: 0%;
     top: 0%;
-    translate: 0% 0%;
-    transition: translate 3000ms cubic-bezier(.1, .67, 0, 1);
+    transform: translateY(0rem);
+    transition: transform 3000ms cubic-bezier(.1, .67, 0, 1);
 }
 
 .prize-filter {
