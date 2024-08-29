@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript is working!');
 
     const MINIMUM_ADDITIONAL_ITERATION_COUNT = 2;
-
     const targetDate = new Date('2025-01-23T15:00:00');
+    // const targetDate = new Date('2024-08-20T15:00:00');
 
     const config = {
         additionalIterationCount: Math.max(MINIMUM_ADDITIONAL_ITERATION_COUNT, 3),
@@ -99,10 +99,14 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const track of getTracks()) resetTrackPosition(track);
     };
 
-    const updateCountdownDisplay = () => {
+    const updateCountdownDisplay = (message = null) => {
         const prizeText = getPrizeText();
-        prizeText.innerHTML = getFormattedTime().split('').map((char, index) =>
-            isNaN(char) ? `<span class="character">${char}</span>` : `<span class="digit">${char}</span>`).join('');
+        if (message) {
+            prizeText.innerHTML = `<span class="welcome-message">${message}</span>`;
+        } else {
+            prizeText.innerHTML = getFormattedTime().split('').map((char, index) =>
+                isNaN(char) ? `<span class="character">${char}</span>` : `<span class="digit">${char}</span>`).join('');
+        }
     };
 
     const startCountdown = () => {
@@ -119,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(startCountdown, 1000);
             } else {
                 console.log('Countdown completed');
+                updateCountdownDisplay("Welcome to TP InfoTech Day");
             }
         } else {
             setTimeout(startCountdown, 100);
