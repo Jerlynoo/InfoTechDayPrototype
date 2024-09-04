@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baskerville Old Face', serif;
+    background-color: #010029;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+header {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+/* buttons */
+.direction-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.direction-buttons button:hover {
+    background-color: #4b8aff;
+    color: white;
+  }
+  
+
+.direction-buttons button {
+    padding: 15px 30px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.car-button {
+    background-color: #1E7EFF;
+    color: white;
+}
+
+.mrt-button {
+    background-color: #1E7EFF;
+    color: white;
+}
+
+.bus-button {
+    background-color: #1E7EFF;
+    color: white;
+}
+
+.direction-buttons span {
+    display: block;
+    font-size: 20px;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+@media (max-width: 768px) {
+    .direction-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Popup container - hidden by default */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(95, 77, 118, 0.4);
+}
+
+/* Popup content */
+.popup-content {
+    display: flex;
+    flex-direction: column; /* Default direction is column, change to row if needed */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    background-color: #010029;
+    margin: 15% auto;
+    padding: 30px;
+    border: 5px solid #010029;
+    width: 90%;
+    max-width: 800px; /* Increased width for better table display */
+    position: relative;
+}
+
+/* Close button */
+.close {
+    align-self: flex-end; /* Aligns the close button to the right */
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Adjustments to content alignment */
+.popup-content p {
+    margin-top: 5px; /* Add margin to create space between the close button and the content */
+}
+
+/* Adjustments to content alignment */
+.popup-content p, /* Ensure paragraphs are aligned left */
+.popup-content table, /* Ensure tables are aligned left */
+.popup-content div, /* Ensure divs within content are aligned left */
+.popup-content th,
+.popup-content td {
+    text-align: left; /* Ensure all text is left-aligned */
+}
+
+.direction-info {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 80%;
+    /* Adjust width to fit content */
+    text-align: center;
+    padding: 0 10px;
+    /* Add padding for better text readability */
+    font-size: 22px;
+}
+
+.directions-table,
+.rates-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left; /* Align text left */
+}
+
+.directions-table th,
+.rates-table th {
+    background-color: #7d7a74;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.directions-table td,
+.rates-table td {
+    background-color: #27253e;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}

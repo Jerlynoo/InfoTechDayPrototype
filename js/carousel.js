@@ -18,24 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set the track width
     track.style.width = `${trackWidth}vmin`;
 
-    // Mouse down only within the image track
-    track.onmousedown = e => {
-        track.dataset.mouseDownAt = e.clientX;
+    const handleStart = (clientX) => {
+        track.dataset.mouseDownAt = clientX;
     }
 
-    // Mouse up anywhere on the window to end dragging
-    window.onmouseup = () => {
+    const handleEnd = () => {
         if (track.dataset.mouseDownAt !== "0") {
             track.dataset.mouseDownAt = "0";
             track.dataset.prevPercentage = track.dataset.percentage;
         }
     }
 
-    // Mouse move anywhere on the window, but dragging only happens if mousedown was on the track
-    window.onmousemove = e => {
+    const handleMove = (clientX) => {
         if (track.dataset.mouseDownAt === "0") return;
 
-        const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+        const mouseDelta = parseFloat(track.dataset.mouseDownAt) - clientX,
             maxDelta = window.innerWidth / 2; // Adjust to control overall sensitivity
 
         const dragSpeed = 0.5; // Adjust this to control how fast the carousel moves
@@ -61,4 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }, { duration: animationDuration, fill: "forwards" });
         }
     }
+
+    // Mouse events
+    track.onmousedown = e => handleStart(e.clientX);
+    window.onmouseup = handleEnd;
+    window.onmousemove = e => handleMove(e.clientX);
+
+    // Touch events
+    track.ontouchstart = e => handleStart(e.touches[0].clientX);
+    window.ontouchend = handleEnd;
+    window.ontouchmove = e => handleMove(e.touches[0].clientX);
 });
