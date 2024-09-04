@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <!-- jquery -->
+    <script src="../ext/jquery.min.js"></script>
+    <!-- Footer scripts -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../ext/bootstrap.min.css" />
+    <!-- Bootstrap JS -->
+    <script src="../ext/bootstrap.min.js"></script>
+    <!-- Fontawesome JS -->
+    <script src="../ext/3b161c540c.js" crossorigin="anonymous"></script>
+    <!-- Fontawesome CSS -->
+    <link href="../ext/font-awesome.min.css" rel="stylesheet" />
+    <!-- popper -->
+    <script src="../ext/popper.min.js"></script>
+    <!-- 3D Effect on header-->
+    <link rel="stylesheet" href="../css/pagescroll.css" />
+    <!-- page -->
+    <script src="../ext/imagesloaded.pkgd.min.js"></script>
+    <script src="../ext/isotope.pkdg.min.js"></script>
+    <!-- navbar css -->
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <!-- page css -->
+    <link rel="stylesheet" href="../css/project.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="../css/bootstrap-footer.css" />
+    <!-- Animated -->
+    <link rel="stylesheet" href="../css/animation.css" />
+    <!-- GlobalCSS settings -->
+    <link rel="stylesheet" href="../css/globalsettings.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <p class="navbarP">
+        <a class="navbarA" href="../pages/project.html">Projects</a>
+      </p>
+      <p class="navbarP">
+        <a class="navbarA" href="../pages/seminar.html">Seminar</a>
+      </p>
+      <p class="navbarP">
+        <a class="navbarA" href="">Project Voting</a>
+      </p>
+      <p class="navbarP">
+        <a class="navbarA" href="../pages/direction.html">Getting to TP</a>
+      </p>
+      <p class="navbarP">
+        <a class="navbarA" href="../pages/courses.html">IIT Courses</a>
+      </p>
+      <p class="navbarP">
+        <a
+          class="navbarA"
+          href="https://www.tp.edu.sg/research-and-industry/centres-of-excellence/centres-under-school-of-informatics-it.html"
+          >Centers of Excellence</a
+        >
+      </p>
+    </div>
+    <!-- Navbar toggler -->
+    <div class="menu__toggler">
+      <span></span>
+    </div>
+    <section class="sectionProject">
+      <div class="pgscontainer">
+        <h1 class="sign"><span class="pgspan">Projects</span></h1>
+      </div>
+    </section>
+
+    <!-- Page "Main Projects" -->
+    <div id="other-pages" class="pages text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="isotope-nav">
+              <ul>
+                <li class="nav-item active" data-filter="*">All</li>
+                <li class="nav-item" data-filter=".ai">
+                  Generative AI & Analytics
+                </li>
+                <li class="nav-item" data-filter=".digital-solutions">
+                  Intelligent & Immersive Applications
+                </li>
+                <li class="nav-item" data-filter=".cybersecurity">
+                  Cybersecurity & Digital Forensics
+                </li>
+              </ul>
+            </div>
+            <div class="isotope-content">
+              <div
+                class="isotope-item"
+                style="position: relative; height: 2972.5px"
+              >
+                <!-- Fliter By 3 -->
+                <!-- ai -->
+                <!-- digital-solutions -->
+                <!-- cybersecurity -->
+                <div class="row">
+                  <!-- div class="item col-md-3 col-sm-6 col-xs-12 >ai<" Change >_< accordingly  -->
+                  <!-- COVID-19 Analytics Dashboard:Harnessing Descriptive & Predictive Analytics -->
+                  <div
+                    class="item col-md-3 col-sm-6 col-xs-12 digital-solutions"
+                    style="position: absolute; left: 0px; top: 0px"
+                  >
+                    <div class="page-preview">
+                      <div class="thumb">
+                        <img
+                          src="../project_images/beating_saber.jpg"
+                          class="img-responsive"
+                          alt=""
+                        />
+                        <div class="overlay-text"></div>
+                        <div class="overlay">
+                          <a href="../projectpages/beating_saber.html"
+                            >View Page</a
+                          >
+                        </div>
+                        <!-- Caption -->
+                        <div class="caption">
+                          <p>Beating Saber</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p id="collab_contact" style="color: white">
+            For project collaboration, please contact Dr Sathish Sritharan at
+            sathish_sritharan@tp.edu.sg.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination of "Other Projects" -->
+    <section class="paginationproj">
+      <div class="paginationcontainer">
+        <div class="header_wrap">
+          <div class="num_rows">
+            <div class="form-group">
+              <!--		Show Numbers Of Rows 		-->
+              <select class="form-control" name="state" id="maxRows">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="200">Show ALL Rows</option>
+              </select>
+            </div>
+          </div>
+          <div class="tb_search">
+            <input
+              type="text"
+              id="search_input_all"
+              onkeyup="FilterkeyWord_all_table()"
+              placeholder="Search.."
+              class="form-control"
+            />
+          </div>
+        </div>
+        <table class="table table-striped table-class" id="table-id">
+          <thead>
+            <tr>
+              <th>Project Title</th>
+              <th>Subject</th>
+              <!-- <th>Something here</th> -->
+              <th></th>
+            </tr>
+          </thead>
+          <!-- Subject Names below: -->
+          <!-- Digital Solutions -->
+          <!-- Artificial Intelligence (AI) -->
+          <!-- Cybersecurity & Digital Forensics -->
+          <!-- For Student list more than 5, list in a span. -->
+          <!-- For Student list less than 5, list in a bulleting ul/li format -->
+          <tbody>
+            <!-- Crowne Plaza - Problem Solving Using AI Technologies for Operational Efficiency (AI) -->
+            <tr>
+              <td>Beating Saber</td>
+              <td>Artificial Intelligence (AI)</td>
+              <td>
+                <button
+                  class="minimalistic-button btn-view"
+                  data-modal-id="myModal1"
+                >
+                  View More
+                </button>
+              </td>
+              <div id="myModal1" class="modal">
+                <!-- Modal content -->
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Beating Saber</h5>
+                      <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        <!-- Description Title -->
+                        <b>Description</b><br />
+                        <!-- Description here -->
+                        Problem Statement consisting of multiple problem
+                        statements <br /><br />
+                        <!-- Students Title -->
+                        <b>Students</b><br />
+                        <!-- Students Here -->
+                        HO WEI TING JERLYN
+                        <br /><br />
+                        <!-- Supervisor Title -->
+                        <b>Supervisor</b><br />
+                        <!-- Supervisor(s) name here -->
+                        Cheng Shuyun (Ms), Andrew Chong (Mr)
+                        <br /><br />
+                        <!-- Industrial Partner Title -->
+                        <b>Industrial Partner</b><br />
+                        <!-- Industrial Partner here, if none, N.A -->
+                        N.A
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </tr>
+          </tbody>
+        </table>
+
+        <!--	Start Pagination -->
+        <div id="pagination" class="pagination-container">
+          <nav>
+            <ul class="pagination pagination-button"></ul>
+          </nav>
+        </div>
+        <div class="rows_count">Showing 11 to 20 of 91 entries</div>
+      </div>
+      <!-- End of Container -->
+    </section>
+    <!-- Footer Section -->
+    <section class="sectionFooter">
+      <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <!--Column1 Place TP Logo here-->
+                <div class="footer-pad">
+                  <h4>
+                    <!-- Desktop View Logo -->
+                    <ul class="footerlogo">
+                      <img src="../images/tp-logo-footer.png" />
+                    </ul>
+                    <!-- Mobile View Logo -->
+                    <ul class="footerlogo-2">
+                      <img src="../images/tp-logo-footer.png" />
+                    </ul>
+                  </h4>
+                </div>
+              </div>
+              <div class="col">
+                <!--Column1-->
+                <div class="footer-pad">
+                  <h4></h4>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="https://www.tp.edu.sg/home.html">Main Website</a>
+                    </li>
+                    <li>
+                      <a href="https://www.tp.edu.sg/informaticsandit"
+                        >Our Courses</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.tp.edu.sg/about-tp/media-centre.html"
+                        >Media Centre</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.tp.edu.sg/contactus">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Social Media -->
+              <div class="col-md-6">
+                <h4>Follow Us</h4>
+                <ul class="social-network social-circle">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/iitsch/"
+                      class="icoFacebook"
+                      title="Facebook"
+                      ><i class="fa fa-facebook" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/tpiit"
+                      class="icoInstagram"
+                      title="Instagram"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/school/temasek-polytechnic/"
+                      class="icoLinkedin"
+                      title="Linkedin"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.tiktok.com/@tp_iit"
+                      class="icoTiktok"
+                      title="Tiktok"
+                      ><i class="fa fa-tiktok" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/i/flow/login?redirect_after_login=%2Ftemasekpoly"
+                      class="icoTwitter"
+                      title="Twitter"
+                      ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://t.me/temasekpolyofficial"
+                      class="icoTelegram"
+                      title="Telegram"
+                      ><i class="fa fa-telegram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/channel/UC6_sz8NUywF-G7g20amakyQ"
+                      class="icoYoutube"
+                      title="Youtube"
+                      ><i class="fa fa-youtube-play" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 copy">
+                <p class="text-center">
+                  © Copyright 2024 - Temasek Polytechnic. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/project.js"></script>
+  <script src="../js/project_modal.js"></script>
+</html>
