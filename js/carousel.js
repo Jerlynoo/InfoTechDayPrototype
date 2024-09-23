@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('JavaScript is working!');
-
     const track = document.getElementById("image-track");
     const images = document.querySelectorAll("#image-track .image");
+    const carouselContainer = document.getElementById("carousel-container");
 
     if (!track) {
-        console.error("Element with id 'image-track' not found.");
         return;
     }
 
@@ -18,46 +16,93 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set the track width
     track.style.width = `${trackWidth}vmin`;
 
-    const handleStart = (clientX) => {
-        track.dataset.mouseDownAt = clientX;
-    }
+    // Auto-scroll settings
+    let autoScrollSpeed = 0.1; // Adjust speed here
+    let currentScroll = 0; // Track current scroll percentage
+    let autoScrollInterval = null;
 
-    const handleEnd = () => {
-        if (track.dataset.mouseDownAt !== "0") {
-            track.dataset.mouseDownAt = "0";
-            track.dataset.prevPercentage = track.dataset.percentage;
+    const startAutoScroll = () => {
+        if (autoScrollInterval) return; // Prevent multiple intervals from being created
+        autoScrollInterval = requestAnimationFrame(autoScroll); // Use requestAnimationFrame for smoother scroll
+    };
+
+    const stopAutoScroll = () => {
+        cancelAnimationFrame(autoScrollInterval);
+        autoScrollInterval = null;
+    };
+
+    const autoScroll = () => {
+        if (isNaN(currentScroll)) {
+            currentScroll = 0;
         }
-    }
+
+        currentScroll -= autoScrollSpeed; // Decrease scroll value to move left
+
+        // Reset when it reaches the end of the track
+        if (currentScroll <= -100) {
+            currentScroll = 0;
+        }
+
+        // Apply the scroll transformation
+        track.style.transform = `translate(${currentScroll}%, -50%)`;
+
+        // Adjust the images' object-position
+        for (const image of images) {
+            image.style.objectPosition = `${100 + currentScroll}% center`;
+        }
+
+        autoScrollInterval = requestAnimationFrame(autoScroll); // Continue auto-scroll smoothly
+    };
+
+    // Start auto-scroll initially
+    startAutoScroll();
+
+    // Manual scrolling
+    let isDragging = false;
+    let startX = 0;
+    let startScroll = 0;
+
+    const handleStart = (clientX) => {
+        isDragging = true;
+        startX = clientX;
+        startScroll = currentScroll;
+        stopAutoScroll(); // Stop auto-scroll when manually dragging
+    };
+
+    let velocity = 0; // Track the velocity for smooth movement
 
     const handleMove = (clientX) => {
-        if (track.dataset.mouseDownAt === "0") return;
+        if (!isDragging) return;
 
-        const mouseDelta = parseFloat(track.dataset.mouseDownAt) - clientX,
-            maxDelta = window.innerWidth / 2; // Adjust to control overall sensitivity
+        const deltaX = (clientX - startX) * -1; // Invert the direction
+        const maxDelta = window.innerWidth / 2; // Adjust for sensitivity
 
-        const dragSpeed = 0.5; // Adjust this to control how fast the carousel moves
-        let percentage = (mouseDelta * dragSpeed / maxDelta) * -100,
-            nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
+        const dragSpeed = 0.5; // Control how fast the carousel moves
+        let percentage = (deltaX * dragSpeed / maxDelta) * -100;
+        let newScroll = startScroll + percentage;
 
-        // Clamp the nextPercentage between -100 and 0
-        nextPercentage = Math.max(Math.min(nextPercentage, 0), -100);
+        // Clamp the newScroll between -100 and 0
+        newScroll = Math.max(Math.min(newScroll, 0), -100);
 
-        track.dataset.percentage = nextPercentage;
+        // Calculate velocity for smooth transition
+        velocity = newScroll - currentScroll;
+        currentScroll += velocity * 0.1; // Adjust 0.1 to control smoothness
 
-        const animationDuration = 10000 / dragSpeed; // Increase duration as drag speed decreases
+        // Apply the manual scroll transformation
+        track.style.transform = `translate(${currentScroll}%, -50%)`;
 
-        // Adjust the track animation speed
-        track.animate({
-            transform: `translate(${nextPercentage}%, -50%)`
-        }, { duration: animationDuration, fill: "forwards" });
-
-        // Adjust the images animation speed
-        for (const image of track.getElementsByClassName("image")) {
-            image.animate({
-                objectPosition: `${100 + nextPercentage}% center`
-            }, { duration: animationDuration, fill: "forwards" });
+        // Adjust the images' object-position
+        for (const image of images) {
+            image.style.objectPosition = `${100 + currentScroll}% center`;
         }
-    }
+    };
+
+    const handleEnd = () => {
+        isDragging = false;
+
+        // Restart auto-scroll immediately after ending manual scroll
+        startAutoScroll(); // Restart auto-scroll
+    };
 
     // Mouse events
     track.onmousedown = e => handleStart(e.clientX);
@@ -68,4 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
     track.ontouchstart = e => handleStart(e.touches[0].clientX);
     window.ontouchend = handleEnd;
     window.ontouchmove = e => handleMove(e.touches[0].clientX);
+
+    // Stop auto-scroll when hovering over the carousel
+    carouselContainer.addEventListener('mouseover', stopAutoScroll);
+
+    // Resume auto-scroll when mouse leaves the carousel
+    carouselContainer.addEventListener('mouseout', startAutoScroll);
 });

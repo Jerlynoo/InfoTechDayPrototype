@@ -25,13 +25,18 @@
   <!-- NAV -->
   <div class="menu">
     <p class="navbarP">
+      <a class="navbarA" href="index.html">Home</a>
+    </p>
+    <p class="navbarP">
       <a class="navbarA" href="pages/project.html">Projects</a>
     </p>
     <p class="navbarP">
       <a class="navbarA" href="pages/seminar.html">Seminar</a>
     </p>
     <p class="navbarP">
-      <a class="navbarA" href="">Project Voting</a>
+      <a class="navbarA"
+        href="https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=8JupJXKOKkeuUK373w328bXn78rqNLdLpi-511rKTPxUN1NJNkNLSjhaOEw5NUFFTVhWMk04NEUyRy4u">
+        Project Voting</a>
     </p>
     <p class="navbarP">
       <a class="navbarA" href="pages/direction.html">Getting to TP</a>
@@ -119,7 +124,8 @@
         </tbody>
       </table>
 
-      <br><p>There is a 15 minutes Grace Period for all vehicles.</p>
+      <br>
+      <p>There is a 15 minutes Grace Period for all vehicles.</p>
       <p>Campus opening hours:
         <br>Mondays to Fridays: 0630 - 2230hrs
         <br>Saturdays: 0630 - 1800hrs
@@ -160,7 +166,13 @@
   </div>
 
   <div id="tp-map">
-    <img class="tp-map-img" src="./images/TP-Map.png" draggable="false" />
+    <img class="tp-map-img" src="./images/TP-Map.png" draggable="false" onclick="openModal()" />
+  </div>
+
+  <div id="imageModal" class="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="expandedImage" />
+    <div id="caption"></div>
   </div>
 
   <div class="direction-info">
