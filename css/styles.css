@@ -100,6 +100,15 @@ h2 {
     }
 }
 
+.header-title a {
+    text-decoration: none;
+    color: inherit; /* Inherits the color of the parent element */
+}
+  
+  .header-title a:hover {
+    color: #ff0000; /* Add a hover effect if you like */
+}
+
 
 /* COUNTDOWN ITEMS */
 :root {
