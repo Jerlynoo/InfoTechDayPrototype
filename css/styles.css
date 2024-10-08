@@ -370,13 +370,13 @@ h2 {
 
 
 /* CAROUSEL ITEMS */
-#carousel-container {
-    width: 90%; /* or any other suitable width */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Add padding to ensure images don't touch the sides */
+/* #carousel-container {
+    width: 90%; 
+    margin: 0 auto; 
+    padding: 0 20px; 
     z-index: 1;
-    overflow: hidden; /* Hide overflow */
-    height: 50vmin; /* Match the height of the images */
+    overflow: hidden;
+    height: 50vmin; 
     margin-top: 70px !important;
 }
 
@@ -388,7 +388,7 @@ h2 {
     top: 50%;
     transform: translateY(-50%);
     user-select: none;
-    width: auto; /* Automatically calculate width in JavaScript */
+    width: auto;
 }
 
 #image-track .image {
@@ -397,4 +397,115 @@ h2 {
     object-fit: cover;
     object-position: 100% center;
     border-radius: 15px;
+} */
+#carousel-container {
+    width: 90%; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    z-index: 1;
+    overflow: hidden;
+    height: 50vmin; 
+    margin-top: 70px !important;
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    width: auto;
+}
+
+.polaroid {
+    width: 40vmin;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid:hover {
+    transform: scale(1.05); /* Scale up slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a more prominent shadow */
+}
+
+.polaroid a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.polaroid:hover .container p {
+    text-decoration: underline; /* Optional: underline text on hover */
+}
+
+.polaroid img.image {
+    width: 100%;
+    height: 40vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container p {
+    font-size: 1.3em;
+    color: #000000;
+}
+
+/* Mobile-friendly adjustments */
+@media screen and (max-width: 768px) {
+    #carousel-container {
+        padding: 0 10px;
+        height: 60vmin; /* Increase height a bit for mobile */
+    }
+
+    #image-track {
+        gap: 2vmin; /* Reduce gap between images */
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .polaroid {
+        width: 60vmin; /* Make images larger for mobile */
+    }
+
+    .polaroid img.image {
+        height: 50vmin; /* Adjust image height for mobile */
+    }
+
+    .container p {
+        font-size: 1.1em; /* Decrease font size slightly */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    #carousel-container {
+        height: 70vmin;
+    }
+
+    .polaroid {
+        width: 80vmin; /* Further increase the width for small screens */
+    }
+
+    .polaroid img.image {
+        height: 60vmin; /* Further adjust image height */
+    }
+
+    .container p {
+        font-size: 1em; /* Decrease text size for small screens */
+    }
 }

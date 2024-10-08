@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const deltaX = (clientX - startX) * -1; // Invert the direction
         const maxDelta = window.innerWidth / 2; // Adjust for sensitivity
 
-        const dragSpeed = 0.5; // Control how fast the carousel moves
+        const dragSpeed = 0.9; // Control how fast the carousel moves
         let percentage = (deltaX * dragSpeed / maxDelta) * -100;
         let newScroll = startScroll + percentage;
 
