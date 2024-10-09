@@ -1,7 +1,28 @@
+@font-face {
+    font-family: 'Alegreya_SC';
+    src: url('../fonts/Alegreya_SC/AlegreyaSC-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/Arimo/static/Arimo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito_Sans';
+    src: url('../fonts/Nunito_Sans/static/NunitoSans_7pt_Condensed-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Baskerville Old Face', serif;
+    font-family: 'Arimo';
     background-color: #010029;
     color: white;
     display: flex;
@@ -18,11 +39,13 @@ header {
 }
 
 h1 {
+    font-family: 'Alegreya_SC';
     font-size: 70px;
     margin: 0;
 }
 
 h2 {
+    font-family: 'Nunito_Sans';
     font-size: 30px;
     margin-top: 20px;
 }
@@ -33,7 +56,6 @@ h2 {
     gap: 20px;
     font-size: 48px;
     margin-top: 80px;
-    /* Added margin to space out from the header */
 }
 
 .event-info {
@@ -121,15 +143,18 @@ h2 {
 } */
 
 :root {
-    --darker-rgb: 8 13 7; 
-    --blue: 0 122 255; /* A bright blue color */ 
-    --theme-rgb: var(--blue); /* Use the blue color for the theme */
+    --dark-rgb: 23 28 28;
+    --darker-rgb: 8 13 7;
+
+    --fluorescent-blue: 90 150 255; /* A brighter, more fluorescent blue */
+    --background-rgb: 30 30 30; /* Slightly lighter background */
+    --theme-rgb: var(--fluorescent-blue);
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 10;
+    padding: 5;
 }
 
 #app {
@@ -175,8 +200,8 @@ h2 {
     z-index: 2;
     background-color: rgb(var(--darker-rgb));
     padding: 10rem 4rem;
-    box-shadow: 0rem 0rem 10rem 4rem rgba(217, 112, 255, 0.589);
-    backdrop-filter: blur(1rem);
+    box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589);
+    backdrop-filter: blur(0.5rem);
 }
 
 #prize-labels {
@@ -229,6 +254,7 @@ h2 {
 }
 
 #prize-text {
+    font-family: 'Nunito_Sans';
     display: flex;
     gap: 1rem;
     height: 10rem;
