@@ -1,20 +1,13 @@
 @font-face {
-    font-family: 'Alegreya_SC';
-    src: url('../fonts/Alegreya_SC/AlegreyaSC-Regular.ttf') format('truetype');
+    font-family: 'Arsenal';
+    src: url('../fonts/Arsenal/Arsenal-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Arimo';
-    src: url('../fonts/Arimo/static/Arimo-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Nunito_Sans';
-    src: url('../fonts/Nunito_Sans/static/NunitoSans_7pt_Condensed-Light.ttf') format('truetype');
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -22,7 +15,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arimo';
+    font-family: 'Overpass';
     background-color: #010029;
     color: white;
     display: flex;
@@ -39,13 +32,13 @@ header {
 }
 
 h1 {
-    font-family: 'Alegreya_SC';
+    font-family: 'Baskerville Old Face', serif;
     font-size: 70px;
     margin: 0;
 }
 
 h2 {
-    font-family: 'Nunito_Sans';
+    font-family: 'Arsenal';
     font-size: 30px;
     margin-top: 20px;
 }
@@ -59,12 +52,10 @@ h2 {
 }
 
 .event-info {
-    margin-top: 30px;
+    margin-top: 90px;
     width: 100%;
-    /* Adjust width to fit content */
     text-align: center;
     padding: 0 10px;
-    /* Add padding for better text readability */
 }
 
 .event-info p {
@@ -77,7 +68,6 @@ h2 {
     margin-top: 50px;
     text-align: justify;
     line-height: 1.5;
-    /* Improve readability */
     padding: 0 30px;
     width: 90%;
 }
@@ -122,32 +112,19 @@ h2 {
     }
 }
 
-.header-title a {
+.header-title {
+    margin-top: 60px;
     text-decoration: none;
-    color: inherit; /* Inherits the color of the parent element */
+    color: inherit;
 }
-  
-  .header-title a:hover {
-    color: #ff0000; /* Add a hover effect if you like */
-}
-
 
 /* COUNTDOWN ITEMS */
-/* :root {
-    --dark-rgb: 23 28 28;
-    --darker-rgb: 8 13 7;
-
-    --blue-purple: 173 83 255; // Lighter and more fluorescent blueish-purple shade 
-    --background-rgb: 30 30 30; // Slightly lighter background 
-    --theme-rgb: var(--blue-purple);
-} */
-
 :root {
     --dark-rgb: 23 28 28;
     --darker-rgb: 8 13 7;
 
-    --fluorescent-blue: 90 150 255; /* A brighter, more fluorescent blue */
-    --background-rgb: 30 30 30; /* Slightly lighter background */
+    --fluorescent-blue: 90 150 255;
+    --background-rgb: 30 30 30;
     --theme-rgb: var(--fluorescent-blue);
 }
 
@@ -209,7 +186,7 @@ h2 {
     justify-content: space-around;
     width: 100%;
     margin-top: 1rem;
-    flex-wrap: wrap; /* Allow labels to wrap onto the next line */
+    flex-wrap: wrap;
 }
 
 .label-group {
@@ -254,7 +231,7 @@ h2 {
 }
 
 #prize-text {
-    font-family: 'Nunito_Sans';
+    font-family: 'Baskerville Old Face', serif;
     display: flex;
     gap: 1rem;
     height: 10rem;
@@ -317,57 +294,6 @@ h2 {
     z-index: 5;
 }
 
-#actions-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    position: fixed;
-    bottom: 2rem;
-    z-index: 10;
-}
-
-#actions {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
-    background-color: rgb(0 0 0 / 50%);
-    border: 1px solid rgb(255 255 255 / 5%);
-    border-radius: 0.5rem;
-    backdrop-filter: blur(1rem);
-}
-
-#actions button {
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0rem 1.5rem;
-    background-color: rgb(255 255 255 / 5%);
-    border-radius: 0.25rem;
-    border: 1px solid rgb(255 255 255 / 5%);
-    color: white;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    outline: none;
-    cursor: pointer;
-}
-
-#actions button:is(:hover, :focus-visible) {
-    background-color: rgb(255 255 255 / 7%);
-}
-
-#actions button:focus-visible {
-    border-color: rgb(255 255 255 / 15%);
-}
-
-#redo-button>i {
-    padding-top: 0.2rem;
-}
-
 @media(max-width: 1700px) {
     #prize {
         scale: 0.75;
@@ -400,41 +326,13 @@ h2 {
 
 
 /* CAROUSEL ITEMS */
-/* #carousel-container {
-    width: 90%; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    z-index: 1;
-    overflow: hidden;
-    height: 50vmin; 
-    margin-top: 70px !important;
-}
-
-#image-track {
-    display: flex;
-    gap: 4vmin;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    user-select: none;
-    width: auto;
-}
-
-#image-track .image {
-    width: 40vmin;
-    height: 50vmin;
-    object-fit: cover;
-    object-position: 100% center;
-    border-radius: 15px;
-} */
 #carousel-container {
-    width: 90%; 
-    margin: 0 auto; 
-    padding: 0 20px; 
+    width: 90%;
+    /* margin: 0 auto;  */
+    padding: 0 20px;
     z-index: 1;
     overflow: hidden;
-    height: 50vmin; 
+    height: 50vmin;
     margin-top: 70px !important;
 }
 
@@ -463,8 +361,10 @@ h2 {
 }
 
 .polaroid:hover {
-    transform: scale(1.05); /* Scale up slightly */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a more prominent shadow */
+    transform: scale(1.05);
+    /* Scale up slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Add a more prominent shadow */
 }
 
 .polaroid a {
@@ -473,7 +373,8 @@ h2 {
 }
 
 .polaroid:hover .container p {
-    text-decoration: underline; /* Optional: underline text on hover */
+    text-decoration: underline;
+    /* Optional: underline text on hover */
 }
 
 .polaroid img.image {
@@ -499,25 +400,30 @@ h2 {
 @media screen and (max-width: 768px) {
     #carousel-container {
         padding: 0 10px;
-        height: 60vmin; /* Increase height a bit for mobile */
+        height: 60vmin;
+        /* Increase height a bit for mobile */
     }
 
     #image-track {
-        gap: 2vmin; /* Reduce gap between images */
+        gap: 2vmin;
+        /* Reduce gap between images */
         top: 50%;
         transform: translateY(-50%);
     }
 
     .polaroid {
-        width: 60vmin; /* Make images larger for mobile */
+        width: 60vmin;
+        /* Make images larger for mobile */
     }
 
     .polaroid img.image {
-        height: 50vmin; /* Adjust image height for mobile */
+        height: 50vmin;
+        /* Adjust image height for mobile */
     }
 
     .container p {
-        font-size: 1.1em; /* Decrease font size slightly */
+        font-size: 1.1em;
+        /* Decrease font size slightly */
     }
 }
 
@@ -528,14 +434,216 @@ h2 {
     }
 
     .polaroid {
-        width: 80vmin; /* Further increase the width for small screens */
+        width: 80vmin;
+        /* Further increase the width for small screens */
     }
 
     .polaroid img.image {
-        height: 60vmin; /* Further adjust image height */
+        height: 60vmin;
+        /* Further adjust image height */
     }
 
     .container p {
-        font-size: 1em; /* Decrease text size for small screens */
+        font-size: 1em;
+        /* Decrease text size for small screens */
     }
+}
+
+
+/* SEMINAR */
+.seminar-container {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+#timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the items */
+}
+
+.timeline li {
+    position: relative;
+    width: 90%;
+    margin: 30px 0; /* Spacing between timeline items */
+}
+
+.flag-wrapper {
+    background: #4b8aff; /* Flag background color */
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+.flag-wrapper:hover {
+    background: #1E7EFF; /* Darker shade on hover */
+}
+
+.flag {
+    font-weight: bold;
+    color: white; /* Flag text color */
+}
+
+.time-wrapper {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #d9d9d9; /* Lighter color for time */
+}
+
+.desc {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #f0f0f0; /* Lighter description text */
+}
+
+/* Styles for direction markers */
+.direction-r .flag-wrapper:before,
+.direction-l .flag-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 20px; /* Position marker above flag */
+    width: 20px;
+    height: 20px;
+    background: #4b8aff; /* Same as flag color */
+    border-radius: 50%;
+}
+
+.direction-r .flag-wrapper:before {
+    left: -10px; /* Adjust position for right direction */
+}
+
+.direction-l .flag-wrapper:before {
+    right: -10px; /* Adjust position for left direction */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .timeline li {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+/* LOCATION GUIDE */
+/* Keyframes for zoom effect */
+@keyframes zoom {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.direction-info {
+    font-size: 18px;
+    margin-top: 3rem;
+}
+
+.tp-map-img {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tp-map-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(41, 33, 53, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    /* Ensures the image fits without being distorted */
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.venue-info {
+    margin-top: 2rem;
+    font-size: 20px;
 }

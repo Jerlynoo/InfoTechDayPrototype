@@ -1,0 +1,83 @@
+.seminar-container {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+#timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the items */
+}
+
+.timeline li {
+    position: relative;
+    width: 90%;
+    margin: 30px 0; /* Spacing between timeline items */
+}
+
+.flag-wrapper {
+    background: #4b8aff; /* Flag background color */
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+.flag-wrapper:hover {
+    background: #1E7EFF; /* Darker shade on hover */
+}
+
+.flag {
+    font-weight: bold;
+    color: white; /* Flag text color */
+}
+
+.time-wrapper {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #d9d9d9; /* Lighter color for time */
+}
+
+.desc {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #f0f0f0; /* Lighter description text */
+}
+
+/* Styles for direction markers */
+.direction-r .flag-wrapper:before,
+.direction-l .flag-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 20px; /* Position marker above flag */
+    width: 20px;
+    height: 20px;
+    background: #4b8aff; /* Same as flag color */
+    border-radius: 50%;
+}
+
+.direction-r .flag-wrapper:before {
+    left: -10px; /* Adjust position for right direction */
+}
+
+.direction-l .flag-wrapper:before {
+    right: -10px; /* Adjust position for left direction */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .timeline li {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
