@@ -1,0 +1,60 @@
+/* Fullscreen background */
+#opening-sequence {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #fff, #c8d6e5); /* Soft gradient for a royal effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 1;
+    animation: fadeOut 5s ease forwards; /* Fades out after 5 seconds */
+    animation-delay: 4s; /* Waits 4 seconds before fading */
+}
+
+#main-title {
+    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    color: #2e86de;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 3s ease forwards; /* Fades in title */
+    animation-delay: 1s;
+}
+
+#sub-title {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #576574;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards; /* Fades in subtitle */
+    animation-delay: 2s;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95); /* Slight zoom in */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
