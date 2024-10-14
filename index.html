@@ -14,9 +14,9 @@
   <!-- Bootstrap JS -->
   <script src="./ext/bootstrap.min.js"></script>
   <!-- Fontawesome JS -->
-  <script src="../ext/3b161c540c.js" crossorigin="anonymous"></script>
+  <script src="./ext/3b161c540c.js" crossorigin="anonymous"></script>
   <!-- Fontawesome CSS -->
-  <link href="../ext/font-awesome.min.css" rel="stylesheet" />
+  <link href="./ext/font-awesome.min.css" rel="stylesheet" />
   <!-- main style css -->
   <link rel="stylesheet" href="css/styles.css" />
   <!-- navbar css -->
@@ -90,20 +90,10 @@
         <span class="label">SECONDS</span>
       </div>
     </div>
-
-    <!-- <div id="shapes"></div> -->
-
-    <!-- <div id="actions-wrapper">
-      <div id="actions">
-        <button id="redo-button" type="button" onclick="handleRedo()">
-          <i class="fa-solid fa-arrows-repeat"></i>
-          <span>Rerun</span>
-        </button>
-      </div>
-    </div> -->
+    
   </div>
   <div class="event-info">
-    <p>23 January (Thurs) | 3 - 9pm | TP Main Foyer & Auditorium 1 & 2</p>
+    <p>23 January (Thurs) | 3PM - 9PM | TP Main Foyer & Auditorium 1 & 2</p>
   </div>
 
   <div class="description">
@@ -207,8 +197,9 @@
       </a>
     </div>
   </div>
-  <div class="seminar-container">
-    <h1 class="header-title">Seminars</h1>
+
+  <div class="container">
+    <h1 class="project-name">Seminar</h1>
     <div id="timeline">
       <ul class="timeline">
         <!-- Item 1 -->
@@ -219,31 +210,35 @@
               <span class="flag">Do we need AI?</span>
               <span class="time-wrapper"><span class="time">2.30PM</span></span>
             </div>
-            <div class="desc">Dr. Andy Chang | Temasek Polytechnic</div>
+            <div class="desc">
+              Dr. Andy Chang | Temasek Polytechnic
+            </div>
           </div>
         </li>
-
         <!-- Item 2 -->
         <li>
           <div class="direction-l">
             <div class="flag-wrapper">
               <span class="hexa"></span>
-              <span class="flag">Can Chicken Code?</span>
+              <span class="flag">Can chickens code?</span>
               <span class="time-wrapper"><span class="time">3.30PM</span></span>
             </div>
-            <div class="desc">Mrs. Go Lok | Chicken can code Company</div>
+            <div class="desc">
+              Mrs. Go Lok | Chicken can code Company
+            </div>
           </div>
         </li>
-
         <!-- Item 3 -->
         <li>
           <div class="direction-r">
             <div class="flag-wrapper">
               <span class="hexa"></span>
-              <span class="flag">VR set is Fun and you should purchase it</span>
+              <span class="flag">VR set is fun and you should purchase it</span>
               <span class="time-wrapper"><span class="time">4PM</span></span>
             </div>
-            <div class="desc">Ms How Si Mei | Meta Corps.</div>
+            <div class="desc">
+              Ms How Si Mei | Meta Corps.
+            </div>
           </div>
         </li>
       </ul>
@@ -254,12 +249,7 @@
   <script src="js/popup.js"></script>
   <section class="header-title">
     <h1>Venue Information</h1>
-    <div class="direction-info">
-      <p>Click to view our location on <a
-          href="https://www.google.com/maps/search/?api=1&query=21+Tampines+Ave+1,+Singapore+529757"
-          target="_blank">Google Maps</a></p>
-    </div>
-    <div id="tp-map">
+    <div class="tp-map">
       <img class="tp-map-img" src="./images/TP-Map.png" draggable="false" onclick="openModal()" />
     </div>
     <div id="imageModal" class="modal">
@@ -269,10 +259,14 @@
     </div>
     <div class="venue-info">
       <p>
-        <strong>Location:</strong> Auditorium 1 & 2, Temasek Polytechnic
+        <strong>Event Date:</strong> 23 January 2025 (Thursday), 3PM - 9PM
       </p>
       <p>
-        <strong>Address:</strong> 21 Tampines Avenue 1, Singapore 529757
+        <strong>Venue:</strong> Auditorium 1 & 2, Temasek Polytechnic
+      </p>
+      <p>
+        <strong>Address:</strong> <a href="https://maps.app.goo.gl/QPNgcZdAfEHjNQda8" target="_blank">
+          21 Tampines Avenue 1, Singapore 529757</a> (Click to view on Google Maps)
       </p>
       <p><strong>Contact:</strong> +65 6788 2000</p>
       <p>
