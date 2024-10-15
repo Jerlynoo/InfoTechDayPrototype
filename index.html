@@ -18,7 +18,7 @@
     <!-- Fontawesome CSS -->
     <link href="./ext/font-awesome.min.css" rel="stylesheet" />
     <!-- main style css -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/homePage.css" />
     <!-- navbar css -->
     <link rel="stylesheet" href="css/navbar.css" />
     <!-- footer css -->
@@ -56,7 +56,7 @@
                 Voting</a>
         </p>
         <p class="navbarP">
-            <a class="navbarA" href="direction.html">Getting to TP</a>
+            <a class="navbarA" href="pages/direction.html">Getting to TP</a>
         </p>
         <p class="navbarP">
             <a class="navbarA" href="pages/courses.html">IIT Courses</a>
@@ -211,46 +211,283 @@
             </a>
         </div>
     </div>
-
-    <div class="container">
-        <h1 class="project-name">Seminar</h1>
-        <div id="timeline">
-            <ul class="timeline">
-                <!-- Item 1 -->
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="hexa"></span>
-                            <span class="flag">Do we need AI?</span>
-                            <span class="time-wrapper"><span class="time">2.30PM</span></span>
-                        </div>
-                        <div class="desc">Dr. Andy Chang | Temasek Polytechnic</div>
-                    </div>
-                </li>
-                <!-- Item 2 -->
-                <li>
-                    <div class="direction-l">
-                        <div class="flag-wrapper">
-                            <span class="hexa"></span>
-                            <span class="flag">Can chickens code?</span>
-                            <span class="time-wrapper"><span class="time">3.30PM</span></span>
-                        </div>
-                        <div class="desc">Mrs. Go Lok | Chicken can code Company</div>
-                    </div>
-                </li>
-                <!-- Item 3 -->
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="hexa"></span>
-                            <span class="flag">VR set is fun and you should purchase it</span>
-                            <span class="time-wrapper"><span class="time">4PM</span></span>
-                        </div>
-                        <div class="desc">Ms How Si Mei | Meta Corps.</div>
-                    </div>
-                </li>
-            </ul>
+    <!-- Seminars Section -->
+    <svg display="none">
+      <symbol id="arrow">
+        <polyline
+          points="7 10,12 15,17 10"
+          fill="none"
+          stroke="currentcolor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </symbol>
+    </svg>
+    <h1>Seminars</h1>
+    <div id="timeline" class="timeline">
+      <div class="btn-group">
+        <button class="btn" type="button" data-action="expand">
+          Expand All
+        </button>
+        <button class="btn" type="button" data-action="collapse">
+          Collapse All
+        </button>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item1"
+            aria-labelledby="item1-name"
+            aria-expanded="false"
+            aria-controls="item1-ctrld"
+            aria-haspopup="true"
+            data-item="1"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item1-name" class="timeline__meta">
+            <time class="timeline__date" datetime="1970-01-01">2.00PM</time
+            ><br />
+            <strong class="timeline__title">Welcoming Speech</strong>
+          </span>
         </div>
+        <div
+          class="timeline__item-body"
+          id="item1-ctrld"
+          role="region"
+          aria-labelledby="item1"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <p class="timeline__item-p">Dr Ang Kok Song</p>
+            <p>CEO of Temasek Corporation</p>
+            <p>Temasek Polytechnic</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item2"
+            aria-labelledby="item2-name"
+            aria-expanded="false"
+            aria-controls="item2-ctrld"
+            aria-haspopup="true"
+            data-item="2"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item2-name" class="timeline__meta">
+            <time class="timeline__date" datetime="1973-10-17">2.30PM</time
+            ><br />
+            <strong class="timeline__title"
+              >Will AI take over the Future?</strong
+            >
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item2-ctrld"
+          role="region"
+          aria-labelledby="item2"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <p class="timeline__item-p">Mr Chicken Wing</p>
+            <p>Director of Chicken Nuggets Department</p>
+            <p>Chicken Inc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item3"
+            aria-labelledby="item3-name"
+            aria-expanded="false"
+            aria-controls="item3-ctrld"
+            aria-haspopup="true"
+            data-item="3"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item3-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2001-09-09">$.00PM</time
+            ><br />
+            <strong class="timeline__title">1 Billion Seconds</strong>
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item3-ctrld"
+          role="region"
+          aria-labelledby="item3"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <p class="timeline__item-p">Mr Chicken Wing</p>
+            <p>Director of Chicken Nuggets Department</p>
+            <p>Chicken Inc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item4"
+            aria-labelledby="item4-name"
+            aria-expanded="false"
+            aria-controls="item4-ctrld"
+            aria-haspopup="true"
+            data-item="4"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item4-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2009-02-13">4.30PM</time
+            ><br />
+            <strong class="timeline__title">1,234,567,890 Seconds</strong>
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item4-ctrld"
+          role="region"
+          aria-labelledby="item4"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <p class="timeline__item-p">Mr Chicken Wing</p>
+            <p>Director of Chicken Nuggets Department</p>
+            <p>Chicken Inc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item5"
+            aria-labelledby="item5-name"
+            aria-expanded="false"
+            aria-controls="item5-ctrld"
+            aria-haspopup="true"
+            data-item="5"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item5-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2033-05-18">5.00PM</time
+            ><br />
+            <strong class="timeline__title">2 Billion Seconds</strong>
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item5-ctrld"
+          role="region"
+          aria-labelledby="item5"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <p class="timeline__item-p">Mr Chicken Wing</p>
+            <p>Director of Chicken Nuggets Department</p>
+            <p>Chicken Inc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item6"
+            aria-labelledby="item6-name"
+            aria-expanded="false"
+            aria-controls="item6-ctrld"
+            aria-haspopup="true"
+            data-item="6"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item6-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2038-01-19">6.00PM</time
+            ><br />
+            <strong class="timeline__title">2025 END OF THE WORLD?</strong>
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item6-ctrld"
+          role="region"
+          aria-labelledby="item6"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <p class="timeline__item-p">Mr Chicken Wing</p>
+            <p>Director of Chicken Nuggets Department</p>
+            <p>Chicken Inc.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Venue Section -->

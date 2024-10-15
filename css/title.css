@@ -1,65 +1,66 @@
 body {
-  color: #ccc;
-  background: #111;
-  font-family: sans-serif;
-}
-
-h1,
-h2 {
-  margin: 0;
-}
-
-a {
-  color: #ccc;
-}
-
-section {
-  padding: 20px;
-}
-
-.hero {
-  font-size: clamp(40px, 10vw, 100px);
-  line-height: 1;
-  display: inline-block;
-  color: #fff;
-  z-index: 2;
-  letter-spacing: 10px;
-
-  /* Bright things in dark environments usually cast that light, giving off a glow */
-  filter: drop-shadow(0 1px 3px);
-}
-
-.demo {
-  height: 100px;
-  background: #fff;
-}
-
-.layers {
-  position: relative;
-}
-
-.layers::before,
-.layers::after {
-  content: attr(data-text);
-  position: absolute;
-  width: 110%;
-  z-index: -1;
-}
-
-.layers::before {
-  top: 10px;
-  left: 15px;
-  color: #e0287d;
-}
-
-.layers::after {
-  top: 5px;
-  left: -10px;
-  color: #1bc7fb;
-}
-
-.single-path {
-  clip-path: polygon(0% 12%,
+    color: #ccc;
+    /* background: #111; */
+    font-family: sans-serif;
+  }
+  
+  h1,
+  h2 {
+    margin: 0;
+  }
+  
+  a {
+    color: #ccc;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  .hero {
+    font-size: clamp(40px, 10vw, 100px);
+    line-height: 1;
+    display: inline-block;
+    color: #fff;
+    z-index: 2;
+    letter-spacing: 10px;
+  
+    /* Bright things in dark environments usually cast that light, giving off a glow */
+    filter: drop-shadow(0 1px 3px);
+  }
+  
+  .demo {
+    height: 100px;
+    background: #fff;
+  }
+  
+  .layers {
+    position: relative;
+  }
+  
+  .layers::before,
+  .layers::after {
+    content: attr(data-text);
+    position: absolute;
+    width: 110%;
+    z-index: -1;
+  }
+  
+  .layers::before {
+    top: 10px;
+    left: 15px;
+    color: #e0287d;
+  }
+  
+  .layers::after {
+    top: 5px;
+    left: -10px;
+    color: #1bc7fb;
+  }
+  
+  .single-path {
+    clip-path: polygon(
+      0% 12%,
       53% 12%,
       53% 26%,
       25% 26%,
