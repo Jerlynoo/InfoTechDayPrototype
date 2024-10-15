@@ -28,8 +28,8 @@
 }
 
 #app {
-    height: 80%;
     width: 100%;
+    padding: 0 1rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
     }
 
     50% {
-        box-shadow: 0rem 0rem 11rem 5rem rgba(144, 205, 255, 0.797);
+        box-shadow: 0rem 0rem 11rem 5rem rgba(93, 171, 255, 0.824);
     }
 
     100% {
@@ -51,7 +51,8 @@
 }
 
 #prize {
-    width: 100rem;
+    width: 90%;
+    max-width: 100rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,9 +60,9 @@
     position: relative;
     z-index: 2;
     background-color: rgba(var(--darker-rgb), 0.8);
-    padding: 10rem 4rem;
+    padding: 2rem 1rem;
     backdrop-filter: blur(0.5rem);
-    animation: boxShadowPulse 3s ease-in-out infinite;
+    animation: boxShadowPulse 2.5s ease-in-out infinite;
 }
 
 #prize-labels {
@@ -80,26 +81,6 @@
     letter-spacing: 0.1rem;
 }
 
-@media (max-width: 900px) {
-    .label {
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .label {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .label {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-    }
-}
 
 
 .label-group {
@@ -144,10 +125,11 @@
     height: auto;
     line-height: 8rem;
     font-size: 10rem;
+    max-width: 100%;
     font-family: 'Arsenal';
     color: rgba(112, 169, 255, 0.9);
     text-shadow: 0 0 5px rgba(112, 169, 255, 0.6),
-        0 0 10px rgba(112, 169, 255, 0.4)
+        0 0 10px rgba(112, 169, 255, 0.4);
 }
 
 .time-group {
@@ -221,38 +203,64 @@
     z-index: 5;
 }
 
-@media(max-width: 1700px) {
-    #prize {
-        scale: 0.75;
+@media (min-width: 1700px) {
+    #app {
+        height: 85%;
     }
 }
 
-@media(max-width: 1300px) {
-    #prize {
-        scale: 0.65;
+@media (max-width: 1700px) {
+    #app {
+        height: 80%;
     }
 }
 
-@media(max-width: 900px) {
-    #prize {
-        scale: 0.55;
+@media (max-width: 1300px) {
+    #app {
+        height: 75%;
     }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 900px) {
+    #app {
+        height: 70%;
+    }
+}
+
+@media (max-width: 600px) {
     #prize-text {
         font-size: 6rem;
-        line-height: 6rem;
+        line-height: 3.5rem;
     }
-
-    #prize-labels .label {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
+    #app {
+        height: 65%;
     }
 }
 
-@media(max-width: 300px) {
-    #prize {
-        scale: 0.35;
+@media (max-width: 400px) {
+    #prize-text {
+        font-size: 5rem;
+        line-height: 2.5rem;
+    }
+    #app {
+        height: 60%;
+    }
+    #prize-label>span {
+        font-size: 2.3rem;
+        padding-bottom: 40px;
+    }
+    .label {
+        font-size: 2rem;
+        line-height: 3rem;
+        letter-spacing: 0.1rem;
+    }
+    .digits .digit {
+        width: 6rem;
+    }
+}
+
+@media (max-width: 300px) {
+    #app {
+        height: 55%;
     }
 }

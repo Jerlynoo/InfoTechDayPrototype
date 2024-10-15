@@ -8,9 +8,11 @@ class CollapsibleTimeline {
 
     this.init();
   }
+
   init() {
     this.el?.addEventListener("click", this.itemAction.bind(this));
   }
+
   animateItemAction(button, ctrld, contentHeight, shouldCollapse) {
     const expandedClass = "timeline__item-body--expanded";
     const animOptions = {
@@ -22,25 +24,31 @@ class CollapsibleTimeline {
       button.ariaExpanded = "false";
       ctrld.ariaHidden = "true";
       ctrld.classList.remove(expandedClass);
-      animOptions.duration *= 2;
       this.animation = ctrld.animate(
         [
-          { height: `${contentHeight}px` },
-          { height: `${contentHeight}px` },
-          { height: "0px" },
+          { height: `${contentHeight}px`, opacity: 1 },
+          { height: "0px", opacity: 0 }
         ],
-        animOptions
+        { ...animOptions, fill: "forwards" } 
       );
+      this.animation.onfinish = () => {
+        ctrld.style.visibility = 'hidden'; 
+      };
     } else {
       button.ariaExpanded = "true";
       ctrld.ariaHidden = "false";
       ctrld.classList.add(expandedClass);
+      ctrld.style.visibility = 'visible';
       this.animation = ctrld.animate(
-        [{ height: "0px" }, { height: `${contentHeight}px` }],
-        animOptions
+        [
+          { height: "0px", opacity: 0 },
+          { height: `${contentHeight}px`, opacity: 1 }
+        ],
+        { ...animOptions, fill: "forwards" }
       );
     }
   }
+
   itemAction(e) {
     const { target } = e;
     const action = target?.getAttribute("data-action");
