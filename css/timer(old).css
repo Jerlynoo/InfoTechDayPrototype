@@ -1,18 +1,4 @@
-@font-face {
-    font-family: 'Arsenal';
-    src: url('../fonts/Arsenal/Arsenal-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Overpass';
-    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-:root {
+/* :root {
     --dark-rgb: 23 28 28;
     --darker-rgb: 8 13 7;
 
@@ -36,15 +22,37 @@
     justify-content: center;
 }
 
+#shapes {
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+    margin: 1rem;
+    border: 0.15rem dashed rgb(var(--theme-rgb) / 40%);
+    pointer-events: none;
+}
+
+@keyframes float {
+
+    from,
+    to {
+        translate: 0% 0%;
+    }
+
+    50% {
+        translate: 0% 10%;
+    }
+}
+
 @keyframes boxShadowPulse {
     0% {
         box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589);
     }
-
     50% {
-        box-shadow: 0rem 0rem 11rem 5rem rgba(144, 205, 255, 0.797);
+        box-shadow: 0rem 0rem 11rem 5rem rgba(112, 169, 255, 0.8);
     }
-
     100% {
         box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589);
     }
@@ -74,39 +82,23 @@
 
 .label {
     color: rgba(var(--theme-rgb), 0.8);
-    font-size: 2.5rem;
-    line-height: 5rem;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
 }
-
-@media (max-width: 900px) {
-    .label {
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .label {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .label {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-    }
-}
-
 
 .label-group {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0.5rem;
+}
+
+#prize-labels .label {
+    flex: 1;
+    text-align: center;
+    color: rgb(var(--theme-rgb));
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
 }
 
 #prize-labels {
@@ -120,9 +112,6 @@
 #prize-label>span {
     display: inline-flex;
     font-size: 3rem;
-    padding-bottom: 40px;
-    color: rgba(112, 169, 255, 0.9);
-    text-shadow: 0 0 5px rgba(112, 169, 255, 0.6)
 }
 
 #prize-label>.asterisk {
@@ -142,34 +131,18 @@
     gap: 1rem;
     justify-content: center;
     height: auto;
-    line-height: 8rem;
-    font-size: 10rem;
-    font-family: 'Arsenal';
-    color: rgba(112, 169, 255, 0.9);
-    text-shadow: 0 0 5px rgba(112, 169, 255, 0.6),
-        0 0 10px rgba(112, 169, 255, 0.4)
+    line-height: 10rem;
+    font-size: 11rem;
+    text-shadow: 0 0 5px rgba(var(--theme-rgb), 0.5),
+        0 0 10px rgba(var(--theme-rgb), 0.4),
+        0 0 15px rgba(var(--theme-rgb), 0.3);
 }
 
-.time-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.digits {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.digits .digit {
-    font-family: 'Baskerville Old Face', serif;
-    line-height: 1em;
+#prize-text>.digit {
     width: 8rem;
     position: relative;
     overflow: hidden;
-    border-bottom: 0.25rem solid rgba(112, 169, 255, 0.9);
-    color: rgba(112, 169, 255, 0.9);
+    border-bottom: 0.25rem solid rgb(var(--theme-rgb));
 }
 
 #prize-text>.digit>.digit-track {
@@ -216,8 +189,8 @@
 }
 
 #prize-shadow {
-    background: radial-gradient(rgb(var(--theme-rgb) / 8%) 40%,
-            rgb(var(--darker-rgb) / 80%) 95%);
+    background: radial-gradient(rgb(var(--theme-rgb) / 1%) 40%,
+            rgb(var(--darker-rgb) / 80%) 85%);
     z-index: 5;
 }
 
@@ -255,4 +228,4 @@
     #prize {
         scale: 0.35;
     }
-}
+} */

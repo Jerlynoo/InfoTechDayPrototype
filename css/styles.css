@@ -118,67 +118,6 @@ h2 {
     color: inherit;
 }
 
-/* COUNTDOWN ITEMS */
-:root {
-    --dark-rgb: 23 28 28;
-    --darker-rgb: 8 13 7;
-
-    --fluorescent-blue: 90 150 255;
-    --background-rgb: 30 30 30;
-    --theme-rgb: var(--fluorescent-blue);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 5;
-}
-
-#app {
-    height: 80%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#shapes {
-    height: calc(100% - 2rem);
-    width: calc(100% - 2rem);
-    position: fixed;
-    left: 0%;
-    top: 0%;
-    z-index: 1;
-    margin: 1rem;
-    border: 0.15rem dashed rgb(var(--theme-rgb) / 40%);
-    pointer-events: none;
-}
-
-@keyframes float {
-
-    from,
-    to {
-        translate: 0% 0%;
-    }
-
-    50% {
-        translate: 0% 10%;
-    }
-}
-
-@keyframes boxShadowPulse {
-    0% {
-        box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589);
-    }
-    50% {
-        box-shadow: 0rem 0rem 11rem 5rem rgba(112, 169, 255, 0.8);
-    }
-    100% {
-        box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589);
-    }
-}
-
 /* CAROUSEL ITEMS */
 #carousel-container {
     width: 90%;
