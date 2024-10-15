@@ -9,7 +9,7 @@
     background-color: rgba(var(--darker-rgb), 0.8);
     padding: 10rem 4rem;
     backdrop-filter: blur(0.5rem);
-    animation: boxShadowPulse 3s ease-in-out infinite; /* Apply box-shadow animation */
+    animation: boxShadowPulse 3s ease-in-out infinite;
 }
 
 #prize-labels {
@@ -41,23 +41,17 @@
     letter-spacing: 0.1rem;
 }
 
-#prize-label,
-#prize-text {
-    color: rgb(var(--theme-rgb));
-    text-align: center;
-}
-
-#prize-label {
+#prize-labels {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    font-size: 3rem;
-    opacity: 1;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
 }
 
 #prize-label>span {
     display: inline-flex;
+    font-size: 3rem;
 }
 
 #prize-label>.asterisk {
@@ -65,11 +59,18 @@
     line-height: 0.5em;
 }
 
+#prize-label,
 #prize-text {
-    font-family: 'Baskerville Old Face', serif;
+    color: rgb(var(--theme-rgb));
+    text-align: center;
+}
+
+#prize-text {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
-    height: 10rem;
+    justify-content: center;
+    height: auto;
     line-height: 10rem;
     font-size: 11rem;
     text-shadow: 0 0 5px rgba(var(--theme-rgb), 0.5),
@@ -94,7 +95,7 @@
     top: 0%;
     transform: translateY(0rem);
     transition: transform 3000ms cubic-bezier(.1, .67, 0, 1);
-    color: rgba(112, 169, 255, 0.8); 
+    color: rgba(112, 169, 255, 0.8);
 }
 
 .prize-filter {
@@ -152,8 +153,14 @@
 }
 
 @media(max-width: 600px) {
-    #prize {
-        scale: 0.45;
+    #prize-text {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+
+    #prize-labels .label {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
     }
 }
 
