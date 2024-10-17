@@ -47,14 +47,17 @@
 }
 
 .venue-info {
-  flex: 1;
-  max-width: 50%;
+  flex: 5;
+  max-width: 90%;
   text-align: left;
-  padding-bottom: 15px; /* Adjust padding to make sure info is aligned with the image bottom */
+  padding-bottom: 5px; 
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .venue-info p {
   font-size: 1em;
+  text-align: left;
   margin: 8px 0;
 }
 
