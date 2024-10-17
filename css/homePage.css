@@ -82,6 +82,7 @@ h2 {
 .registration-buttons button {
     padding: 15px 30px;
     font-size: 24px;
+    font-weight: 1000;
     border: none;
     cursor: pointer;
     border-radius: 5px;

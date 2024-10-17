@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const targetDate = new Date('2025-01-23T15:00:00');
+    const targetDate = new Date('2024-01-23T15:00:00');
     const config = {
         transitionDuration: 3000,
         time: 0,
@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateCountdownDisplay = () => {
         const [days, hours, minutes, seconds] = formatTime(config.time);
 
-        // Function to create a time display with a colon between each digit group
         const timeGroupWithColon = (id, value, showColon = true) => {
             document.getElementById(id).innerHTML = value.split('').map(
                 char => `<span class="digit">${char}</span>`
@@ -27,7 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
         timeGroupWithColon('days', days);
         timeGroupWithColon('hours', hours);
         timeGroupWithColon('minutes', minutes);
-        timeGroupWithColon('seconds', seconds, false); // No colon after the seconds
+        timeGroupWithColon('seconds', seconds, false);
+    };
+
+    const displayWelcomeMessage = () => {
+        const prizeText = document.getElementById('prize-text');
+        prizeText.innerHTML = '<div class="welcome-message">WELCOME TO TP INFOTECH DAY 2025</div>';
+        prizeText.style.fontSize = '6rem'; 
+        prizeText.style.lineHeight = '7rem';
+
+        const prizeLabel = document.getElementById('prize-label');
+        prizeLabel.innerHTML = '';
+
+        const registrationButtons = document.querySelector('.registration-buttons');
+        registrationButtons.style.display = 'none';
     };
 
     const startCountdown = () => {
@@ -35,12 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
         config.time = timeRemaining;
 
-        updateCountdownDisplay();
-
         if (timeRemaining > 0) {
+            updateCountdownDisplay();
             setTimeout(startCountdown, 1000);
         } else {
-            console.log('Countdown completed');
+            displayWelcomeMessage();
         }
     };
 
@@ -49,8 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
         config.time = timeRemaining;
 
-        updateCountdownDisplay();
-        startCountdown();
+        if (timeRemaining > 0) {
+            updateCountdownDisplay();
+            startCountdown();
+        } else {
+            displayWelcomeMessage();
+        }
 
         const handleRedo = () => {
             location.reload();

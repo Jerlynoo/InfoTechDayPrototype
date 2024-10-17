@@ -50,6 +50,16 @@
     }
 }
 
+.welcome-message {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    color: rgba(112, 169, 255, 0.9); 
+    margin-bottom: 2.5rem;
+}
+
 #prize {
     width: 90%;
     max-width: 100rem;
@@ -125,6 +135,7 @@
     height: auto;
     line-height: 8rem;
     font-size: 10rem;
+    margin-bottom: 2.5rem;
     max-width: 100%;
     font-family: 'Arsenal';
     color: rgba(112, 169, 255, 0.9);
