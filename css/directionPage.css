@@ -90,16 +90,14 @@ h2 {
 
 /* Popup container - hidden by default */
 .popup {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(41, 33, 53, 0.9);
-    display: flex;
     justify-content: center;
     align-items: center;
 }

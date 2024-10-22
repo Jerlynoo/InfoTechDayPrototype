@@ -13,7 +13,11 @@
 p.text-center{
   color: white;
   margin-top: 1rem;
-  font-size: 22px;
+  font-size: 18px;
+}
+
+.footer-pad ul li a {
+  font-size: 18px; /* Change to your desired size */
 }
 
 .mainfooter {
@@ -111,6 +115,10 @@ ul.social-network li {
 
 .social-network a.icoYoutube:hover {
   background-color: red;
+}
+
+.footer-pad {
+  text-align: left !important;
 }
 
 /* global setting */
