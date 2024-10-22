@@ -16,6 +16,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
+    overflow-x: hidden;
 }
 
 header {
@@ -98,6 +99,9 @@ h2 {
     height: 100%;
     overflow: auto;
     background-color: rgba(41, 33, 53, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Popup content */
@@ -107,14 +111,12 @@ h2 {
     align-items: flex-start;
     background-color: #010029;
     margin: 15% auto;
-    padding: 30px;
+    padding: 20px;
     border: 5px solid #010029;
     border-radius: 12px;
     width: 90%;
     max-width: 800px;
     position: relative;
-
-    /* Add the animation */
     animation-name: zoom;
     animation-duration: 0.4s;
 }
@@ -152,7 +154,6 @@ h2 {
 /* Close button */
 .close {
     align-self: flex-end;
-    /* Aligns the close button to the right */
     color: #ffffff;
     font-size: 28px;
     font-weight: bold;
@@ -165,33 +166,25 @@ h2 {
     text-decoration: none;
 }
 
-/* Adjustments to content alignment */
 .popup-content p {
     margin-top: 5px;
-    /* Add margin to create space between the close button and the content */
 }
 
-/* Adjustments to content alignment */
 .popup-content p,
-/* Ensure paragraphs are aligned left */
 .popup-content table,
-/* Ensure tables are aligned left */
 .popup-content div,
-/* Ensure divs within content are aligned left */
 .popup-content th,
 .popup-content td {
     text-align: left;
-    /* Ensure all text is left-aligned */
+    font-size: 1em;
 }
 
 .direction-info {
     margin-top: 30px;
     margin-bottom: 15px;
     width: 80%;
-    /* Adjust width to fit content */
     text-align: center;
     padding: 0 10px;
-    /* Add padding for better text readability */
     font-size: 22px;
 }
 
@@ -201,7 +194,6 @@ h2 {
     border-collapse: collapse;
     margin-top: 20px;
     text-align: left;
-    /* Align text left */
 }
 
 .directions-table th,
@@ -237,25 +229,16 @@ h2 {
 /* The Modal (background) */
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     padding-top: 100px;
-    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(41, 33, 53, 0.9);
-    /* Black w/ opacity */
 }
 
 /* Modal Content (Image) */
@@ -264,7 +247,6 @@ h2 {
     height: auto;
     max-height: 100%;
     object-fit: contain;
-    /* Ensures the image fits without being distorted */
 }
 
 /* Caption of Modal Image */
@@ -318,5 +300,83 @@ h2 {
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .directions-table,
+    .rates-table {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    .directions-table th,
+    .rates-table th {
+        padding: 8px;
+    }
+
+    .directions-table td,
+    .rates-table td {
+        padding: 8px;
+    }
+
+    .popup-content {
+        margin: 15% auto;
+        padding: 15px;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+
+    .direction-info {
+        font-size: 1.2em;
+    }
+
+    .tp-map-img {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .direction-buttons {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+
+    .direction-buttons button {
+        padding: 12px 20px;
+        font-size: 17px;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .direction-info {
+        font-size: 1.2em;
+    }
+
+    .directions-table th,
+    .rates-table th,
+    .directions-table td,
+    .rates-table td {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+
+    .close {
+        font-size: 22px;
+    }
+
+    .tp-map-img {
+        padding: 5px;
     }
 }

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const targetDate = new Date('2024-01-23T15:00:00');
+    const targetDate = new Date('2025-01-23T15:00:00');
     const config = {
         transitionDuration: 3000,
         time: 0,

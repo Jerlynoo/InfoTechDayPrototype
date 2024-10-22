@@ -122,12 +122,11 @@ h2 {
 /* CAROUSEL ITEMS */
 #carousel-container {
     width: 90%;
-    /* margin: 0 auto;  */
     padding: 0 20px;
     z-index: 1;
     overflow: hidden;
     height: 50vmin;
-    margin-top: 70px !important;
+    margin-top: 60px !important;
     margin-bottom: 70px !important;
 }
 
@@ -143,7 +142,8 @@ h2 {
 }
 
 .polaroid {
-    width: 40vmin;
+    width: 30vmin;
+    height: 40vmin;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 10px;
@@ -189,43 +189,12 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
-    #carousel-container {
-        padding: 0 10px;
-        height: 60vmin;
-    }
-
-    #image-track {
-        gap: 2vmin;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .polaroid {
-        width: 60vmin;
-    }
-
-    .polaroid img.image {
-        height: 50vmin;
-    }
-
     .container p {
         font-size: 1.1em;
     }
 }
 
 @media screen and (max-width: 480px) {
-    #carousel-container {
-        height: 70vmin;
-    }
-
-    .polaroid {
-        width: 80vmin;
-    }
-
-    .polaroid img.image {
-        height: 60vmin;
-    }
-
     .container p {
         font-size: 1em;
     }
@@ -320,10 +289,10 @@ h2 {
 .venue-info {
     margin-top: 2rem;
     font-size: 20px;
-    text-align: center; 
+    text-align: center;
     line-height: 1.8;
-    width: 100%; 
-    margin: 0 auto; 
+    width: 100%;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
