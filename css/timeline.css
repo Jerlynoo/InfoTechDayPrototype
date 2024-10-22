@@ -1,6 +1,6 @@
 .timeline {
 	margin: auto;
-	padding: 4em 1.5em 0;
+	padding: 2em 1.5em 0;
 	width: 100%;
 	max-width: 36em;
 }
@@ -39,11 +39,15 @@
 
 /* Button */
 .btn {
-	background-color: var(--fg);
+	/* background-color: var(--fg); */
+	/* background-color: rgb(74, 6, 221); */
 	border-radius: 0.25em;
+	/* border-color: rgb(76, 51, 190); */
+	border-color: white;
+	border-width: 0.15em;
 	color: var(--bg);
 	cursor: pointer;
-	padding: 0.375em 0.75em 2.5em;
+	padding: 0.375em 0.75em 0.5em;
 	transition:
 		background-color calc(var(--trans-dur) / 2) linear,
 		color var(--trans-dur);
