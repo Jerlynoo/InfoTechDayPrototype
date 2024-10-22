@@ -341,3 +341,18 @@ h2 {
         padding-bottom: 0;
     }
 }
+
+.description {
+    margin-left: 40px;
+}
+
+.description h2 {
+    margin: 0 0 15px;
+}
+
+.description p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: white; /* Ensure text color is visible */
+}
