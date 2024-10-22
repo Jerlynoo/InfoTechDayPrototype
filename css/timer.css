@@ -245,6 +245,9 @@
     #app {
         height: 65%;
     }
+    .welcome-message {
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 400px) {
