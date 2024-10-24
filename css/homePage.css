@@ -27,9 +27,9 @@ body {
 
 header {
     /* background-image: url('../images/tp-banner.png'); */
-    height: 50vh;
+    height: 30vh;
     margin-top: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     z-index: 4;
 }
 
@@ -43,14 +43,6 @@ h2 {
     font-family: 'Arsenal';
     font-size: 30px;
     margin-top: 20px;
-}
-
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 48px;
-    margin-top: 80px;
 }
 
 .event-info {
@@ -67,10 +59,10 @@ h2 {
 
 .description {
     font-size: 20px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     text-align: justify;
     line-height: 1.5;
-    padding: 0 30px;
+    padding: 10 30px;
     width: 90%;
 }
 
@@ -78,7 +70,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 30px;
+    padding: 50px;
 }
 
 .registration-buttons button {
