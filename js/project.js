@@ -1,18 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch('../data/project.json')
-    .then(response => response.json())
-    .then(data => {
-      const container = document.querySelector('.isotope-content .row');
-      data.forEach(project => {
-        const projectClass = project.Subject.toLowerCase().replace(/\s/g, '-');
+  // Fetch the project data from the JSON file
+  fetch("../data/project.json")
+    .then((response) => response.json())
+    .then((data) => {
+      // Render all projects initially
+      renderProjects(data);
+
+      // Add click event listeners to filter buttons
+      const filterButtons = document.querySelectorAll(".isotope-nav .nav-item");
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Get the filter from the data-filter attribute
+          const filterValue = button.getAttribute("data-filter");
+          // Call renderProjects with the selected filter
+          renderProjects(data, filterValue);
+          // Update active class
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+        });
+      });
+    })
+    .catch((error) => console.error("Error loading projects:", error));
+
+  // Function to render projects based on the selected filter
+  function renderProjects(data, filter = "*") {
+    const container = document.querySelector(".isotope-content .row");
+    container.innerHTML = ""; // Clear existing projects
+
+    // Filter and render projects
+    data.forEach((project) => {
+      const projectClass = project.Filter.toLowerCase().replace(/\s/g, "-");
+      if (filter === "*" || filter === `.${projectClass}`) {
         container.innerHTML += `
           <div class="item col-md-3 col-sm-6 col-xs-12 ${projectClass}" style="position: relative;">
             <div class="page-preview">
               <div class="thumb">
-                <img src="../project_images/${project.Title.toLowerCase().replace(/\s/g, '_')}.jpg" class="img-responsive" alt="${project.Title}" />
+                <img src="../project_images/${project.Title.toLowerCase().replace(
+                  /\s/g,
+                  "_"
+                )}.jpg" class="img-responsive" alt="${project.Title}" />
                 <div class="overlay-text"></div>
                 <div class="overlay">
-                  <a href="../project_pages/${project.Title.toLowerCase().replace(/\s/g, '_')}.html">View Page</a>
+                  <a href="../project_pages/${project.Title.toLowerCase().replace(
+                    /\s/g,
+                    "_"
+                  )}.html">View Page</a>
                 </div>
                 <!-- Caption -->
                 <div class="caption">
@@ -22,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         `;
-      });
-    })
-    .catch(error => console.error('Error loading projects:', error));
+      }
+    });
+  }
 });

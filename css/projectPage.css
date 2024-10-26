@@ -155,29 +155,42 @@
   margin-bottom: 30px;
   list-style: none;
   font-size: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   color: white;
 }
 
-
 .isotope-nav ul li {
   font-size: 1.2rem;
-  padding: 3px 20px;
-  border-radius: 3px;
+  padding: 10px 20px; 
+  border-radius: 5px; 
   cursor: pointer;
-  margin-bottom: 15px;
-  margin-top: 20px;
+  margin: 5px; 
+  transition: background-color 0.3s ease, border 0.3s ease; 
 }
-.isotope-nav ul li.active {
-  background: rgba(36, 109, 248, 0.15);
-  color: red;
+
+.isotope-nav ul li:hover {
+  background-color: white;
+  color: #000; 
+}
+
+.isotope-nav .nav-item.active {
+  font-weight: bold; 
+  border: 2px solid currentColor; 
+  color: white; 
+}
+
+.isotope-nav .nav-item.active.cybersecurity {
+  color: orange;
+}
+
+.isotope-nav .nav-item.active.ai {
+  color: green;
+}
+
+.isotope-nav .nav-item.active.digital-solution {
+  color: purple; 
 }
 
 @media all and (max-width: 767px) {

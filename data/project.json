@@ -1,15 +1,47 @@
 [
     {
     "Title": "Beating Saber",
-    "Subject": "AI",
+    "Filter": "ai",
     "Description": "Greatest Game Alive!!!",
     "Student": "HO WEI TING JERLYN",
     "Supervisor": "Daryl Chia (DR)",
     "Industrial_Partner": "Temasek Poly"
     },
     {
-    "Title": "Beating Saber",
-    "Subject": "AI",
+    "Title": "Crash",
+    "Filter": "digital-solution",
+    "Description": "Greatest Game Alive!!!",
+    "Student": "HO WEI TING JERLYN , JOSHUA TAN , JASMINE ANG",
+    "Supervisor": "Daryl Chia (DR) , HU HUIMEI (MS)",
+    "Industrial_Partner": "Temasek Poly"
+    },
+    {
+    "Title": "COVID 19 Analytics Dashboard Harnessing Descriptive and Predictive Analytics",
+    "Filter": "ai",
+    "Description": "Greatest Game Alive!!!",
+    "Student": "HO WEI TING JERLYN",
+    "Supervisor": "Daryl Chia (DR)",
+    "Industrial_Partner": "Temasek Poly"
+    },
+    {
+    "Title": "AI Chatbot",
+    "Filter": "ai",
+    "Description": "Greatest Game Alive!!!",
+    "Student": "HO WEI TING JERLYN",
+    "Supervisor": "Daryl Chia (DR)",
+    "Industrial_Partner": "Temasek Poly"
+    },
+    {
+    "Title": "Chatbot",
+    "Filter": "ai",
+    "Description": "Greatest Game Alive!!!",
+    "Student": "HO WEI TING JERLYN",
+    "Supervisor": "Daryl Chia (DR)",
+    "Industrial_Partner": "Temasek Poly"
+    },
+    {
+    "Title": "Hackaholic",
+    "Filter": "cybersecurity",
     "Description": "Greatest Game Alive!!!",
     "Student": "HO WEI TING JERLYN",
     "Supervisor": "Daryl Chia (DR)",

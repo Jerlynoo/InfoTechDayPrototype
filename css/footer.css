@@ -48,9 +48,15 @@ p.text-center{
 }
 
 .footer-middle .container {
-  width: 50%;
-  max-width: 100%; /* Ensure the container doesn't limit the width */
-  padding: 0; /* Remove any default padding if needed */
+  width: 50%; 
+  max-width: 100%; 
+  padding: 0; 
+}
+
+@media (max-width: 768px) {
+  .footer-middle .container {
+    width: 90%;
+  }
 }
 
 .footerlogo img {
