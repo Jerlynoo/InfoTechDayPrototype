@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center; 
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .venue-image-wrapper {
@@ -47,9 +47,9 @@
 }
 
 .venue-info {
-  flex: 5;
-  max-width: 90%;
-  text-align: left;
+  /* flex: 5; */
+  max-width: 50%;
+  text-align: center;
   padding-bottom: 5px; 
   padding-right: 15px;
   padding-left: 15px;
@@ -57,7 +57,7 @@
 
 .venue-info p {
   font-size: 1em;
-  text-align: left;
+  text-align: center;
   margin: 8px 0;
 }
 

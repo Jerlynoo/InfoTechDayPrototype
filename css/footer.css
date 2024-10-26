@@ -1,10 +1,9 @@
 /*FOOTER*/
 .sectionFooter {
-  background: #16222A;
   background: -webkit-linear-gradient(59deg, #d62839, #dc3545);
   background: #e6162f;
   color: white;
-  margin-top: 100px !important;
+  margin-top: 50px !important;
   text-align: left !important;
   width: 100%;
   padding: 0; /* Ensure padding does not affect the width */
@@ -28,7 +27,7 @@ p.text-center{
 .sectionFooter a {
   color: #fff;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 900;
   transition-duration: 0.2s;
 }
 
@@ -49,20 +48,21 @@ p.text-center{
 }
 
 .footer-middle .container {
-  width: 100%;
+  width: 50%;
   max-width: 100%; /* Ensure the container doesn't limit the width */
   padding: 0; /* Remove any default padding if needed */
 }
 
 .footerlogo img {
-  width: 300px;
+  width: 180px;
   /* Adjust the size as needed */
   height: auto;
   /* Maintain aspect ratio */
+  padding-left: 25px;
 }
 
 .footerlogo-2 img {
-  width: 100px;
+  width: 180px;
   /* Adjust the size as needed */
   height: auto;
   /* Maintain aspect ratio */
