@@ -43,6 +43,9 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
+            <div id="search-container" style="display: none">
+              <input type="text" id="search-bar" placeholder="Search..." />
+            </div>
             <div class="isotope-nav">
               <ul>
                 <li class="nav-item active" data-filter="*">All</li>
@@ -81,7 +84,6 @@
         <div class="header_wrap">
           <div class="num_rows">
             <div class="form-group">
-              <!--		Show Numbers Of Rows 		-->
               <select class="form-control" name="state" id="maxRows">
                 <option value="5">5</option>
                 <option value="10">10</option>
@@ -102,75 +104,22 @@
             />
           </div>
         </div>
+
+        <!-- Updated Table Structure -->
         <table class="table table-striped table-class" id="table-id">
           <thead>
             <tr>
               <th>Project Title</th>
               <th>Subject</th>
-              <!-- <th>Something here</th> -->
               <th></th>
             </tr>
           </thead>
-          <!-- Subject Names below: -->
-          <!-- Digital Solutions -->
-          <!-- Artificial Intelligence (AI) -->
-          <!-- Cybersecurity & Digital Forensics -->
-          <!-- For Student list more than 5, list in a span. -->
-          <!-- For Student list less than 5, list in a bulleting ul/li format -->
-          <tbody>
-            <!-- Crowne Plaza - Problem Solving Using AI Technologies for Operational Efficiency (AI) -->
-            <tr>
-              <td>Beating Saber</td>
-              <td>Artificial Intelligence (AI)</td>
-              <td>
-                <button
-                  class="minimalistic-button btn-view"
-                  data-modal-id="myModal1"
-                >
-                  View More
-                </button>
-              </td>
-              <div id="myModal1" class="modal">
-                <!-- Modal content -->
-                <div class="modal-dialog modal-dialog-scrollable">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Beating Saber</h5>
-                      <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <p>
-                        <!-- Description Title -->
-                        <b>Description</b><br />
-                        <!-- Description here -->
-                        Problem Statement consisting of multiple problem
-                        statements <br /><br />
-                        <!-- Students Title -->
-                        <b>Students</b><br />
-                        <!-- Students Here -->
-                        HO WEI TING JERLYN
-                        <br /><br />
-                        <!-- Supervisor Title -->
-                        <b>Supervisor</b><br />
-                        <!-- Supervisor(s) name here -->
-                        Cheng Shuyun (Ms), Andrew Chong (Mr)
-                        <br /><br />
-                        <!-- Industrial Partner Title -->
-                        <b>Industrial Partner</b><br />
-                        <!-- Industrial Partner here, if none, N.A -->
-                        N.A
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </tr>
+          <tbody id="table-body">
+            <!-- Rows will be added here dynamically -->
           </tbody>
         </table>
 
-        <!--	Start Pagination -->
+        <!-- Pagination Section -->
         <div id="pagination" class="pagination-container">
           <nav>
             <ul class="pagination pagination-button"></ul>
@@ -178,7 +127,6 @@
         </div>
         <div class="rows_count">Showing 11 to 20 of 91 entries</div>
       </div>
-      <!-- End of Container -->
     </section>
     <!-- Footer Section -->
   </body>

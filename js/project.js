@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
       renderProjects(data);
 
       // Add click event listeners to filter buttons
-      const filterButtons = document.querySelectorAll(".isotope-nav .nav-item");
+      const filterButtons = document.querySelectorAll(
+        ".isotope-nav .nav-item:not(#search-icon)"
+      );
       filterButtons.forEach((button) => {
         button.addEventListener("click", () => {
           // Get the filter from the data-filter attribute
@@ -19,18 +21,42 @@ document.addEventListener("DOMContentLoaded", () => {
           button.classList.add("active");
         });
       });
+
+      // Add event listener for the search icon to toggle the search bar
+      const searchIcon = document.getElementById("search-icon");
+      const searchContainer = document.getElementById("search-container");
+      searchIcon.addEventListener("click", () => {
+        searchContainer.style.display =
+          searchContainer.style.display === "none" ? "block" : "none";
+        // Optionally, focus the search bar when it becomes visible
+        if (searchContainer.style.display === "block") {
+          document.getElementById("search-bar").focus();
+        }
+      });
+
+      // Add event listener for the search bar
+      const searchBar = document.getElementById("search-bar");
+      searchBar.addEventListener("input", function () {
+        const query = this.value.toLowerCase(); // Get the search input
+        // Call renderProjects with the current filter and search query
+        renderProjects(data, "*", query);
+      });
     })
     .catch((error) => console.error("Error loading projects:", error));
 
   // Function to render projects based on the selected filter
-  function renderProjects(data, filter = "*") {
+  function renderProjects(data, filter = "*", query = "") {
     const container = document.querySelector(".isotope-content .row");
     container.innerHTML = ""; // Clear existing projects
 
     // Filter and render projects
     data.forEach((project) => {
       const projectClass = project.Filter.toLowerCase().replace(/\s/g, "-");
-      if (filter === "*" || filter === `.${projectClass}`) {
+      const isMatch = project.Title.toLowerCase().includes(query); // Check if the title includes the search query
+      if (
+        (filter === "*" || filter === `.${projectClass}`) &&
+        (query === "" || isMatch)
+      ) {
         container.innerHTML += `
           <div class="item col-md-3 col-sm-6 col-xs-12 ${projectClass}" style="position: relative;">
             <div class="page-preview">

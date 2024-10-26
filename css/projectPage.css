@@ -149,6 +149,33 @@
   text-decoration: underline;
 }
 
+.isotope-nav {
+  display: flex;
+  align-items: center;
+}
+
+#search-icon {
+  margin-left: 20px; /* Space between filter items and search icon */
+  font-size: 24px; /* Adjust the size of the search icon */
+}
+
+#search-container {
+  margin-bottom: 20px; /* Space between search bar and filters */
+}
+
+#search-bar {
+  width: 100%; /* Full width for the search bar */
+  padding: 10px; /* Padding for input */
+  border: 2px solid #ccc; /* Border styling */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+}
+
+#search-bar:focus {
+  border-color: #246df8; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
 .isotope-nav ul {
   padding: 10px;
   margin: 0;
