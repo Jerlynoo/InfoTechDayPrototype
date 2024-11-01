@@ -31,7 +31,7 @@ header {
 }
 
 h1 {
-    font-family: 'Brightness2';
+    font-family: 'Brightness1';
     font-size: 70px;
     margin: 0;
 }
@@ -72,7 +72,7 @@ section {
     background-color: hsl(var(--h, 0), 75%, 60%);
 }
 
-.container {
+.seminar-container {
     width: 100%;
     max-width: 80rem;
     padding: 0 max(5vw, 1rem);
@@ -81,7 +81,7 @@ section {
 }
 
 @media (min-width: 32em) {
-    .container {
+    .seminar-container {
         display: grid;
         grid-template-columns: repeat(7, minmax(0, 1fr));
         gap: 1rem;
@@ -90,7 +90,7 @@ section {
 
 nav {
     position: fixed;
-    top: 9rem;
+    top: 17rem;
     left: 0;
     width: 100%;
     z-index: 2;
@@ -110,7 +110,7 @@ nav::after {
 
 .marker {
     position: fixed;
-    top: 10.75rem;
+    top: 18.75rem;
     left: 4rem;
     width: 1rem;
     height: 1rem;
@@ -134,7 +134,7 @@ nav::after {
     position: relative;
     min-width: max(200rem, 200%);
     padding: 1.5rem max(100rem, 100%) 0 0;
-    height: 57rem;
+    /* height: 57rem; */
 }
 
 .nav__list {
