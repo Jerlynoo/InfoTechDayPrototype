@@ -313,6 +313,16 @@ h2 {
     margin: 0 auto;
 }
 
+.venue-info a {
+    color: rgb(50, 180, 255); /* Change to your desired shade of green */
+    text-decoration: none; /* Optional: Remove underline */
+  }
+  
+  .venue-info a:hover {
+    text-decoration: underline; /* Optional: Underline on hover */
+  }
+  
+
 @media screen and (max-width: 768px) {
     .venue-container {
         flex-direction: column;
