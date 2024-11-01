@@ -12,6 +12,28 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Nocashe';
+    src: url('../fonts/nocashe/Nocashe-0W4VX.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brightness1';
+    src: url('../fonts/brightness-2/Brightness.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brightness2';
+    src: url('../fonts/brightness-2/BrightnessBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -27,14 +49,14 @@ body {
 
 header {
     /* background-image: url('../images/tp-banner.png'); */
-    height: 30vh;
+    height: 20vh;
     margin-top: 50px;
     margin-bottom: 10px;
     z-index: 4;
 }
 
 h1 {
-    font-family: 'Baskerville Old Face', serif;
+    font-family: 'Brightness1';
     font-size: 70px;
     margin: 0;
 }
@@ -300,6 +322,30 @@ h2 {
         max-width: 100%;
         text-align: center;
         padding-bottom: 0;
+    }
+
+    h1 {
+        font-size: 55px;
+        margin: 0;
+    }
+    
+    h2 {
+        font-family: 'Arsenal';
+        font-size: 25px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 50px;
+        margin: 0;
+    }
+    
+    h2 {
+        font-family: 'Arsenal';
+        font-size: 22px;
+        margin-top: 20px;
     }
 }
 

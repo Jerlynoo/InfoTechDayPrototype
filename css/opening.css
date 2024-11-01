@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'Arsenal';
-    src: url('../fonts/Arsenal/Arsenal-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Fullscreen background */
 #opening-sequence {
     position: fixed;
@@ -24,9 +17,9 @@
 }
 
 #main-title {
-    font-size: 4rem;
-    font-family: 'Baskerville Old Face', serif;
-    color: #2e86de;
+    font-size: 5rem;
+    font-family: 'Brightness1';
+    color: #5d90c2;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     opacity: 0;
     animation: fadeIn 1.8s ease forwards; /* Fades in title */

@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'Brightness1';
+  src: url('../fonts/brightness-2/Brightness.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     color: #ccc;
-    background: #111;
+    background: #010029;
     font-family: sans-serif;
   }
   
@@ -19,6 +26,7 @@ body {
   
   .hero {
     font-size: clamp(40px, 10vw, 100px);
+    font-family: 'Brightness1';
     line-height: 1;
     display: inline-block;
     color: #fff;

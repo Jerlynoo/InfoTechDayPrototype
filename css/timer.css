@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Brightness2';
+    src: url('../fonts/brightness-2/BrightnessBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --dark-rgb: 23 28 28;
     --darker-rgb: 8 13 7;

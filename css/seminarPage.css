@@ -21,7 +21,7 @@ body {
     --navTextColor: #c7c7c7;
     --mainBg: #010029;
     min-height: 100vh;
-    color: #141417;
+    color: #010029;
     background: var(--mainBg);
 }
 
@@ -31,7 +31,7 @@ header {
 }
 
 h1 {
-    font-family: 'Baskerville Old Face', serif;
+    font-family: 'Brightness2';
     font-size: 70px;
     margin: 0;
 }
@@ -93,8 +93,6 @@ nav {
     top: 9rem;
     left: 0;
     width: 100%;
-    /* background: var(--navBgColor);
-    color: var(--navTextColor); */
     z-index: 2;
     height: 6rem;
 }

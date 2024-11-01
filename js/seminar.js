@@ -1,4 +1,12 @@
-import lodashThrottle from "https://cdn.skypack.dev/lodash.throttle@4.1.1";
+function throttle(func, delay) {
+    let lastCall = 0;
+    return function (...args) {
+        const now = new Date().getTime();
+        if (now - lastCall < delay) return;
+        lastCall = now;
+        return func(...args);
+    };
+}
 
 const scrollContainer = document.querySelector('[data-scroller]')
 const sections = gsap.utils.toArray('section')
@@ -14,14 +22,14 @@ const getDraggableWidth = () => {
     return ((track.offsetWidth * 0.5) - lastItemWidth())
 }
 
-const updatePosition = () => {
-    const left = track.getBoundingClientRect().left * -1
-    const width = getDraggableWidth()
-    const useableHeight = getUseableHeight()
-    const y = gsap.utils.mapRange(0, width, 0, useableHeight, left)
+const updatePosition = throttle(() => {
+    const left = track.getBoundingClientRect().left * -1;
+    const width = getDraggableWidth();
+    const useableHeight = getUseableHeight();
+    const y = gsap.utils.mapRange(0, width, 0, useableHeight, left);
 
-    st.scroll(y)
-}
+    st.scroll(y);
+}, 100);
 
 const tl = gsap.timeline()
     .to(track, {
