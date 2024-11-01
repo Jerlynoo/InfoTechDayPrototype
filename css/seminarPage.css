@@ -88,7 +88,7 @@ section {
     }
 }
 
-nav {
+/* nav {
     position: fixed;
     top: 17rem;
     left: 0;
@@ -134,7 +134,6 @@ nav::after {
     position: relative;
     min-width: max(200rem, 200%);
     padding: 1.5rem max(100rem, 100%) 0 0;
-    /* height: 57rem; */
 }
 
 .nav__list {
@@ -188,7 +187,7 @@ nav::after {
 
 .nav__link.is-active::after {
     display: none;
-}
+} */
 
 .section__heading {
     font-size: clamp(2rem, 12vmin, 7rem);
