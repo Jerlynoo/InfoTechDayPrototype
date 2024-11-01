@@ -96,7 +96,8 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
     text-transform: uppercase;
-    min-width: 200px; /* Sets a minimum width to maintain size on larger screens */
+    width: 280px;
+    max-width: 100%; 
 }
 
 .general-registration-button {
