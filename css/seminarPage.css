@@ -62,7 +62,7 @@ img {
     max-width: 100%;
 }
 
-section {
+section:not(.sectionFooter) {
     --h: calc(var(--i) * 30);
     min-height: 100vh;
     padding: 8rem 0 max(5vh, 2rem);
@@ -74,7 +74,7 @@ section {
 
 .seminar-container {
     width: 100%;
-    max-width: 80rem;
+    /* max-width: 80rem; */
     padding: 0 max(5vw, 1rem);
     transform-style: perspective-3d;
     perspective: 900px;
