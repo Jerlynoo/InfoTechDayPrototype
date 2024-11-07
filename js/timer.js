@@ -53,48 +53,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const startCountdown = () => {
+  const checkEventStatus = () => {
     const now = new Date();
     const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
     config.time = timeRemaining;
 
     if (timeRemaining > 0) {
       updateCountdownDisplay();
-      setTimeout(startCountdown, 1000);
-    } else {
-      if (now >= targetDate && now < eventEndDate) {
-        // Show Welcome message on the day of the event
-        displayMessage("WELCOME TO TP INFOTECH DAY 2025");
-      } else if (now >= eventEndDate) {
-        // After the event is over (24th Jan onwards)
-        displayMessage("THANK YOU!<br>The Event is Over :)", "5rem", "6rem");
-      }
+    } else if (now >= targetDate && now < eventEndDate) {
+      // Show Welcome message on the day of the event
+      displayMessage("WELCOME TO TP INFOTECH DAY 2025");
+    } else if (now >= eventEndDate) {
+      // After the event is over (24th Jan onwards)
+      displayMessage("THANK YOU!<br>The Event is Over :)", "5rem", "6rem");
+      clearInterval(intervalId); // Stop checking after the thank-you message
     }
   };
 
-  window.onload = () => {
-    const now = new Date();
-    const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
-    config.time = timeRemaining;
+  // Set an interval to check every second
+  const intervalId = setInterval(checkEventStatus, 1000);
 
-    if (timeRemaining > 0) {
-      updateCountdownDisplay();
-      startCountdown();
-    } else {
-      if (now >= targetDate && now < eventEndDate) {
-        // Show Welcome message on the day of the event
-        displayMessage("WELCOME TO TP INFOTECH DAY 2025");
-      } else if (now >= eventEndDate) {
-        // After the event is over (24th Jan onwards)
-        displayMessage("THANK YOU!<br>The Event is Over :)", "5rem", "6rem");
-      }
-    }
-
-    const handleRedo = () => {
-      location.reload();
-      console.log("Page reloaded");
-    };
-
-    window.handleRedo = handleRedo;
-  };
+  // Initial check to update the display immediately on page load
+  checkEventStatus();
 });
