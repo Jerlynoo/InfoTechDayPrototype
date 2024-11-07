@@ -1,358 +1,204 @@
-@font-face {
-    font-family: 'Arsenal';
-    src: url('../fonts/Arsenal/Arsenal-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Overpass';
-    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Overpass';
-    background-color: #010029;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
+    height: 1500px;
+    background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);
+    font-family: 'Arial', sans-serif;
 }
 
-header {
-    /* background-image: url('../images/tp-banner.png'); */
-    height: 50vh;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    z-index: 4;
-}
-
-h1 {
-    font-family: 'Baskerville Old Face', serif;
-    font-size: 70px;
-    margin: 0;
-}
-
-h2 {
-    font-family: 'Arsenal';
-    font-size: 30px;
-    margin-top: 20px;
-}
-
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 48px;
-    margin-top: 80px;
-}
-
-.event-info {
-    margin-top: 90px;
+/* Header Styling */
+.header {
+    position: fixed;
     width: 100%;
+    height: 250px;
+    font-weight: bold;
     text-align: center;
-    padding: 0 10px;
+    background: gold;
+    transition: .3s;
+    z-index: 10; /* Ensure header is on top of other content */
+    padding: 10px 0; /* To provide space at the top and bottom */
 }
 
-.event-info p {
-    font-size: 30px;
-    margin: 0;
-}
-
-.description {
-    font-size: 20px;
-    margin-top: 50px;
-    text-align: justify;
-    line-height: 1.5;
-    padding: 0 30px;
-    width: 90%;
-}
-
-.registration-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
-}
-
-.registration-buttons button {
-    padding: 15px 30px;
-    font-size: 24px;
-    font-weight: 1000;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.general-registration-button {
-    background-color: red;
-    color: white;
-}
-
-.student-registration-button {
-    background-color: #1E7EFF;
-    color: white;
-}
-
-.registration-buttons span {
-    display: block;
-    font-size: 20px;
-    margin-top: 5px;
-    text-transform: none;
-}
-
-@media (max-width: 768px) {
-    .registration-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-.header-title {
-    margin-top: 10px;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* CAROUSEL ITEMS */
-#carousel-container {
-    width: 90%;
-    /* margin: 0 auto;  */
-    padding: 0 20px;
-    z-index: 1;
-    overflow: hidden;
-    height: 50vmin;
-    margin-top: 70px !important;
-    margin-bottom: 70px !important;
-}
-
-#image-track {
-    display: flex;
-    gap: 4vmin;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    user-select: none;
+.header-logo {
+    position: absolute;
+    top: 20px; /* Adjust to align with the header */
+    right: 20px; /* Adjust to place it on the right edge */
+    height: 50px; /* Size of the logo */
     width: auto;
 }
 
-.polaroid {
-    width: 40vmin;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/* When header becomes small, adjust offset padding */
+.header.small + .offset {
+    padding-top: 120px; /* Adjust according to the reduced header height */
+}
+
+/* If header shrinks to a small size, adjust padding in .offset */
+.offset {
+    padding-top: 270px; /* Initial padding when header is not shrunk */
+    transition: .3s;
+}
+
+/* If you want to adjust the small header more */
+.header.small {
+    height: 70px; /* Smaller header height */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding-top: 10px; /* Adjust top padding to make room for logo */
+}
+
+.header_logo {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding-top: 80px;
+    font-size: 50px;
+    text-shadow: 3px 4px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+.header.small .header_logo {
+    padding-top: 20px;
+    font-size: 20px;
+    text-shadow: none;
+}
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.title-section h1 {
+    font-size: 36px;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.left-column {
+    flex: 1.2;  
+}
+
+.right-column {
+    flex: 1.8; 
+}
+
+.project-image img {
+    width: 100%;     
+    max-width: 450px;      
+    height: 250px;          
+    border: 3px solid #ccc;
+    object-fit: cover;     
+    margin-bottom: 20px;
+}
+
+/* Key Benefits, Technologies Section */
+.key-benefits, .technologies {
+    margin-bottom: 20px;
+}
+
+.key-benefits h2, .technologies h2 {
+    font-size: 24px;
     margin-bottom: 10px;
-    border-radius: 15px;
+}
+
+.key-benefits ul, .technologies ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 10px;
 }
 
-.polaroid:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.polaroid a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.polaroid:hover .container p {
-    text-decoration: underline;
-}
-
-.polaroid img.image {
-    width: 100%;
-    height: 40vmin;
-    object-fit: cover;
-    object-position: 100% center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.container {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.container p {
-    font-size: 1.3em;
-    color: #000000;
-}
-
-@media screen and (max-width: 768px) {
-    #carousel-container {
-        padding: 0 10px;
-        height: 60vmin;
-    }
-
-    #image-track {
-        gap: 2vmin;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .polaroid {
-        width: 60vmin;
-    }
-
-    .polaroid img.image {
-        height: 50vmin;
-    }
-
-    .container p {
-        font-size: 1.1em;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #carousel-container {
-        height: 70vmin;
-    }
-
-    .polaroid {
-        width: 80vmin;
-    }
-
-    .polaroid img.image {
-        height: 60vmin;
-    }
-
-    .container p {
-        font-size: 1em;
-    }
-}
-
-/* LOCATION GUIDE */
-@keyframes zoom {
-    from {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.tp-map-img {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.tp-map-img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(41, 33, 53, 0.9);
-}
-
-.modal-content {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.modal-content,
-#caption {
-    animation-name: zoom;
-    animation-duration: 0.4s;
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-
-    to {
-        transform: scale(1)
-    }
-}
-
-.close-modal {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
+.key-benefits li, .technologies li {
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.close-modal:hover,
-.close-modal:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+.project-description {
+    margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 700px) {
-    .modal-content {
-        width: 100%;
-    }
+.students, .supervisor, .industrial-partner {
+    margin-bottom: 20px;
 }
 
-.venue-info {
-    margin-top: 2rem;
-    font-size: 20px;
-    text-align: center; 
-    line-height: 1.8;
-    width: 100%; 
-    margin: 0 auto; 
+.students h2, .supervisor h2, .industrial-partner h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .venue-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .venue-image-wrapper,
-    .venue-info {
-        max-width: 100%;
-        text-align: center;
-        padding-bottom: 0;
-    }
+.student p, .supervisor p, .industrial-partner p {
+    text-transform: uppercase;
 }
 
-.description {
-    margin-left: 40px;
+/* Students Grid */
+.student-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.description h2 {
-    margin: 0 0 15px;
+.student {
+    text-align: center;
+    width: 100px;
 }
 
-.description p {
-    margin: 0;
-    line-height: 1.6;
-    font-size: 1.1em;
-    color: white; /* Ensure text color is visible */
+.student-image img {
+    width: 300px; 
+    height: auto;
+    border-radius: 0;
+    padding: 20px;
+}
+
+.student p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #ccc;
+    font-size: 14px;
+}
+
+/* General icon styling */
+.icon {
+    font-size: 1.5em; /* Icon size */
+    margin-right: 10px; /* Spacing between icon and text */
+    color: #000; /* Icon color */
+}
+
+/* Key Technologies Section Styling */
+.key-technologies {
+    margin-top: 20px;
+}
+
+.key-technologies h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.technology-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.2em; /* Adjust text size for better consistency */
+    line-height: 1.6; /* Better line spacing for readability */
+}
+
+.technology-item i {
+    font-size: 1.5em; /* Ensure the icon size matches the text */
+}
+
+.key-technologies .technology-item:last-child {
+    margin-bottom: 0; /* Remove margin for the last item */
 }
