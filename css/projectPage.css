@@ -12,6 +12,7 @@
 /* Other Pages Background */
 #other-pages {
   background-color: #010029;
+  padding-top: 20px;
 } 
 #other-pages:focus {
   outline: none;

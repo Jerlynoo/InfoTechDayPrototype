@@ -1,547 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TP InfoTech Day 2025</title>
-    <link rel="icon" href="images/favicon.png" type="image/png" />
-    <!-- Footer scripts -->
-    <!-- jquery -->
-    <script src="./ext/jquery.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./ext/bootstrap.min.css" />
-    <!-- Bootstrap JS -->
-    <script src="./ext/bootstrap.min.js"></script>
-    <!-- Fontawesome JS -->
-    <script src="./ext/3b161c540c.js" crossorigin="anonymous"></script>
-    <!-- Fontawesome CSS -->
-    <link href="./ext/font-awesome.min.css" rel="stylesheet" />
-    <!-- main style css -->
-    <link rel="stylesheet" href="css/homePage.css" />
-    <!-- navbar css -->
-    <link rel="stylesheet" href="css/navbar.css" />
-    <!-- footer css -->
-    <link rel="stylesheet" href="css/footer.css" />
-    <!-- opening css -->
-    <link rel="stylesheet" href="css/opening.css" />
-    <!-- timeline css -->
-    <link rel="stylesheet" href="css/timeline.css" />
-    <!-- Venue css -->
-    <link rel="stylesheet" href="css/venue.css" />
-    <!-- Timer css -->
-    <link rel="stylesheet" href="css/timer.css" />
-  </head>
 
-  <body>
-    <!-- Opening Sequence -->
-    <div id="opening-sequence">
-      <div id="main-title">TP InfoTech Day 2025</div>
-      <div id="sub-title">Creating Tomorrow's Solutions Today</div>
-    </div>
-    <!-- NAV -->
-    <header>
-      <h1>TP InfoTech Day 2025</h1>
-      <h2>Creating Tomorrow's Solutions Today</h2>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Temasek Polytechnic (TP) InfoTech Day is an annual event organised by the School of Informatics & IT. It comprises seminars and a showcase of student projects. The displays at the event feature innovative technology projects completed by final-year students. The TP InfoTech Day 2025 microsite offers an online platform for visitors to experience the innovations developed by our students.">
+  <title>TP InfoTech Day 2025</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <!-- Footer scripts -->
+  <!-- jquery -->
+  <script src="./ext/jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./ext/bootstrap.min.css" />
+  <!-- Bootstrap JS -->
+  <script src="./ext/bootstrap.min.js"></script>
+  <!-- Fontawesome JS -->
+  <script src="./ext/3b161c540c.js" crossorigin="anonymous"></script>
+  <!-- Fontawesome CSS -->
+  <link href="./ext/font-awesome.min.css" rel="stylesheet" />
+  <!-- main style css -->
+  <link rel="stylesheet" href="css/homePage.css" />
+  <!-- navbar css -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <!-- footer css -->
+  <link rel="stylesheet" href="css/footer.css" />
+  <!-- opening css -->
+  <link rel="stylesheet" href="css/opening.css" />
+  <!-- timeline css -->
+  <link rel="stylesheet" href="css/timeline.css" />
+  <!-- Venue css -->
+  <link rel="stylesheet" href="css/venue.css" />
+  <!-- Timer css -->
+  <link rel="stylesheet" href="css/timer.css" />
+</head>
 
-    <div id="app">
-      <div id="prize">
-        <div id="prize-lines" class="prize-filter"></div>
-        <div id="prize-shadow" class="prize-filter"></div>
-        <h2 id="prize-label">
-          <span class="asterisk">*</span>
-          <span>COUNTDOWN TO TP INFOTECH DAY 2025</span>
-          <span class="asterisk">*</span>
-        </h2>
-        <div id="prize-text">
-          <div class="time-group" id="days-group">
-            <div class="digits" id="days"></div>
-            <span class="label">DAYS</span>
-          </div>
-          <div class="time-group" id="hours-group">
-            <div class="digits" id="hours"></div>
-            <span class="label">HOURS</span>
-          </div>
-          <div class="time-group" id="minutes-group">
-            <div class="digits" id="minutes"></div>
-            <span class="label">MINUTES</span>
-          </div>
-          <div class="time-group" id="seconds-group">
-            <div class="digits" id="seconds"></div>
-            <span class="label">SECONDS</span>
-          </div>
+<body>
+  <!-- Opening Sequence -->
+  <div id="opening-sequence">
+    <div id="main-title">TP InfoTech Day 2025</div>
+    <div id="sub-title">Creating Tomorrow's Solutions Today</div>
+  </div>
+  <!-- NAV -->
+  <header>
+    <h1>TP InfoTech Day 2025</h1>
+    <h2>Creating Tomorrow's Solutions Today</h2>
+  </header>
+
+  <div id="app">
+    <div id="prize">
+      <div id="prize-lines" class="prize-filter"></div>
+      <div id="prize-shadow" class="prize-filter"></div>
+      <h2 id="prize-label">
+        <span class="asterisk">*</span>
+        <span>COUNTDOWN TO TP INFOTECH DAY 2025</span>
+        <span class="asterisk">*</span>
+      </h2>
+      <div id="prize-text">
+        <div class="time-group" id="days-group">
+          <div class="digits" id="days"></div>
+          <span class="label">DAYS</span>
+        </div>
+        <div class="time-group" id="hours-group">
+          <div class="digits" id="hours"></div>
+          <span class="label">HOURS</span>
+        </div>
+        <div class="time-group" id="minutes-group">
+          <div class="digits" id="minutes"></div>
+          <span class="label">MINUTES</span>
+        </div>
+        <div class="time-group" id="seconds-group">
+          <div class="digits" id="seconds"></div>
+          <span class="label">SECONDS</span>
         </div>
       </div>
     </div>
-    <div class="event-info">
-      <p>23 January (Thurs) | 3PM - 9PM | TP Main Foyer & Auditorium 1 & 2</p>
-    </div>
-    <div class="registration-buttons">
-      <button
-        class="general-registration-button"
-        onclick="window.open('https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=8JupJXKOKkeuUK373w328bXn78rqNLdLpi-511rKTPxUOTIzOU5QWlRGSllWMUhQVU9VMU9GQU5CWC4u', '_blank');"
-      >
-        REGISTER NOW<br /><span>(General)</span>
-      </button>
+  </div>
+  <div class="event-info">
+    <p>23 January (Thurs) | 3PM - 9PM | TP Main Foyer & Auditorium 1 & 2</p>
+  </div>
+  <div class="registration-buttons">
+    <button class="general-registration-button"
+      onclick="window.open('https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=8JupJXKOKkeuUK373w328bXn78rqNLdLpi-511rKTPxUOTIzOU5QWlRGSllWMUhQVU9VMU9GQU5CWC4u', '_blank');">
+      REGISTER NOW<br /><span>(General)</span>
+    </button>
 
-      <button
-        class="student-registration-button"
-        onclick="window.open('https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=8JupJXKOKkeuUK373w328bXn78rqNLdLpi-511rKTPxURFNUTkVNOEQzSjE3WElZNEtNRUtSQ0FGRi4u', '_blank');"
-      >
-        REGISTER NOW<br /><span>(For TP Students Only)</span>
+    <button class="student-registration-button"
+      onclick="window.open('https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=8JupJXKOKkeuUK373w328bXn78rqNLdLpi-511rKTPxURFNUTkVNOEQzSjE3WElZNEtNRUtSQ0FGRi4u', '_blank');">
+      REGISTER NOW<br /><span>(For TP Students Only)</span>
+    </button>
+  </div>
+  <div class="description">
+    <p>
+      The Temasek Polytechnic (TP) InfoTech Day is an annual event organised
+      by the School of Informatics & IT. It comprises seminars and a showcase
+      of student projects. The displays at the event feature innovative
+      technology projects completed by final year students. The TP InfoTech
+      Day 2025 microsite offers an online platform for visitors to experience
+      the innovations developed by our students. This microsite enables
+      visitors to view the seminar details and projects online. All projects
+      have been undertaken in collaboration with industry partners and various
+      government agencies, employing the latest technologies in critical areas
+      such as AI-Driven Trends and Innovations, Future-Oriented Cybersecurity,
+      and Next-Gen Digital Transformation.
+    </p>
+  </div>
+  <hr />
+  <div class="header-title">
+    <h1>Featured Projects</h1>
+  </div>
+  <div id="carousel-container">
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      <a href="pages/project.html" class="polaroid">
+        <img class="image" src="images/medium-shot-man-wearing-vr-glasses_23-2149126949.avif" draggable="false" />
+        <div class="container">
+          <p>Coming Soon...</p>
+        </div>
+      </a>
+      <a href="pages/project.html" class="polaroid">
+        <img class="image" src="images/learning-in-the-new-age-2.jpg" draggable="false" />
+        <div class="container">
+          <p>Coming Soon...</p>
+        </div>
+      </a>
+      <a href="pages/project.html" class="polaroid">
+        <img class="image"
+          src="images/How_Smart_Technology_is_Enhancing_Transportation_2024_03_20_07_13_45_334784_00_00.jpeg"
+          draggable="false" />
+        <div class="container">
+          <p>Coming Soon...</p>
+        </div>
+      </a>
+      <a href="pages/project.html" class="polaroid">
+        <img class="image" src="images/modern-education-Skillstork-1568x882.jpg" draggable="false" />
+        <div class="container">
+          <p>Coming Soon...</p>
+        </div>
+      </a>
+      <a href="pages/project.html" class="polaroid">
+        <img class="image" src="images/medium-shot-man-wearing-vr-glasses_23-2149126949.avif" draggable="false" />
+        <div class="container">
+          <p>Coming Soon...</p>
+        </div>
+      </a>
+      <a href="pages/project.html" class="polaroid">
+        <img class="image" src="images/learning-in-the-new-age-2.jpg" draggable="false" />
+        <div class="container">
+          <p>Coming Soon...</p>
+        </div>
+      </a>
+      <a href="pages/project.html" class="polaroid">
+        <img class="image"
+          src="images/How_Smart_Technology_is_Enhancing_Transportation_2024_03_20_07_13_45_334784_00_00.jpeg"
+          draggable="false" />
+        <div class="container">
+          <p>Coming Soon...</p>
+        </div>
+      </a>
+      <a href="pages/project.html" class="polaroid">
+        <img class="image" src="images/modern-education-Skillstork-1568x882.jpg" draggable="false" />
+        <div class="container">
+          <p>Coming Soon...</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- Seminars Section -->
+  <svg display="none">
+    <symbol id="arrow">
+      <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="2" />
+    </symbol>
+  </svg>
+  <h1>Seminars</h1>
+  <div id="timeline" class="timeline">
+    <div class="btn-group">
+      <button class="btn" type="button" data-action="expand">
+        Expand All
+      </button>
+      <button class="btn" type="button" data-action="collapse">
+        Collapse All
       </button>
     </div>
-    <div class="description">
+    <div class="timeline__item">
+      <div class="timeline__item-header">
+        <button class="timeline__arrow" type="button" id="item1" aria-labelledby="item1-name" aria-expanded="false"
+          aria-controls="item1-ctrld" aria-haspopup="true" data-item="1">
+          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+            <use href="#arrow" />
+          </svg>
+        </button>
+        <span class="timeline__dot"></span>
+        <span id="item1-name" class="timeline__meta">
+          <time class="timeline__date" datetime="1970-01-01">2.00PM</time><br />
+          <strong class="timeline__title">Coming Soon...</strong>
+        </span>
+      </div>
+      <div class="timeline__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
+        <div class="timeline__item-body-content">
+          <!-- Placeholder Name -->
+          <p class="timeline__item-p">Coming Soon...</p>
+          <!-- Current Position -->
+          <p>Coming Soon...</p>
+          <!-- Company Name -->
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+    </div>
+    <div class="timeline__item">
+      <div class="timeline__item-header">
+        <button class="timeline__arrow" type="button" id="item2" aria-labelledby="item2-name" aria-expanded="false"
+          aria-controls="item2-ctrld" aria-haspopup="true" data-item="2">
+          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+            <use href="#arrow" />
+          </svg>
+        </button>
+        <span class="timeline__dot"></span>
+        <span id="item2-name" class="timeline__meta">
+          <time class="timeline__date" datetime="1973-10-17">2.30PM</time><br />
+          <strong class="timeline__title">Coming Soon...</strong>
+        </span>
+      </div>
+      <div class="timeline__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+        <div class="timeline__item-body-content">
+          <!-- Placeholder Name -->
+          <p class="timeline__item-p">Coming Soon...</p>
+          <!-- Current Position -->
+          <p>Coming Soon...</p>
+          <!-- Company Name -->
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+    </div>
+    <div class="timeline__item">
+      <div class="timeline__item-header">
+        <button class="timeline__arrow" type="button" id="item3" aria-labelledby="item3-name" aria-expanded="false"
+          aria-controls="item3-ctrld" aria-haspopup="true" data-item="3">
+          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+            <use href="#arrow" />
+          </svg>
+        </button>
+        <span class="timeline__dot"></span>
+        <span id="item3-name" class="timeline__meta">
+          <time class="timeline__date" datetime="2001-09-09">3.00PM</time><br />
+          <strong class="timeline__title">Coming Soon...</strong>
+        </span>
+      </div>
+      <div class="timeline__item-body" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
+        <div class="timeline__item-body-content">
+          <!-- Placeholder Name -->
+          <p class="timeline__item-p">Coming Soon...</p>
+          <!-- Current Position -->
+          <p>Coming Soon...</p>
+          <!-- Company Name -->
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+    </div>
+    <div class="timeline__item">
+      <div class="timeline__item-header">
+        <button class="timeline__arrow" type="button" id="item4" aria-labelledby="item4-name" aria-expanded="false"
+          aria-controls="item4-ctrld" aria-haspopup="true" data-item="4">
+          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+            <use href="#arrow" />
+          </svg>
+        </button>
+        <span class="timeline__dot"></span>
+        <span id="item4-name" class="timeline__meta">
+          <time class="timeline__date" datetime="2009-02-13">4.30PM</time><br />
+          <strong class="timeline__title">Coming Soon...</strong>
+        </span>
+      </div>
+      <div class="timeline__item-body" id="item4-ctrld" role="region" aria-labelledby="item4" aria-hidden="true">
+        <div class="timeline__item-body-content">
+          <!-- Placeholder Name -->
+          <p class="timeline__item-p">Coming Soon...</p>
+          <!-- Current Position -->
+          <p>Coming Soon...</p>
+          <!-- Company Name -->
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+    </div>
+    <div class="timeline__item">
+      <div class="timeline__item-header">
+        <button class="timeline__arrow" type="button" id="item5" aria-labelledby="item5-name" aria-expanded="false"
+          aria-controls="item5-ctrld" aria-haspopup="true" data-item="5">
+          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+            <use href="#arrow" />
+          </svg>
+        </button>
+        <span class="timeline__dot"></span>
+        <span id="item5-name" class="timeline__meta">
+          <time class="timeline__date" datetime="2033-05-18">5.00PM</time><br />
+          <strong class="timeline__title">Coming Soon...</strong>
+        </span>
+      </div>
+      <div class="timeline__item-body" id="item5-ctrld" role="region" aria-labelledby="item5" aria-hidden="true">
+        <div class="timeline__item-body-content">
+          <!-- Placeholder Name -->
+          <p class="timeline__item-p">Coming Soon...</p>
+          <!-- Current Position -->
+          <p>Coming Soon...</p>
+          <!-- Company Name -->
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+    </div>
+    <div class="timeline__item">
+      <div class="timeline__item-header">
+        <button class="timeline__arrow" type="button" id="item6" aria-labelledby="item6-name" aria-expanded="false"
+          aria-controls="item6-ctrld" aria-haspopup="true" data-item="6">
+          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+            <use href="#arrow" />
+          </svg>
+        </button>
+        <span class="timeline__dot"></span>
+        <span id="item6-name" class="timeline__meta">
+          <time class="timeline__date" datetime="2038-01-19">6.00PM</time><br />
+          <strong class="timeline__title">Coming Soon...</strong>
+        </span>
+      </div>
+      <div class="timeline__item-body" id="item6-ctrld" role="region" aria-labelledby="item6" aria-hidden="true">
+        <div class="timeline__item-body-content">
+          <!-- Placeholder Name -->
+          <p class="timeline__item-p">Coming Soon...</p>
+          <!-- Current Position -->
+          <p>Coming Soon...</p>
+          <!-- Company Name -->
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- Venue Section -->
+  <section class="header-title">
+    <h1>Venue Information</h1>
+    <div class="tp-map">
+      <img class="tp-map-img" src="./images/TP-Map.png" draggable="false" onclick="openModal()" />
+    </div>
+    <div id="imageModal" class="modal">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="expandedImage" />
+      <div id="caption"></div>
+    </div>
+    <div class="venue-info">
+      <p><strong>Venue Details:</strong></p>
+      <p>23 January 2025 (Thursday), 3PM - 9PM</p>
+      <p>TP Main Foyer and Auditorium 1 & 2</p>
       <p>
-        The Temasek Polytechnic (TP) InfoTech Day is an annual event organised
-        by the School of Informatics & IT. It comprises seminars and a showcase
-        of student projects. The displays at the event feature innovative
-        technology projects completed by final year students. The TP InfoTech
-        Day 2025 microsite offers an online platform for visitors to experience
-        the innovations developed by our students. This microsite enables
-        visitors to view the seminar details and projects online. All projects
-        have been undertaken in collaboration with industry partners and various
-        government agencies, employing the latest technologies in critical areas
-        such as AI-Driven Trends and Innovations, Future-Oriented Cybersecurity,
-        and Next-Gen Digital Transformation.
+        <a href="https://maps.app.goo.gl/QPNgcZdAfEHjNQda8" target="_blank">
+          21 Tampines Avenue 1, Singapore 529757
+        </a>
+      </p>
+      <p>Nearest Parking:</p>
+      <p><strong>Carpark C and E</strong></p>
+      <p>
+        <a class="mapDownload locationClick" href="./images/TP-Map.png" target="_blank" download>
+          Download TP Campus Map
+        </a>
       </p>
     </div>
-    <hr />
-    <div class="header-title">
-      <h1>Featured Projects</h1>
-    </div>
-    <div id="carousel-container">
-      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-        <a href="pages/project.html" class="polaroid">
-          <img
-            class="image"
-            src="images/medium-shot-man-wearing-vr-glasses_23-2149126949.avif"
-            draggable="false"
-          />
-          <div class="container">
-            <p>Coming Soon...</p>
-          </div>
-        </a>
-        <a href="pages/project.html" class="polaroid">
-          <img
-            class="image"
-            src="images/learning-in-the-new-age-2.jpg"
-            draggable="false"
-          />
-          <div class="container">
-            <p>Coming Soon...</p>
-          </div>
-        </a>
-        <a href="pages/project.html" class="polaroid">
-          <img
-            class="image"
-            src="images/How_Smart_Technology_is_Enhancing_Transportation_2024_03_20_07_13_45_334784_00_00.jpeg"
-            draggable="false"
-          />
-          <div class="container">
-            <p>Coming Soon...</p>
-          </div>
-        </a>
-        <a href="pages/project.html" class="polaroid">
-          <img
-            class="image"
-            src="images/modern-education-Skillstork-1568x882.jpg"
-            draggable="false"
-          />
-          <div class="container">
-            <p>Coming Soon...</p>
-          </div>
-        </a>
-        <a href="pages/project.html" class="polaroid">
-          <img
-            class="image"
-            src="images/medium-shot-man-wearing-vr-glasses_23-2149126949.avif"
-            draggable="false"
-          />
-          <div class="container">
-            <p>Coming Soon...</p>
-          </div>
-        </a>
-        <a href="pages/project.html" class="polaroid">
-          <img
-            class="image"
-            src="images/learning-in-the-new-age-2.jpg"
-            draggable="false"
-          />
-          <div class="container">
-            <p>Coming Soon...</p>
-          </div>
-        </a>
-        <a href="pages/project.html" class="polaroid">
-          <img
-            class="image"
-            src="images/How_Smart_Technology_is_Enhancing_Transportation_2024_03_20_07_13_45_334784_00_00.jpeg"
-            draggable="false"
-          />
-          <div class="container">
-            <p>Coming Soon...</p>
-          </div>
-        </a>
-        <a href="pages/project.html" class="polaroid">
-          <img
-            class="image"
-            src="images/modern-education-Skillstork-1568x882.jpg"
-            draggable="false"
-          />
-          <div class="container">
-            <p>Coming Soon...</p>
-          </div>
-        </a>
-      </div>
-    </div>
+  </section>
 
-    <hr />
+  <!-- Footer Section -->
+</body>
+<script src="js/main.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/popup.js"></script>
 
-    <!-- Seminars Section -->
-    <svg display="none">
-      <symbol id="arrow">
-        <polyline
-          points="7 10,12 15,17 10"
-          fill="none"
-          stroke="currentcolor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-        />
-      </symbol>
-    </svg>
-    <h1>Seminars</h1>
-    <div id="timeline" class="timeline">
-      <div class="btn-group">
-        <button class="btn" type="button" data-action="expand">
-          Expand All
-        </button>
-        <button class="btn" type="button" data-action="collapse">
-          Collapse All
-        </button>
-      </div>
-      <div class="timeline__item">
-        <div class="timeline__item-header">
-          <button
-            class="timeline__arrow"
-            type="button"
-            id="item1"
-            aria-labelledby="item1-name"
-            aria-expanded="false"
-            aria-controls="item1-ctrld"
-            aria-haspopup="true"
-            data-item="1"
-          >
-            <svg
-              class="timeline__arrow-icon"
-              viewBox="0 0 24 24"
-              width="24px"
-              height="24px"
-            >
-              <use href="#arrow" />
-            </svg>
-          </button>
-          <span class="timeline__dot"></span>
-          <span id="item1-name" class="timeline__meta">
-            <time class="timeline__date" datetime="1970-01-01">2.00PM</time
-            ><br />
-            <strong class="timeline__title">Coming Soon...</strong>
-          </span>
-        </div>
-        <div
-          class="timeline__item-body"
-          id="item1-ctrld"
-          role="region"
-          aria-labelledby="item1"
-          aria-hidden="true"
-        >
-          <div class="timeline__item-body-content">
-            <!-- Placeholder Name -->
-            <p class="timeline__item-p">Coming Soon...</p>
-            <!-- Current Position -->
-            <p>Coming Soon...</p>
-            <!-- Company Name -->
-            <p>Coming Soon...</p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline__item">
-        <div class="timeline__item-header">
-          <button
-            class="timeline__arrow"
-            type="button"
-            id="item2"
-            aria-labelledby="item2-name"
-            aria-expanded="false"
-            aria-controls="item2-ctrld"
-            aria-haspopup="true"
-            data-item="2"
-          >
-            <svg
-              class="timeline__arrow-icon"
-              viewBox="0 0 24 24"
-              width="24px"
-              height="24px"
-            >
-              <use href="#arrow" />
-            </svg>
-          </button>
-          <span class="timeline__dot"></span>
-          <span id="item2-name" class="timeline__meta">
-            <time class="timeline__date" datetime="1973-10-17">2.30PM</time
-            ><br />
-            <strong class="timeline__title">Coming Soon...</strong>
-          </span>
-        </div>
-        <div
-          class="timeline__item-body"
-          id="item2-ctrld"
-          role="region"
-          aria-labelledby="item2"
-          aria-hidden="true"
-        >
-          <div class="timeline__item-body-content">
-            <!-- Placeholder Name -->
-            <p class="timeline__item-p">Coming Soon...</p>
-            <!-- Current Position -->
-            <p>Coming Soon...</p>
-            <!-- Company Name -->
-            <p>Coming Soon...</p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline__item">
-        <div class="timeline__item-header">
-          <button
-            class="timeline__arrow"
-            type="button"
-            id="item3"
-            aria-labelledby="item3-name"
-            aria-expanded="false"
-            aria-controls="item3-ctrld"
-            aria-haspopup="true"
-            data-item="3"
-          >
-            <svg
-              class="timeline__arrow-icon"
-              viewBox="0 0 24 24"
-              width="24px"
-              height="24px"
-            >
-              <use href="#arrow" />
-            </svg>
-          </button>
-          <span class="timeline__dot"></span>
-          <span id="item3-name" class="timeline__meta">
-            <time class="timeline__date" datetime="2001-09-09">3.00PM</time
-            ><br />
-            <strong class="timeline__title">Coming Soon...</strong>
-          </span>
-        </div>
-        <div
-          class="timeline__item-body"
-          id="item3-ctrld"
-          role="region"
-          aria-labelledby="item3"
-          aria-hidden="true"
-        >
-          <div class="timeline__item-body-content">
-            <!-- Placeholder Name -->
-            <p class="timeline__item-p">Coming Soon...</p>
-            <!-- Current Position -->
-            <p>Coming Soon...</p>
-            <!-- Company Name -->
-            <p>Coming Soon...</p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline__item">
-        <div class="timeline__item-header">
-          <button
-            class="timeline__arrow"
-            type="button"
-            id="item4"
-            aria-labelledby="item4-name"
-            aria-expanded="false"
-            aria-controls="item4-ctrld"
-            aria-haspopup="true"
-            data-item="4"
-          >
-            <svg
-              class="timeline__arrow-icon"
-              viewBox="0 0 24 24"
-              width="24px"
-              height="24px"
-            >
-              <use href="#arrow" />
-            </svg>
-          </button>
-          <span class="timeline__dot"></span>
-          <span id="item4-name" class="timeline__meta">
-            <time class="timeline__date" datetime="2009-02-13">4.30PM</time
-            ><br />
-            <strong class="timeline__title">Coming Soon...</strong>
-          </span>
-        </div>
-        <div
-          class="timeline__item-body"
-          id="item4-ctrld"
-          role="region"
-          aria-labelledby="item4"
-          aria-hidden="true"
-        >
-          <div class="timeline__item-body-content">
-            <!-- Placeholder Name -->
-            <p class="timeline__item-p">Coming Soon...</p>
-            <!-- Current Position -->
-            <p>Coming Soon...</p>
-            <!-- Company Name -->
-            <p>Coming Soon...</p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline__item">
-        <div class="timeline__item-header">
-          <button
-            class="timeline__arrow"
-            type="button"
-            id="item5"
-            aria-labelledby="item5-name"
-            aria-expanded="false"
-            aria-controls="item5-ctrld"
-            aria-haspopup="true"
-            data-item="5"
-          >
-            <svg
-              class="timeline__arrow-icon"
-              viewBox="0 0 24 24"
-              width="24px"
-              height="24px"
-            >
-              <use href="#arrow" />
-            </svg>
-          </button>
-          <span class="timeline__dot"></span>
-          <span id="item5-name" class="timeline__meta">
-            <time class="timeline__date" datetime="2033-05-18">5.00PM</time
-            ><br />
-            <strong class="timeline__title">Coming Soon...</strong>
-          </span>
-        </div>
-        <div
-          class="timeline__item-body"
-          id="item5-ctrld"
-          role="region"
-          aria-labelledby="item5"
-          aria-hidden="true"
-        >
-          <div class="timeline__item-body-content">
-            <!-- Placeholder Name -->
-            <p class="timeline__item-p">Coming Soon...</p>
-            <!-- Current Position -->
-            <p>Coming Soon...</p>
-            <!-- Company Name -->
-            <p>Coming Soon...</p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline__item">
-        <div class="timeline__item-header">
-          <button
-            class="timeline__arrow"
-            type="button"
-            id="item6"
-            aria-labelledby="item6-name"
-            aria-expanded="false"
-            aria-controls="item6-ctrld"
-            aria-haspopup="true"
-            data-item="6"
-          >
-            <svg
-              class="timeline__arrow-icon"
-              viewBox="0 0 24 24"
-              width="24px"
-              height="24px"
-            >
-              <use href="#arrow" />
-            </svg>
-          </button>
-          <span class="timeline__dot"></span>
-          <span id="item6-name" class="timeline__meta">
-            <time class="timeline__date" datetime="2038-01-19">6.00PM</time
-            ><br />
-            <strong class="timeline__title">Coming Soon...</strong>
-          </span>
-        </div>
-        <div
-          class="timeline__item-body"
-          id="item6-ctrld"
-          role="region"
-          aria-labelledby="item6"
-          aria-hidden="true"
-        >
-          <div class="timeline__item-body-content">
-            <!-- Placeholder Name -->
-            <p class="timeline__item-p">Coming Soon...</p>
-            <!-- Current Position -->
-            <p>Coming Soon...</p>
-            <!-- Company Name -->
-            <p>Coming Soon...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr />
-
-    <!-- Venue Section -->
-    <section class="header-title">
-      <h1>Venue Information</h1>
-      <div class="tp-map">
-        <img
-          class="tp-map-img"
-          src="./images/TP-Map.png"
-          draggable="false"
-          onclick="openModal()"
-        />
-      </div>
-      <div id="imageModal" class="modal">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="expandedImage" />
-        <div id="caption"></div>
-      </div>
-      <div class="venue-info">
-        <p><strong>Venue Details:</strong></p>
-        <p>23 January 2025 (Thursday), 3PM - 9PM</p>
-        <p>TP Main Foyer and Auditorium 1 & 2</p>
-        <p>
-          <a href="https://maps.app.goo.gl/QPNgcZdAfEHjNQda8" target="_blank">
-            21 Tampines Avenue 1, Singapore 529757
-          </a>
-        </p>
-        <p>Nearest Parking:</p>
-        <p><strong>Carpark C and E</strong></p>
-        <p>
-          <a
-            class="mapDownload locationClick"
-            href="./images/TP-Map.png"
-            target="_blank"
-            download
-          >
-            Download TP Campus Map
-          </a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-  </body>
-  <script src="js/main.js"></script>
-  <script src="js/carousel.js"></script>
-  <script src="js/navbar.js"></script>
-  <script src="js/footer.js"></script>
-  <script src="js/timer.js"></script>
-  <script src="js/timeline.js"></script>
-  <script src="js/popup.js"></script>
 </html>
