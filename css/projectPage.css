@@ -165,16 +165,45 @@
   transition: background-color 0.3s ease, border 0.3s ease; 
   white-space: nowrap; /* Prevent text wrap */
 }
-.isotope-nav ul li:hover {
+/* .isotope-nav ul li:hover {
   background-color: white;
   color: #000;
-}
+} */
 .isotope-nav .nav-item.active {
   border: 2px solid currentColor; 
 }
-.isotope-nav .nav-item.active.cybersecurity { color: orange; }
-.isotope-nav .nav-item.active.ai { color: green; }
-.isotope-nav .nav-item.active.digital-solution { color: purple; }
+
+
+.isotope-nav .nav-item.cybersecurity:hover {
+  background-color: #ffa500; 
+}
+
+.isotope-nav .nav-item.ai:hover {
+  background-color: #1ca764;; 
+}
+
+.isotope-nav .nav-item.digital-solution:hover {
+  background-color: #d04dea; 
+}
+
+.isotope-nav .nav-item.active.cybersecurity:hover {
+  background-color: #caae82; 
+  color: #010029;
+}
+
+.isotope-nav .nav-item.active.ai:hover {
+  background-color: #377350;
+  color: #010029;
+}
+
+.isotope-nav .nav-item.active.digital-solution:hover {
+  background-color: #84608b; 
+  color: #010029;
+}
+
+.isotope-nav .nav-item.active.cybersecurity { color: #ffa500; }
+.isotope-nav .nav-item.active.ai { color: #1ca764; }
+.isotope-nav .nav-item.active.digital-solution { color: #d04dea; }
 
 /* Responsive Styling for Isotope Navigation */
 @media (max-width: 767px) {
@@ -275,6 +304,7 @@ th {
 }
 .modal-content {
   background-color: #fefefe;
+  color: #626197;
   margin: 15% auto;
   padding: 20px;
   border-radius: 5px;
