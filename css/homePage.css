@@ -88,7 +88,8 @@ h2 {
 }
 
 .registration-buttons button {
-    flex-grow: 1; /* Makes buttons grow to equal widths */
+    flex-grow: 1;
+    /* Makes buttons grow to equal widths */
     padding: 15px 30px;
     font-size: 24px;
     font-weight: 1000;
@@ -97,7 +98,7 @@ h2 {
     border-radius: 5px;
     text-transform: uppercase;
     width: 280px;
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .general-registration-button {
@@ -122,9 +123,10 @@ h2 {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .registration-buttons button {
-        width: 100%; /* Buttons take up full width in mobile view */
+        width: 100%;
+        /* Buttons take up full width in mobile view */
     }
 }
 
@@ -139,7 +141,7 @@ h2 {
     width: 90%;
     padding: 0 20px;
     z-index: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 50vmin;
     margin-top: 60px !important;
     margin-bottom: 70px !important;
@@ -186,7 +188,7 @@ h2 {
 
 .polaroid img.image {
     width: 100%;
-    height: 40vmin;
+    height: 60vmin;
     object-fit: cover;
     object-position: 100% center;
     border-top-left-radius: 15px;
@@ -205,13 +207,30 @@ h2 {
 
 @media screen and (max-width: 768px) {
     .container p {
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
+    .container p {
+        font-size: 1.1em;
+    }
+
+    .polaroid {
+        width: 35vmin;
+        height: 46vmin;
+        border-radius: 25px !important;
+    }
+}
+@media screen and (max-width: 640px) {
     .container p {
         font-size: 1em;
+    }
+
+    .polaroid {
+        width: 40vmin;
+        height: 60vmin;
+        border-radius: 20px !important;
     }
 }
 
@@ -311,14 +330,14 @@ h2 {
 }
 
 .venue-info a {
-    color: rgb(50, 180, 255); /* Change to your desired shade of green */
-    text-decoration: none; /* Optional: Remove underline */
-  }
-  
-  .venue-info a:hover {
-    text-decoration: underline; /* Optional: Underline on hover */
-  }
-  
+    color: rgb(50, 180, 255);
+    text-decoration: none;
+}
+
+.venue-info a:hover {
+    text-decoration: underline;
+}
+
 
 @media screen and (max-width: 768px) {
     .venue-container {
@@ -337,31 +356,54 @@ h2 {
         font-size: 55px;
         margin: 0;
     }
-    
+
     h2 {
-        font-family: 'Arsenal';
         font-size: 25px;
         margin-top: 20px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 900px) {
     h1 {
-        font-size: 50px;
+        font-size: 63px;
         margin: 0;
     }
-    
+
     h2 {
-        font-family: 'Arsenal';
+        font-size: 25px;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    h1 {
+        font-size: 58px;
+        margin: 0;
+    }
+
+    h2 {
         font-size: 22px;
-        margin-top: 20px;
+        margin-top: 15px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 45px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 8px;
     }
 }
 
 hr {
     border: none;
     height: 2px;
-    background-color: #f1f1f1; /* black color */
-    width: 90%; /* width of the line */
-    margin: 20px auto; /* center the line */
-  }
+    background-color: #f1f1f1;
+    width: 90%;
+    margin: 20px auto;
+}

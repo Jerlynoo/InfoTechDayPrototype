@@ -58,3 +58,23 @@
         visibility: hidden;
     }
 }
+
+@media (max-width: 600px) {
+    #main-title {
+        font-size: 3.5rem;
+    }
+
+    #sub-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #main-title {
+        font-size: 3rem;
+    }
+
+    #sub-title {
+        font-size: 1.5rem;
+    }
+}
