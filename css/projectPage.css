@@ -179,25 +179,25 @@
 }
 
 .isotope-nav .nav-item.ai:hover {
-  background-color: #1ca764;; 
+  background-color: #3fdf92;; 
 }
 
 .isotope-nav .nav-item.digital-solution:hover {
-  background-color: #d04dea; 
+  background-color: #e979ff; 
 }
 
 .isotope-nav .nav-item.active.cybersecurity:hover {
-  background-color: #caae82; 
+  background-color: #cd8d27; 
   color: #010029;
 }
 
 .isotope-nav .nav-item.active.ai:hover {
-  background-color: #377350;
+  background-color: #30e17a;
   color: #010029;
 }
 
 .isotope-nav .nav-item.active.digital-solution:hover {
-  background-color: #84608b; 
+  background-color: #d236f2; 
   color: #010029;
 }
 
