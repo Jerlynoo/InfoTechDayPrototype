@@ -205,6 +205,8 @@ body {
 /* Go Back Btn */
 .go-back-button {
     position: center;
+    margin-bottom: 50px;
+    margin-left: 50px;
     bottom: 20px;
     left: 20px;
     padding: 10px 20px;

@@ -132,6 +132,7 @@ h2 {
 
 .header-title {
     margin-top: 10px;
+    margin-bottom: 50px;
     text-decoration: none;
     color: inherit;
 }
@@ -143,8 +144,7 @@ h2 {
     z-index: 1;
     overflow: hidden;
     height: 65vmin;
-    margin-top: 40px !important;
-    margin-bottom: 50px !important;
+    margin-bottom: 	3rem;
 }
 
 #image-track {
@@ -183,7 +183,7 @@ h2 {
 }
 
 .polaroid:hover .container p {
-    text-decoration: underline;
+    color: #4f81ff;
 }
 
 .polaroid img.image {
@@ -330,7 +330,7 @@ h2 {
 }
 
 .venue-info a {
-    color: rgb(50, 180, 255);
+    color: #329fff;
     text-decoration: none;
 }
 

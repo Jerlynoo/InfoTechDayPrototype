@@ -57,18 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start auto-scroll initially
     startAutoScroll();
 
-    // Manual scrolling
-    let isDragging = false;
-    let startX = 0;
-    let startScroll = 0;
-
-    const handleStart = (clientX) => {
-        isDragging = true;
-        startX = clientX;
-        startScroll = currentScroll;
-        stopAutoScroll(); // Stop auto-scroll when manually dragging
-    };
-
     let velocity = 0; // Track the velocity for smooth movement
 
     const handleMove = (clientX) => {
