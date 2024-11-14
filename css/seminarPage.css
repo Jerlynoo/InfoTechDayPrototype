@@ -8,6 +8,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     font-family: 'Overpass';
     color: white;
     display: flex;
@@ -36,6 +37,9 @@ h2 {
 
 html {
     overscroll-behavior: contain;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -59,11 +63,13 @@ section:not(.sectionFooter) {
     justify-content: center;
     align-items: center;
     background-color: hsl(var(--h, 0), 75%, 60%);
+    width: 100vw;
+    margin: 0;
 }
 
 .seminar-container {
     width: 100%;
-    padding: 0 max(5vw, 1rem);
+    padding: 0 0;
     transform-style: perspective-3d;
     perspective: 900px;
 }
@@ -121,5 +127,5 @@ section:not(.sectionFooter) {
 }
 
 .section__image img {
-    filter: brightness(0.5) grayscale(100%);
+    filter: brightness(1) grayscale(100%);
 }

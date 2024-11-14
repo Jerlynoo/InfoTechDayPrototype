@@ -2,8 +2,8 @@
 .sectionFooter {
   background: -webkit-linear-gradient(59deg, #d62839, #dc3545);
   background: #e6162f;
-  color: white;
-  margin-top: 50px !important;
+  color: white; 
+  /* margin-top: 50px !important; */
   text-align: left !important;
   width: 100%;
   padding: 0; /* Ensure padding does not affect the width */

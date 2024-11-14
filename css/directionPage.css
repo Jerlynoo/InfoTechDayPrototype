@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -44,7 +51,8 @@ h2 {
 
 
 .direction-buttons button {
-    padding: 15px 30px;
+    padding: 20px 50px;
+    font-family: 'Overpass';
     font-weight: bold;
     font-size: 22px;
     border: none;
@@ -83,7 +91,8 @@ h2 {
 
 /* Popup container - hidden by default */
 .popup {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -172,7 +181,15 @@ h2 {
 
 .direction-info {
     margin-top: 30px;
-    margin-bottom: 15px;
+    width: 80%;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 22px;
+}
+
+.direction-info2 {
+    margin-top: 30px;
+    margin-bottom: 65px;
     width: 80%;
     text-align: center;
     padding: 0 10px;
@@ -294,7 +311,7 @@ h2 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     .directions-table,
     .rates-table {
@@ -321,7 +338,8 @@ h2 {
         font-size: 24px;
     }
 
-    .direction-info {
+    .direction-info,
+    .direction-info2 {
         font-size: 1.2em;
     }
 
@@ -338,7 +356,7 @@ h2 {
     }
 
     .direction-buttons button {
-        padding: 12px 20px;
+        padding: 15px 30px;
         font-size: 17px;
         width: 100%;
         max-width: 300px;
