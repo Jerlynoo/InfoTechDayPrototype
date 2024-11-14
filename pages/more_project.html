@@ -46,26 +46,76 @@
     <!-- Pagination of "Other Projects" -->
     <section class="paginationproj">
       <div class="paginationcontainer">
+        <!-- Search Bar and Filter Button Row -->
         <div class="header_wrap">
-          <div class="num_rows">
-            <div class="form-group">
-              <select class="form-control" name="state" id="maxRows">
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-                <option value="200">Show ALL Rows</option>
-              </select>
-            </div>
-          </div>
           <div class="tb_search">
             <input
               type="text"
               id="search_input_all"
               placeholder="Search.."
+              class="form-control clearable"
+            />
+          </div>
+
+          <button id="filter-icon" class="minimalistic-button">Filter</button>
+        </div>
+
+        <!-- Filter Panel -->
+        <div id="filter-panel" style="display: none; margin-top: 10px">
+          <h3>Filter Options</h3>
+
+          <!-- Filter by Subject -->
+          <div class="filter-section">
+            <label>Filter by Subject:</label>
+            <label
+              ><input
+                type="checkbox"
+                value="Next Gen Digital Transformation"
+                class="subject-filter"
+              />
+              Next Gen Digital Transformation</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="AI-Driven Trends and Innovations"
+                class="subject-filter"
+              />
+              AI-Driven Trends and Innovations</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="Future-Oriented Cybersecurity"
+                class="subject-filter"
+              />
+              Future-Oriented Cybersecurity</label
+            >
+          </div>
+
+          <!-- Manual Row Input for Number of Rows -->
+          <div class="filter-section">
+            <label for="manualRowInput">Enter number of rows to display:</label>
+            <input
+              type="number"
+              id="manualRowInput"
+              placeholder="Enter number of rows"
+              min="1"
               class="form-control"
             />
+          </div>
+
+          <!-- Optional Max Rows Select Dropdown -->
+          <div class="filter-section">
+            <label for="maxRows">Select number of rows to display:</label>
+            <select class="form-control" name="state" id="maxRows">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="200">Show ALL Rows</option>
+            </select>
           </div>
         </div>
 
@@ -88,7 +138,7 @@
           <nav>
             <ul class="pagination-button"></ul>
           </nav>
-        </div>  
+        </div>
         <p id="entry-count"></p>
       </div>
     </section>
