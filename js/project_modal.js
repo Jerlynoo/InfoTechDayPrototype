@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let filteredProjects = []; // Store the filtered projects for rendering
   let currentPage = 1;
   let entriesPerPage = 10; // Default number of entries per page
+  let selectedSubjects = []; // Store selected subjects for filtering
 
   // Fetch and render projects
   fetch("../data/allProject.json")
@@ -23,6 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProjects();
     setupPagination();
     updateEntryCount(); // Update entry count after change
+  });
+
+  // Event listener for manual row input
+  document.getElementById("manualRowInput").addEventListener("input", (e) => {
+    const input = parseInt(e.target.value);
+    if (!isNaN(input) && input > 0) {
+      entriesPerPage = input;
+      currentPage = 1; // Reset to first page
+      renderProjects();
+      setupPagination();
+      updateEntryCount();
+    }
   });
 
   // Function to render projects based on current page and entriesPerPage
@@ -148,4 +161,38 @@ document.addEventListener("DOMContentLoaded", () => {
     setupPagination();
     updateEntryCount();
   });
+
+  // Toggle filter panel visibility
+  document.getElementById("filter-icon").addEventListener("click", () => {
+    const filterPanel = document.getElementById("filter-panel");
+    filterPanel.style.display = filterPanel.style.display === "block" ? "none" : "block";
+  });
+
+  // Handle subject filtering
+  document.querySelectorAll(".subject-filter").forEach((checkbox) => {
+    checkbox.addEventListener("change", (e) => {
+      const subject = e.target.value;
+      if (e.target.checked) {
+        selectedSubjects.push(subject);
+      } else {
+        selectedSubjects = selectedSubjects.filter((s) => s !== subject);
+      }
+      filterProjectsBySubjects();
+    });
+  });
+
+  // Filter projects by subjects
+  function filterProjectsBySubjects() {
+    if (selectedSubjects.length > 0) {
+      filteredProjects = allProjects.filter((project) =>
+        selectedSubjects.includes(project.Subject)
+      );
+    } else {
+      filteredProjects = allProjects; // Reset to all projects
+    }
+    renderProjects();
+    setupPagination();
+    updateEntryCount();
+  }
+
 });

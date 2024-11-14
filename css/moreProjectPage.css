@@ -1,60 +1,99 @@
-/* Pagination */
-.form-control { font-size: 1rem !important; }
-td { color: white; }
-.paginationproj {
-  background-color: #010029;
-  padding: 0 20px 70px;
-}
-th {
-  background: #656565;
-  color: #fff;
-}
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.pagination li:hover { cursor: pointer; }
-
-/* Minimalistic Button */
+/* General Layout */
 .header_wrap {
-  padding:30px 0;
-}
-.num_rows {
-  width: 20%;
-  float:left;
-}
-.tb_search {
-  width: 20%;
-  float:right;
-}
-.pagination-button li {
-  width: 80%;
-  padding: 2px 4px;
-  background-color: transparent;
-  color: white;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  font-size: 12px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-}
-
-.pagination-button:last-child::after {
-  content: '';
-  display: block;
-}
-.minimalistic-button {
-  padding: 2px 4px;
-  font-size: 12px;
-  color: white;
-  background-color: blue;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.minimalistic-button:hover { background-color: darkblue; }
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  .tb_search {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  #filter-icon {
+    padding: 8px 16px;
+    color: white;
+    background-color: blue;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #filter-icon:hover {
+    background-color: darkblue;
+  }
+  
+  /* Filter Panel */
+  #filter-panel {
+    background-color: #010029;
+    padding: 20px;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .filter-section {
+    margin-bottom: 15px;
+  }
+  
+  .filter-section h4 {
+    margin-bottom: 8px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    font-size: 1rem !important;
+    margin-top: 5px;
+  }
+  
+  .minimalistic-button {
+    color: white;
+    background-color: blue;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .minimalistic-button:hover {
+    background-color: darkblue;
+  }
+  
+  /* Table Styling */
+  .table-class {
+    width: 100%;
+    background-color: #010029;
+    color: white;
+  }
+  
+  th {
+    background: #656565;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  td {
+    color: white;
+  }
+  
+  /* Pagination */
+  .pagination-button li {
+    padding: 4px 8px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    margin: 4px 2px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination-button li:hover {
+    background-color: #555;
+  }
+  
