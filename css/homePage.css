@@ -6,15 +6,15 @@
 }
 
 @font-face {
-    font-family: 'Overpass';
-    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
+    font-family: 'Nocashe';
+    src: url('../fonts/nocashe/Nocashe-0W4VX.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Nocashe';
-    src: url('../fonts/nocashe/Nocashe-0W4VX.otf') format('truetype');
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -175,6 +175,7 @@ h2 {
 .polaroid:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
 }
 
 .polaroid a {
@@ -197,12 +198,16 @@ h2 {
 
 .container {
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+
 }
 
 .container p {
-    font-size: 1.3em;
-    color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    color: #010029;
+    text-transform: uppercase;
+    margin-top: 16px;
 }
 
 @media screen and (max-width: 768px) {

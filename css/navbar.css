@@ -131,6 +131,7 @@
 .navbarA:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   color: #FA944B;
+  text-decoration: none;
 }
 
 /* .navbarA::after{
