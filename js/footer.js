@@ -11,11 +11,11 @@ window.addEventListener("load", function () {
                   <div class="footer-pad">                  
                       <!-- Desktop View Logo -->
                       <ul class="footerlogo">
-                        <img src="../images/tp-logo-footer.png" />
+                        <img src="../images/tp-logo-white.svg" />
                       </ul>
                       <!-- Mobile View Logo -->
                       <ul class="footerlogo-2">
-                        <img src="../images/tp-logo-footer.png" />
+                        <img src="../images/tp-logo-white.svg" />
                       </ul>                  
                   </div>
                 </div>

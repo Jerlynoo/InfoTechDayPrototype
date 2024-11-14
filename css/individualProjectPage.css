@@ -1,8 +1,26 @@
+@font-face {
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brightness1';
+    src: url('../fonts/brightness-2/Brightness.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General Styles */
 body {
     height: 1500px;
     background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);
-    font-family: 'Arial', sans-serif;
+    font-family: 'Overpass';
+}
+
+h2{
+    font-weight: bold;
 }
 
 /* Header Styling */
@@ -12,7 +30,7 @@ body {
     height: 250px;
     font-weight: bold;
     text-align: center;
-    background: gold;
+    background: #540917;
     transition: .3s;
     z-index: 10; /* Ensure header is on top of other content */
     padding: 10px 0; /* To provide space at the top and bottom */
@@ -24,6 +42,7 @@ body {
     right: 20px; /* Adjust to place it on the right edge */
     height: 50px; /* Size of the logo */
     width: auto;
+    padding-bottom: 20px;
 }
 
 /* When header becomes small, adjust offset padding */
@@ -45,17 +64,17 @@ body {
 }
 
 .header_logo {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Brightness1';
     margin: 0;
-    padding-top: 80px;
-    font-size: 50px;
-    text-shadow: 3px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 70px;
+    font-size: 70px;
+    color: #ffffff;
     transition: .3s;
 }
 
 .header.small .header_logo {
-    padding-top: 20px;
-    font-size: 20px;
+    padding-top: 10px;
+    font-size: 30px;
     text-shadow: none;
 }
 
@@ -115,14 +134,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-size: 17px;
 }
 
-.key-benefits li, .technologies li {
+/* .key-benefits li, .technologies li {
     font-weight: bold;
-}
+} */
 
 .project-description {
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .students, .supervisor, .industrial-partner {

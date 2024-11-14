@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* General Layout */
 .header_wrap {
     display: flex;
@@ -8,11 +15,13 @@
   .tb_search {
     flex-grow: 1;
     margin-right: 10px;
+    font-family: 'Overpass';
   }
   
   #filter-icon {
     padding: 8px 16px;
     color: white;
+    font-family: 'Overpass';
     background-color: blue;
     border: none;
     cursor: pointer;
@@ -73,11 +82,14 @@
   th {
     background: #656565;
     color: #fff;
+    font-family: 'Overpass';
+    font-weight: bold;
     padding: 10px;
   }
   
   td {
     color: white;
+    font-family: 'Overpass';
   }
   
   /* Pagination */
@@ -85,6 +97,7 @@
     padding: 4px 8px;
     background-color: #333;
     color: white;
+    font-family: 'Overpass';
     border: 1px solid #ccc;
     cursor: pointer;
     text-align: center;

@@ -110,6 +110,7 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     background-color: #010029;
+    font-family: 'Overpass';
     margin: 15% auto;
     padding: 20px;
     border: 5px solid #010029;
@@ -185,6 +186,8 @@ h2 {
     text-align: center;
     padding: 0 10px;
     font-size: 22px;
+    font-family: 'Overpass';
+    font-weight: bold;
 }
 
 .direction-info2 {
@@ -194,6 +197,8 @@ h2 {
     text-align: center;
     padding: 0 10px;
     font-size: 22px;
+    font-family: 'Overpass';
+    font-weight: bold;
 }
 
 .directions-table,
