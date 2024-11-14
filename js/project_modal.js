@@ -1,75 +1,151 @@
 document.addEventListener("DOMContentLoaded", () => {
   let allProjects = []; // Store all projects for easy filtering
+  let filteredProjects = []; // Store the filtered projects for rendering
+  let currentPage = 1;
+  let entriesPerPage = 10; // Default number of entries per page
 
+  // Fetch and render projects
   fetch("../data/allProject.json")
     .then((response) => response.json())
     .then((data) => {
       allProjects = data; // Save the full project data
-      renderProjects(allProjects);
+      filteredProjects = data; // Initially, all projects are displayed
+      renderProjects();
+      setupPagination();
+      updateEntryCount();
     })
     .catch((error) => console.error("Error loading projects:", error));
 
-  // Function to render projects
-  function renderProjects(data) {
+  // Event listener for maxRows <select> element
+  document.getElementById("maxRows").addEventListener("change", (e) => {
+    entriesPerPage = parseInt(e.target.value);
+    currentPage = 1; // Reset to first page on entries change
+    renderProjects();
+    setupPagination();
+    updateEntryCount(); // Update entry count after change
+  });
+
+  // Function to render projects based on current page and entriesPerPage
+  function renderProjects() {
     const tableBody = document.querySelector("#table-body");
     tableBody.innerHTML = "";
 
-    data.forEach((project) => {
+    const start = (currentPage - 1) * entriesPerPage;
+    const end = start + entriesPerPage;
+    const paginatedProjects = filteredProjects.slice(start, end);
+
+    paginatedProjects.forEach((project) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${project.Title}</td>
-        <td>${project.Subject || "N/A"}</td>
-        <td>
-          <button class="minimalistic-button btn-view" data-modal-id="modal-${project.Title.replace(/\s+/g, "-").toLowerCase()}">View More</button>
-        </td>
-      `;
+          <td>${project.Title}</td>
+          <td>${project.Subject || "N/A"}</td>
+          <td>
+            <button class="minimalistic-button btn-view" data-modal-id="modal-${project.Title.replace(
+              /\s+/g,
+              "-"
+            ).toLowerCase()}">View More</button>
+          </td>
+        `;
       tableBody.appendChild(row);
-      createModal(project);
+      createModal(project); // Create modal for each project
     });
 
-    // Event listeners for the view buttons
+    setupModalEvents(); // Setup modal events for newly added buttons
+    updateEntryCount(); // Update entry count after rendering
+  }
+
+  // Function to create modals for each project
+  function createModal(project) {
+    const modalHTML = `
+        <div id="modal-${project.Title.replace(
+          /\s+/g,
+          "-"
+        ).toLowerCase()}" class="modal">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">${project.Title}</h5>
+                <button type="button" class="close" onclick="document.getElementById('modal-${project.Title.replace(
+                  /\s+/g,
+                  "-"
+                ).toLowerCase()}').style.display='none'">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p><b>Description:</b><br />${project.Description}</p>
+                <p><b>Students:</b><br />${project.Student}</p>
+                <p><b>Supervisor:</b><br />${project.Supervisor}</p>
+                <p><b>Industrial Partner:</b><br />${
+                  project.Industrial_Partner || "N.A"
+                }</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    document.body.insertAdjacentHTML("beforeend", modalHTML);
+  }
+
+  // Event listeners for modal view buttons
+  function setupModalEvents() {
     const buttons = document.querySelectorAll(".btn-view");
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         const modalId = button.getAttribute("data-modal-id");
         const modal = document.querySelector(`#${modalId}`);
         if (modal) {
-          modal.style.display = "block";
+          modal.style.display = "block"; // Show the modal when clicked
         }
       });
     });
   }
 
-  function createModal(project) {
-    const modalHTML = `
-      <div id="modal-${project.Title.replace(/\s+/g, "-").toLowerCase()}" class="modal">
-        <div class="modal-dialog modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">${project.Title}</h5>
-              <button type="button" class="close" onclick="document.getElementById('modal-${project.Title.replace(/\s+/g, "-").toLowerCase()}').style.display='none'">&times;</button>
-            </div>
-            <div class="modal-body">
-              <p><b>Description:</b><br />${project.Description}</p>
-              <p><b>Students:</b><br />${project.Student}</p>
-              <p><b>Supervisor:</b><br />${project.Supervisor}</p>
-              <p><b>Industrial Partner:</b><br />${project.Industrial_Partner || "N.A"}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-    document.body.insertAdjacentHTML("beforeend", modalHTML);
+  // Setup pagination controls
+  function setupPagination() {
+    const paginationContainer = document.querySelector("#pagination");
+    paginationContainer.innerHTML = "";
+
+    const pageCount = Math.ceil(filteredProjects.length / entriesPerPage);
+
+    for (let i = 1; i <= pageCount; i++) {
+      const pageButton = document.createElement("button");
+      pageButton.textContent = i;
+      pageButton.classList.add("pagination-button");
+
+      if (i === currentPage) pageButton.classList.add("active");
+
+      pageButton.addEventListener("click", () => {
+        currentPage = i;
+        renderProjects();
+        setupPagination();
+      });
+
+      paginationContainer.appendChild(pageButton);
+    }
+  }
+
+  // Function to update the entry count display
+  function updateEntryCount() {
+    const entryCountDisplay = document.querySelector("#entry-count");
+    if (entryCountDisplay) {
+      const start = (currentPage - 1) * entriesPerPage + 1;
+      const end = Math.min(start + entriesPerPage - 1, filteredProjects.length);
+      entryCountDisplay.textContent = `Showing ${start}-${end} out of ${filteredProjects.length} entries`;
+    }
   }
 
   // Search function
   document.getElementById("search_input_all").addEventListener("keyup", (e) => {
     const searchTerm = e.target.value.toLowerCase();
-    const filteredProjects = allProjects.filter((project) =>
-      project.Title.toLowerCase().includes(searchTerm) ||
-      (project.Subject && project.Subject.toLowerCase().includes(searchTerm))
+    currentPage = 1; // Reset to first page on search
+
+    filteredProjects = allProjects.filter(
+      (project) =>
+        project.Title.toLowerCase().includes(searchTerm) ||
+        (project.Subject && project.Subject.toLowerCase().includes(searchTerm))
     );
 
-    renderProjects(filteredProjects);
+    renderProjects();
+    setupPagination();
+    updateEntryCount();
   });
 });

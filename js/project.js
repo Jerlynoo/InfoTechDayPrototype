@@ -21,26 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
           button.classList.add("active");
         });
       });
-
-      // Add event listener for the search icon to toggle the search bar
-      const searchIcon = document.getElementById("search-icon");
-      const searchContainer = document.getElementById("search-container");
-      searchIcon.addEventListener("click", () => {
-        searchContainer.style.display =
-          searchContainer.style.display === "none" ? "block" : "none";
-        // Optionally, focus the search bar when it becomes visible
-        if (searchContainer.style.display === "block") {
-          document.getElementById("search-bar").focus();
-        }
-      });
-
-      // Add event listener for the search bar
-      const searchBar = document.getElementById("search-bar");
-      searchBar.addEventListener("input", function () {
-        const query = this.value.toLowerCase(); // Get the search input
-        // Call renderProjects with the current filter and search query
-        renderProjects(data, "*", query);
-      });
     })
     .catch((error) => console.error("Error loading projects:", error));
 

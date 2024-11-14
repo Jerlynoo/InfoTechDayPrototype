@@ -187,7 +187,7 @@
 }
 
 .isotope-nav .nav-item.active.cybersecurity:hover {
-  background-color: #cd8d27; 
+  background-color: #ffb031; 
   color: #010029;
 }
 
@@ -231,68 +231,6 @@
   .demo-infos { display: block; padding-bottom: 30px; }
   .demo-info { padding-top: 30px; }
 }
-
-/* Pagination */
-.form-control { font-size: 1rem !important; }
-td { color: white; }
-.paginationproj {
-  background-color: #010029;
-  padding: 0 20px 70px;
-}
-th {
-  background: #656565;
-  color: #fff;
-}
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.pagination li:hover { cursor: pointer; }
-
-/* Minimalistic Button */
-.header_wrap {
-  padding:30px 0;
-}
-.num_rows {
-  width: 20%;
-  float:left;
-}
-.tb_search {
-  width: 20%;
-  float:right;
-}
-.pagination-button li {
-  width: 80%;
-  padding: 2px 4px;
-  background-color: transparent;
-  color: white;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  font-size: 12px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-}
-
-.pagination-button:last-child::after {
-  content: '';
-  display: block;
-}
-.minimalistic-button {
-  padding: 2px 4px;
-  font-size: 12px;
-  color: white;
-  background-color: blue;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.minimalistic-button:hover { background-color: darkblue; }
-
 /* Modal Styling */
 .modal {
   display: none;
@@ -321,3 +259,27 @@ th {
 }
 .close:hover { opacity: 1; }
 .modal-body { margin: 1rem 0; font-size: 1.1rem; line-height: 1.5; }
+
+.view-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%; 
+}
+
+.view-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; 
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+  background-color: #0056b3; 
+  color: #fff;  
+}
+
