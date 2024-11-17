@@ -64,12 +64,34 @@ h2 {
     width: 100%;
     text-align: center;
     padding: 0 10px;
+    white-space: nowrap; /* Keeps text on a single line by default */
 }
 
 .event-info p {
     font-size: 30px;
     margin: 0;
 }
+
+@media (max-width: 768px) { /* Apply this styling for mobile screens */
+    .event-info {
+      white-space: normal; /* Allows text to wrap */
+      display: block;
+    }
+  
+    .event-info span {
+      display: block; /* Break each segment into its own line */
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 834px) { /* iPad Mini View */
+    .event-info {
+      white-space: normal;
+    }
+  
+    .event-info span:nth-child(3) { /* Keep "TP Main Foyer & Auditorium 1 & 2" together */
+      display: inline-block;
+    }
+  }
 
 .description {
     font-size: 20px;
