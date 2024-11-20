@@ -104,9 +104,12 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         const modalId = button.getAttribute("data-modal-id");
-        const modal = document.querySelector(`#${modalId}`);
+        // console.log(`Modal ID: ${modalId}`); // Debugging
+        const modal = document.querySelector(`#${CSS.escape(modalId)}`);
         if (modal) {
           modal.style.display = "block"; // Show the modal when clicked
+        } else {
+          console.error(`Modal with ID ${modalId} not found.`);
         }
       });
     });
@@ -195,12 +198,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setupPagination();
     updateEntryCount();
   }
-
-  // Function to clear the search input when the X icon is clicked
-  document
-    .getElementById("clear_search")
-    .addEventListener("click", function () {
-      document.getElementById("search_input_all").value = ""; // Clear the input field
-      document.getElementById("search_input_all").focus(); // Focus on the input for immediate typing
-    });
 });
