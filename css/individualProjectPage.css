@@ -243,3 +243,67 @@ h2{
   .go-back-button:hover {
     background-color: #555;
   }
+
+ /* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .content-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .left-column, .right-column, .project-description, .project-image, 
+    .key-benefits, .technologies, .students, .supervisor, .industrial-partner {
+        flex: 1; /* Ensure both columns take up equal space */
+    }
+
+    .project-description {
+        order: 1; /* First in mobile view */
+    }
+
+    .project-image {
+        order: 2; /* Second in mobile view */
+        text-align: center; /* Center the image */
+    }
+
+    .project-image img {
+        max-width: 100%; /* Adjust image size for smaller screens */
+        height: auto;
+    }
+
+    .key-benefits {
+        order: 3; /* Third in mobile view */
+    }
+
+    .key-benefits ul {
+        display: flex; /* Set to flex container */
+        flex-direction: column; /* Stack list items vertically */
+        padding-left: 0; /* Remove default padding */
+        margin: 0; /* Remove any margin */
+    }
+
+    .technologies {
+        order: 4; /* Fourth in mobile view */
+    }
+
+    .students {
+        order: 5; /* Fifth in mobile view */
+    }
+
+    .student-grid {
+        justify-content: center; /* Center the grid items */
+        flex-direction: column; /* Stack student items */
+        align-items: center;
+    }
+
+    .student {
+        margin-bottom: 20px; /* Add spacing between students */
+    }
+
+    .supervisor {
+        order: 6; /* Sixth in mobile view */
+    }
+
+    .industrial-partner {
+        order: 7; /* Last in mobile view */
+    }
+}
