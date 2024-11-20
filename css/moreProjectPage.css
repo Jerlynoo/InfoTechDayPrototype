@@ -1,112 +1,241 @@
-@font-face {
-  font-family: 'Overpass';
-  src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+/* Container Styling */
+.paginationproj {
+  padding: 20px;
+  max-width: 1600px; /* Increase the width limit */
+  /* width: calc(100% - 40px); */
+  margin: 40px auto;
+  background: #010029;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* General Layout */
+/* Pagination Styling */
+.pagination-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  flex-wrap: wrap; /* Wrap buttons if they overflow */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Header and Filter Row */
 .header_wrap {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-  }
-  
-  .tb_search {
-    flex-grow: 1;
-    margin-right: 10px;
-    font-family: 'Overpass';
-  }
-  
-  #filter-icon {
-    padding: 8px 16px;
-    color: white;
-    font-family: 'Overpass';
-    background-color: blue;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #filter-icon:hover {
-    background-color: darkblue;
-  }
-  
-  /* Filter Panel */
-  #filter-panel {
-    background-color: #010029;
-    padding: 20px;
-    color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .filter-section {
-    margin-bottom: 15px;
-  }
-  
-  .filter-section h4 {
-    margin-bottom: 8px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-control {
-    font-size: 1rem !important;
-    margin-top: 5px;
-  }
-  
-  .minimalistic-button {
-    color: white;
-    background-color: blue;
-    border: none;
-    cursor: pointer;
-    padding: 8px 16px;
-    transition: background-color 0.3s;
-  }
-  
-  .minimalistic-button:hover {
-    background-color: darkblue;
-  }
-  
-  /* Table Styling */
-  .table-class {
-    width: 100%;
-    background-color: #010029;
-    color: white;
-  }
-  
-  th {
-    background: #656565;
-    color: #fff;
-    font-family: 'Overpass';
-    font-weight: bold;
-    padding: 10px;
-  }
-  
-  td {
-    color: white;
-    font-family: 'Overpass';
-  }
-  
-  /* Pagination */
-  .pagination-button li {
-    padding: 4px 8px;
-    background-color: #333;
-    color: white;
-    font-family: 'Overpass';
-    border: 1px solid #ccc;
-    cursor: pointer;
-    text-align: center;
-    margin: 4px 2px;
-    font-size: 14px;
-    transition: background-color 0.3s;
-  }
-  
-  .pagination-button li:hover {
-    background-color: #555;
-  }
-  
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tb_search input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.filter-icon {
+  background-color: #007bff; /* Button background */
+  color: #fff; /* Icon color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px; /* Adjust icon size */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-icon:hover {
+  background-color: #0056b3;
+}
+
+
+.minimalistic-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.minimalistic-button:hover {
+  background-color: #0056b3;
+}
+
+/* Filter Panel */
+#filter-panel {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+h3{
+  color: #333;
+}
+
+/* Filter Section Labels */
+.filter-section {
+  margin-bottom: 15px;
+}
+
+.filter-section label {
+  font-weight: bold;
+  color: #333; /* Darker color for better readability */
+  margin-right: 10px;
+  font-size: 16px; /* Slightly larger font for better visibility */
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff; /* Ensure good contrast for inputs */
+  color: #333; /* Text color for inputs */
+}
+
+/* Focus and Hover Effects */
+.filter-section input:focus,
+.filter-section select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.filter-section input:hover,
+.filter-section select:hover {
+  border-color: #007bff;
+}
+
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #001f47;
+}
+
+/* .table th {
+  background-color: #00142F;
+  color: #fff;
+} */
+
+.table tr {
+  background-color: #00142F;
+  color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #092543;
+  color: #fff;
+}
+
+.table tbody tr:hover {
+  background-color: #0b4fc3;
+}
+
+/* Pagination Styling */
+.pagination-container {
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+ 
+
+.pagination-button li a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid #007bff;
+  color: #007bff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Entry Count */
+#entry-count {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #b7b7b7;
+  text-align: center;
+}
+
+.page-link {
+  padding: 10px 15px;
+  margin: 5px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  color: #007bff;
+  background-color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.page-link:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Link Styling */
+.page-link.active {
+  background-color: #003cff;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #003cff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.15); /* Slightly larger */
+}
+
+/* Optional: Add a subtle glow to active links */
+.page-link.active:hover {
+  box-shadow: 0 0 15px #003cff, 0 0 5px #007bff;
+  transform: scale(1.2); /* Slightly larger on hover */
+}
+
+/* Disable Link Styling */
+.page-link.disabled {
+  color: #ccc;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  cursor: not-allowed;
+  box-shadow: none;
+}

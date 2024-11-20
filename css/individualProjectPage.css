@@ -30,7 +30,7 @@ h2{
     height: 250px;
     font-weight: bold;
     text-align: center;
-    background: #540917;
+    background: #100954;
     transition: .3s;
     z-index: 10; /* Ensure header is on top of other content */
     padding: 10px 0; /* To provide space at the top and bottom */

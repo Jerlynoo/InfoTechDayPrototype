@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 1; i <= pageCount; i++) {
       const pageButton = document.createElement("button");
       pageButton.textContent = i;
-      pageButton.classList.add("pagination-button");
+      pageButton.classList.add("page-link");
 
       if (i === currentPage) pageButton.classList.add("active");
 
@@ -165,7 +165,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Toggle filter panel visibility
   document.getElementById("filter-icon").addEventListener("click", () => {
     const filterPanel = document.getElementById("filter-panel");
-    filterPanel.style.display = filterPanel.style.display === "block" ? "none" : "block";
+    filterPanel.style.display =
+      filterPanel.style.display === "block" ? "none" : "block";
   });
 
   // Handle subject filtering
@@ -195,4 +196,11 @@ document.addEventListener("DOMContentLoaded", () => {
     updateEntryCount();
   }
 
+  // Function to clear the search input when the X icon is clicked
+  document
+    .getElementById("clear_search")
+    .addEventListener("click", function () {
+      document.getElementById("search_input_all").value = ""; // Clear the input field
+      document.getElementById("search_input_all").focus(); // Focus on the input for immediate typing
+    });
 });
