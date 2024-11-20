@@ -69,33 +69,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to create modals for each project
   function createModal(project) {
+    const modalId = `modal-${project.Title.replace(/\s+/g, "-").toLowerCase()}`;
     const modalHTML = `
-        <div id="modal-${project.Title.replace(
-          /\s+/g,
-          "-"
-        ).toLowerCase()}" class="modal">
-          <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">${project.Title}</h5>
-                <button type="button" class="close" onclick="document.getElementById('modal-${project.Title.replace(
-                  /\s+/g,
-                  "-"
-                ).toLowerCase()}').style.display='none'">&times;</button>
-              </div>
-              <div class="modal-body">
-                <p><b>Description:</b><br />${project.Description}</p>
-                <p><b>Students:</b><br />${project.Student}</p>
-                <p><b>Supervisor:</b><br />${project.Supervisor}</p>
-                <p><b>Industrial Partner:</b><br />${
-                  project.Industrial_Partner || "N.A"
-                }</p>
-              </div>
+      <div id="${modalId}" class="modal">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">  
+              <h5 class="modal-title">${project.Title}</h5>
+              <button type="button" class="close" data-close="true">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p><b>Description:</b><br />${project.Description}</p>
+              <p><b>Students:</b><br />${project.Student}</p>
+              <p><b>Supervisor:</b><br />${project.Supervisor}</p>
+              <p><b>Industrial Partner:</b><br />${
+                project.Industrial_Partner || "N.A"
+              }</p>
             </div>
           </div>
         </div>
-      `;
+      </div>
+    `;
     document.body.insertAdjacentHTML("beforeend", modalHTML);
+
+    const modal = document.getElementById(modalId);
+
+    // Event listener for the close button
+    modal.querySelector(".close").addEventListener("click", () => {
+      closeModal(modalId);
+    });
+
+    // Event listener for clicking outside modal dialog
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal(modalId);
+      }
+    });
+  }
+
+  // Function to open the modal
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = "block";
+    }
+  }
+
+  // Function to close the modal
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = "none";
+    }
   }
 
   // Event listeners for modal view buttons
