@@ -3,7 +3,6 @@ window.addEventListener("load", function () {
     <div class="menu">
       <p class="navbarP"><a class="navbarA" href="../index.html" >Home</a></p>
       <p class="navbarP"><a class="navbarA" href="../pages/project.html" >Projects</a></p>
-      <p class="navbarP"><a class="navbarA" href="../pages/seminar.html" >Seminars</a></p>
       <p class="navbarP"><a class="navbarA" href="https://forms.office.com/r/CwyyHHLfag" target="_blank">Project Voting</a></p>
       <p class="navbarP"><a class="navbarA" href="../pages/direction.html">Getting to TP</a></p>
       <p class="navbarP"><a class="navbarA" href="../pages/iit_courses.html" id="iit-courses-link">IIT Courses</a></p>
