@@ -40,10 +40,27 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 65px; /* Fixed height for the caption */
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 14px;
+  line-height: normal;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.thumb .caption p {
+  margin: 0;
+  padding: 0 5px; 
+  text-overflow: ellipsis; /*if text exceeds space */
+  overflow: hidden;
+  white-space: normal; 
+  word-wrap: break-word; /* Ensures that words break to the next line if necessary */
+  font-size: 14px;
+  max-width: 90%; /* Ensures there's some padding around the text */
 }
 
 /* Banner Wrap */
@@ -183,8 +200,8 @@
 } */
 .isotope-nav .nav-item.active {
   border: 2px solid currentColor; 
+  font-weight: bold;
 }
-
 
 .isotope-nav .nav-item.cybersecurity:hover {
   background-color: #ffa500; 
