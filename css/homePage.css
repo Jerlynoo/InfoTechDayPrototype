@@ -64,7 +64,7 @@ h2 {
     width: 100%;
     text-align: center;
     padding: 0 10px;
-    white-space: nowrap; /* Keeps text on a single line by default */
+    white-space: normal; /* Allows text wrapping by default */
 }
 
 .event-info p {
@@ -72,26 +72,27 @@ h2 {
     margin: 0;
 }
 
-@media (max-width: 768px) { /* Apply this styling for mobile screens */
-    .event-info {
-      white-space: normal; /* Allows text to wrap */
-      display: block;
-    }
-  
-    .event-info span {
-      display: block; /* Break each segment into its own line */
-    }
-  }
+.event-info span, .event-info .separator {
+    display: inline-block;
+    white-space: nowrap; /* Prevents line breaks between spans and separators */
+}
 
-  @media (min-width: 600px) and (max-width: 834px) { /* iPad Mini View */
-    .event-info {
-      white-space: normal;
+.event-info .separator {
+    margin-left: 15px; 
+    margin-right: 15px; 
+}
+
+@media (max-width: 768px) {
+    .event-info span {
+        display: inline; 
     }
-  
-    .event-info span:nth-child(3) { /* Keep "TP Main Foyer & Auditorium 1 & 2" together */
-      display: inline-block;
+
+    .event-info .separator {
+        display: inline; 
+        margin-left: 15px; /* Space after the preceding word */
+        margin-right: 15px;
     }
-  }
+}
 
 .description {
     font-size: 20px;
@@ -113,7 +114,7 @@ h2 {
     flex-grow: 1;
     /* Makes buttons grow to equal widths */
     padding: 15px 30px;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 1000;
     border: none;
     cursor: pointer;
@@ -135,8 +136,8 @@ h2 {
 
 .registration-buttons span {
     display: block;
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 16px;
+    margin-top: 0px;
     text-transform: none;
 }
 
@@ -148,7 +149,6 @@ h2 {
 
     .registration-buttons button {
         width: 100%;
-        /* Buttons take up full width in mobile view */
     }
 }
 
@@ -282,7 +282,6 @@ h2 {
     cursor: pointer;
 }
 
-/* Mobile View Adjustments */
 @media (max-width: 768px) {
     .tp-map-img {
         width: 100%;
@@ -365,7 +364,7 @@ h2 {
 }
 
 .venue-info a {
-    color: #329fff;
+    color: #77c0ff;
     text-decoration: none;
 }
 
@@ -412,7 +411,7 @@ h2 {
 
 @media screen and (max-width: 780px) {
     h1 {
-        font-size: 58px;
+        font-size: 50px;
         margin: 0;
     }
 
