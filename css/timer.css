@@ -18,6 +18,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Ra';
+    src: url('../fonts/ra-mono/Ra-Mono.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
     --dark-rgb: 23 28 28;
@@ -162,7 +168,7 @@
 }
 
 .digits .digit {
-    font-family: 'Baskerville Old Face', serif;
+    font-family: 'Ra';
     line-height: 1em;
     width: 8rem;
     position: relative;

@@ -205,29 +205,35 @@
 
 .isotope-nav .nav-item.cybersecurity:hover {
   background-color: #ffa500; 
+  font-weight: bold;
 }
 
 .isotope-nav .nav-item.ai:hover {
   background-color: #3fdf92;; 
+  font-weight: bold;
 }
 
 .isotope-nav .nav-item.digital-solution:hover {
   background-color: #e979ff; 
+  font-weight: bold;
 }
 
 .isotope-nav .nav-item.active.cybersecurity:hover {
   background-color: #ffb031; 
   color: #010029;
+  font-weight: bold;
 }
 
 .isotope-nav .nav-item.active.ai:hover {
   background-color: #30e17a;
   color: #010029;
+  font-weight: bold;
 }
 
 .isotope-nav .nav-item.active.digital-solution:hover {
   background-color: #d236f2; 
   color: #010029;
+  font-weight: bold;
 }
 
 .isotope-nav .nav-item.active.cybersecurity { color: #ffa500; }

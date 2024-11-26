@@ -40,7 +40,6 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 120px;
-    padding-top: 30px;
     padding-bottom: 60px;
 }
 
@@ -49,8 +48,8 @@ h2 {
     color: white;
 }
 
-
 .direction-buttons button {
+    margin-top: 30px;
     padding: 20px 50px;
     font-family: 'Overpass';
     font-weight: bold;
@@ -89,10 +88,8 @@ h2 {
     }
 }
 
-/* Popup container - hidden by default */
 .popup {
     display: none;
-    /* Hidden by default */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -100,26 +97,29 @@ h2 {
     width: 100%;
     height: 100%;
     background-color: rgba(41, 33, 53, 0.9);
-    justify-content: center;
-    align-items: center;
+    overflow: hidden; 
+    padding-top: 1rem;
 }
 
-/* Popup content */
 .popup-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: #010029;
     font-family: 'Overpass';
-    margin: 15% auto;
+    margin: auto;
     padding: 20px;
     border: 5px solid #010029;
     border-radius: 12px;
     width: 90%;
     max-width: 800px;
+    max-height: 90%; 
+    overflow-y: auto;
+    overflow-x: hidden;
     position: relative;
     animation-name: zoom;
     animation-duration: 0.4s;
+    box-sizing: border-box; 
 }
 
 /* Keyframes for zoom effect */
@@ -181,7 +181,7 @@ h2 {
 }
 
 .direction-info {
-    margin-top: 30px;
+    margin-top: 60px;
     width: 80%;
     text-align: center;
     padding: 0 10px;
@@ -227,8 +227,8 @@ h2 {
 }
 
 .tp-map-img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -357,7 +357,7 @@ h2 {
     .direction-buttons {
         flex-direction: column;
         gap: 15px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 
     .direction-buttons button {
@@ -393,4 +393,15 @@ h2 {
     .tp-map-img {
         padding: 5px;
     }
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.popup-content img, 
+.popup-content p, 
+.popup-content div {
+    max-width: 100%; 
+    word-wrap: break-word; 
 }

@@ -14,21 +14,20 @@ function closePopup(popupId) {
     popup.style.display = "none";
 }
 
-function openModal() {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('expandedImage');
-    const img = document.querySelector('.tp-map-img');
+function showPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.style.display = "block";
+    document.body.classList.add("modal-open"); // Disable background scrolling
 
-    modal.style.display = "block";
-    modalImg.src = img.src;
-
-    window.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            closeModal();
+    window.addEventListener("click", function (event) {
+        if (event.target === popup) {
+            closePopup(popupId);
         }
     });
 }
 
-function closeModal() {
-    document.getElementById('imageModal').style.display = "none";
+function closePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.style.display = "none";
+    document.body.classList.remove("modal-open"); // Re-enable background scrolling
 }
