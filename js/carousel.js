@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     track.style.width = `${trackWidth}vmin`;
 
     // Auto-scroll settings
-    let autoScrollSpeed = 0.1; // Adjust speed here
+    let autoScrollSpeed = 0.03; // Adjust speed here
     let currentScroll = 0; // Track current scroll percentage
     let autoScrollInterval = null;
 
@@ -31,71 +31,74 @@ document.addEventListener('DOMContentLoaded', () => {
         autoScrollInterval = null;
     };
 
+    
     const autoScroll = () => {
-        if (isNaN(currentScroll)) {
-            currentScroll = 0;
-        }
-
-        currentScroll -= autoScrollSpeed; // Decrease scroll value to move left
-
-        // Reset when it reaches the end of the track
+        currentScroll -= autoScrollSpeed; // Move left
+    
+        // When the scroll reaches the end, reset seamlessly
         if (currentScroll <= -100) {
-            currentScroll = 0;
+            currentScroll += 100; // Shift the scroll position back seamlessly
         }
-
+    
         // Apply the scroll transformation
         track.style.transform = `translate(${currentScroll}%, -50%)`;
-
-        // Adjust the images' object-position
+    
+        // Adjust the images' object-position dynamically
         for (const image of images) {
             image.style.objectPosition = `${100 + currentScroll}% center`;
         }
-
-        autoScrollInterval = requestAnimationFrame(autoScroll); // Continue auto-scroll smoothly
-    };
+    
+        // Continue auto-scrolling smoothly
+        autoScrollInterval = requestAnimationFrame(autoScroll);
+    };    
 
     // Start auto-scroll initially
     startAutoScroll();
 
-    let velocity = 0; // Track the velocity for smooth movement
+    // let velocity = 0; // Track the velocity for smooth movement
 
-    const handleMove = (clientX) => {
-        if (!isDragging) return;
+    // const handleMove = (clientX) => {
+    //     if (!isDragging) return;
 
-        const deltaX = (clientX - startX) * -1; // Invert the direction
-        const maxDelta = window.innerWidth / 2; // Adjust for sensitivity
+    //     const deltaX = (clientX - startX) * -1; // Invert the direction
+    //     const maxDelta = window.innerWidth / 2; // Adjust for sensitivity
 
-        const dragSpeed = 0.9; // Control how fast the carousel moves
-        let percentage = (deltaX * dragSpeed / maxDelta) * -100;
-        let newScroll = startScroll + percentage;
+    //     const dragSpeed = 0.9; // Control how fast the carousel moves
+    //     let percentage = (deltaX * dragSpeed / maxDelta) * -100;
+    //     let newScroll = startScroll + percentage;
 
-        // Clamp the newScroll between -100 and 0
-        newScroll = Math.max(Math.min(newScroll, 0), -100);
+    //     // Clamp the newScroll between -100 and 0
+    //     newScroll = Math.max(Math.min(newScroll, 0), -100);
 
-        // Calculate velocity for smooth transition
-        velocity = newScroll - currentScroll;
-        currentScroll += velocity * 0.1; // Adjust 0.1 to control smoothness
+    //     // Calculate velocity for smooth transition
+    //     velocity = newScroll - currentScroll;
+    //     currentScroll += velocity * 0.1; // Adjust 0.1 to control smoothness
 
-        // Apply the manual scroll transformation
-        track.style.transform = `translate(${currentScroll}%, -50%)`;
+    //     // Apply the manual scroll transformation
+    //     track.style.transform = `translate(${currentScroll}%, -50%)`;
 
-        // Adjust the images' object-position
-        for (const image of images) {
-            image.style.objectPosition = `${100 + currentScroll}% center`;
-        }
-    };
+    //     // Adjust the images' object-position
+    //     for (const image of images) {
+    //         image.style.objectPosition = `${100 + currentScroll}% center`;
+    //     }
+    // };
 
-    const handleEnd = () => {
-        isDragging = false;
-
-        // Restart auto-scroll immediately after ending manual scroll
-        startAutoScroll(); // Restart auto-scroll
-    };
-
-    // Mouse events
-    track.onmousedown = e => handleStart(e.clientX);
-    window.onmouseup = handleEnd;
-    window.onmousemove = e => handleMove(e.clientX);
+    // const handleEnd = () => {
+    //     isDragging = false;
+    
+    //     // Reset velocity and ensure alignment
+    //     velocity = 0;
+    //     currentScroll = Math.round(currentScroll / -100) * -100; // Snap to 0 or -100
+    //     track.style.transform = `translate(${currentScroll}%, -50%)`;
+    
+    //     // Restart auto-scroll
+    //     startAutoScroll();
+    // };
+    
+    // // Mouse events
+    // track.onmousedown = e => handleStart(e.clientX);
+    // window.onmouseup = handleEnd;
+    // window.onmousemove = e => handleMove(e.clientX);
 
     // Touch events
     track.ontouchstart = e => handleStart(e.touches[0].clientX);
