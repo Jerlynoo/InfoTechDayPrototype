@@ -15,7 +15,7 @@
 /* General Styles */
 body {
     height: 1500px;
-    background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);
+    /* background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png); */
     font-family: 'Overpass';
 }
 
@@ -92,6 +92,27 @@ h2{
     text-transform: uppercase;
 }
 
+.breadcrumbs {
+    font-size: 14px;
+    color: #555; /* Neutral color for breadcrumbs */
+    padding-left: 20px;
+    text-align: left; /* Align breadcrumbs to the left */
+}
+
+.breadcrumbs a {
+    color: #1e3ec0; /* Blue for links */
+    text-decoration: none;
+    margin-right: 5px; /* Space between breadcrumb links */
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.breadcrumbs span {
+    color: #333; /* Darker color for the current page */
+}  
+
 /* Content Wrapper */
 .content-wrapper {
     display: flex;
@@ -126,20 +147,40 @@ h2{
 .key-benefits h2, .technologies h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #4b3dc8;
 }
 
 .key-benefits ul, .technologies ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove default list styling */
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 17px;
+    margin: 0;
 }
 
-/* .key-benefits li, .technologies li {
-    font-weight: bold;
-} */
+.key-benefits li, .technologies li {
+    position: relative; /* Set the parent element as relative */
+    margin-bottom: 10px; /* Add space between list items */
+    line-height: 1.6; /* Adjust for readability */
+}
+
+.key-benefits i.icon, .technologies i.icon {
+    position: absolute; /* Position the icon absolutely */
+    left: 0; /* Place the icon on the left side */
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    z-index: -1; /* Place the icon behind the text */
+    font-size: 2em; /* Adjust icon size */
+    color: #000000; /* Light color for a subtle background effect */
+    opacity: 0.5; /* Make it semi-transparent */
+}
+
+.key-benefits li span, .technologies li span {
+    position: relative; /* Ensure text is on top of the icon */
+    margin-left: 40px; /* Add space to the left to accommodate the icon */
+    font-size: 1.1em; /* Adjust text size if needed */
+    z-index: 1; /* Ensure the text stays above the icon */
+    padding-left: 10px;
+}
+
 
 .project-description {
     margin-bottom: 20px;
@@ -157,6 +198,15 @@ h2{
 
 .student p, .supervisor p, .industrial-partner p {
     text-transform: uppercase;
+}
+
+.supervisor h2, .industrial-partner h2 {
+    margin-bottom: 5px; /* Reduce space below the heading */
+}
+
+.supervisor p, .industrial-partner p {
+    margin-top: 0; /* Remove extra space above the paragraph */
+    line-height: 1.2; /* Adjust line height for finer spacing */
 }
 
 /* Students Grid */
@@ -193,9 +243,10 @@ h2{
 
 /* General icon styling */
 .icon {
-    font-size: 1.5em; /* Icon size */
-    margin-right: 10px; /* Spacing between icon and text */
-    color: #000; /* Icon color */
+    font-size: 1.5em; /* Uniform icon size */
+    margin-right: 10px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent icon shrinking */
+    vertical-align: middle; /* Align icon with the text baseline */
 }
 
 /* Key Technologies Section Styling */
@@ -223,6 +274,7 @@ h2{
 .key-technologies .technology-item:last-child {
     margin-bottom: 0; /* Remove margin for the last item */
 }
+
 /* Go Back Btn */
 .go-back-button {
     position: center;
@@ -238,12 +290,16 @@ h2{
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
+}
   
-  .go-back-button:hover {
+.go-back-button:hover {
     background-color: #555;
-  }
+}
 
+.bottom-text {
+    text-align: center;
+    color: #1e3ec0;
+}
  /* Mobile View Adjustments */
 @media (max-width: 768px) {
     .content-wrapper {
@@ -305,5 +361,9 @@ h2{
 
     .industrial-partner {
         order: 7; /* Last in mobile view */
+    }
+
+    .bottom-text {
+        font-size: 12px;
     }
 }
