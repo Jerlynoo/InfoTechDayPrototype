@@ -128,15 +128,10 @@ h3{
 
 .table th,
 .table td {
-  text-align: center;
+  text-align: left;
   padding: 12px;
   border: 1px solid #001f47;
 }
-
-/* .table th {
-  background-color: #00142F;
-  color: #fff;
-} */
 
 .table tr {
   background-color: #00142F;
