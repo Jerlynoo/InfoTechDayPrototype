@@ -219,7 +219,7 @@ h2 {
     border-top-right-radius: 15px;
 }
 
-.container {
+.container1 {
     text-align: center;
     padding: 10px;
     min-height: 10vmin; 
@@ -228,7 +228,7 @@ h2 {
     justify-content: center;
 }
 
-.container p {
+.container1 p {
     font-size: 17px;
     font-weight: bold;
     color: #010029;
