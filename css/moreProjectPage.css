@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Container Styling */
 .paginationproj {
   padding: 20px;
@@ -8,6 +15,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family: 'Overpass';
 }
 
 /* Pagination Styling */
@@ -44,6 +52,7 @@
   padding: 10px;
   cursor: pointer;
   font-size: 18px; /* Adjust icon size */
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -267,7 +276,7 @@ h3{
   position: relative;
   padding: 20px;
   color: #e0e0e0; /* Slightly off-white for better visual comfort */
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Overpass';
   font-size: 16px;
   line-height: 1.6;
   background: #1e1e2f; /* Dark background */
