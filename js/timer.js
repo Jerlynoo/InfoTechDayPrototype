@@ -25,12 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const [days, hours, minutes, seconds] = formatTime(config.time);
 
     const timeGroupWithColon = (id, value, showColon = true) => {
+      // Check if it's mobile view and the group is "hours-group"
+      const isMobileView = isMobile.matches && id === "hours";
       document.getElementById(id).innerHTML =
         value
           .split("")
           .map((char) => `<span class="digit">${char}</span>`)
-          .join("") + (showColon ? '<span class="colon">:</span>' : "");
-    };
+          .join("") +
+        (showColon && !isMobileView ? '<span class="colon">:</span>' : "");
+    };    
 
     timeGroupWithColon("days", days);
     timeGroupWithColon("hours", hours);
@@ -53,23 +56,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const checkEventStatus = () => {
-    const now = new Date();
-    const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
-    config.time = timeRemaining;
+  const isMobile = window.matchMedia("(max-width: 768px)");
 
-    if (timeRemaining > 0) {
-      updateCountdownDisplay();
-    } else if (now >= targetDate && now < eventEndDate) {
-      // Show Welcome message on the day of the event
-      displayMessage("WELCOME TO TP INFOTECH DAY 2025");
-    } else if (now >= eventEndDate) {
-      // After the event is over (24th Jan onwards)
-      displayMessage("THANK YOU!<br>The Event is Over :)", "5rem", "6rem");
-      clearInterval(intervalId); // Stop checking after the thank-you message
+const checkEventStatus = () => {
+  const now = new Date();
+  const timeRemaining = Math.max(0, Math.floor((targetDate - now) / 1000));
+  config.time = timeRemaining;
+
+  const daysRemaining = Math.floor(timeRemaining / 86400);
+
+  if (timeRemaining > 0) {
+    if (isMobile.matches) {
+      // Mobile view adjustments
+      if (daysRemaining > 0) {
+        // Show only days in mobile view
+        document.getElementById("days-group").style.display = "flex";
+        document.getElementById("hours-group").style.display = "flex";
+        document.getElementById("minutes-group").style.display = "none";
+        document.getElementById("seconds-group").style.display = "none";
+      } else {
+        // Show hours, minutes, and seconds in mobile view
+        document.getElementById("days-group").style.display = "none";
+        document.getElementById("hours-group").style.display = "flex";
+        document.getElementById("minutes-group").style.display = "flex";
+        document.getElementById("seconds-group").style.display = "flex";
+      }
+    } else {
+      // Desktop view: Show all
+      document.getElementById("days-group").style.display = "flex";
+      document.getElementById("hours-group").style.display = "flex";
+      document.getElementById("minutes-group").style.display = "flex";
+      document.getElementById("seconds-group").style.display = "flex";
     }
-  };
 
+    updateCountdownDisplay();
+  } else if (now >= targetDate && now < eventEndDate) {
+    // Welcome message
+    displayMessage("WELCOME TO TP INFOTECH DAY 2025");
+  } else if (now >= eventEndDate) {
+    // Event over message
+    displayMessage("THANK YOU!<br>The Event is Over :)", "5rem", "6rem");
+    clearInterval(intervalId); // Stop checking after the event ends
+  }
+};
   // Set an interval to check every second
   const intervalId = setInterval(checkEventStatus, 1000);
 

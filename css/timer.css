@@ -85,14 +85,8 @@
     padding: 2rem 1rem;
     backdrop-filter: blur(0.5rem);
     animation: boxShadowPulse 2.5s ease-in-out infinite;
-}
-
-#prize-labels {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 1rem;
-    flex-wrap: wrap;
+    border-radius: 4rem;
+    overflow: hidden;
 }
 
 .label {
@@ -102,8 +96,6 @@
     font-weight: bold;
     letter-spacing: 0.1rem;
 }
-
-
 
 .label-group {
     display: flex;
