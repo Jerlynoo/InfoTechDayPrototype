@@ -35,10 +35,10 @@ body {
 header {
     /* background-image: url('../images/tp-banner.png'); */
     height: 20vh;
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 10px;
     z-index: 4;
-}
+}   
 
 h1 {
     font-family: 'Brightness1';
@@ -52,8 +52,26 @@ h2 {
     margin-top: 20px;
 }
 
+.main-container {
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 30px;
+    padding: 20px;
+    background-image: url('../images/anime_bg.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: #fff; 
+    width: 100vw;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 10px; */
+    /* max-width: 800px; */
+    /* margin: auto; */
+  }  
+
 .event-info {
-    margin-top: 90px;
+    margin-top: 50px;
     width: 100%;
     text-align: center;
     padding: 0 10px;
