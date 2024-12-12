@@ -6,13 +6,6 @@
 }
 
 @font-face {
-    font-family: 'Nocashe';
-    src: url('../fonts/nocashe/Nocashe-0W4VX.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Overpass';
     src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
     font-weight: normal;
@@ -222,7 +215,7 @@ h2 {
 .container1 {
     text-align: center;
     padding: 10px;
-    min-height: 10vmin; 
+    height: 18vmin;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,28 +234,17 @@ h2 {
     -webkit-box-orient: vertical;
 }
 
-@media screen and (max-width: 768px) {
-    .container p {
-        font-size: 1.2em;
+@media screen and (max-width: 800px) {
+    .container1 p {
+        font-size: 15px;
+    }
+
+    .container1{
+        height: 50vmin;
     }
 }
 
 @media screen and (max-width: 640px) {
-    .container p {
-        font-size: 1.1em;
-    }
-
-    .polaroid {
-        width: 35vmin;
-        height: 46vmin;
-        border-radius: 25px !important;
-    }
-}
-@media screen and (max-width: 640px) {
-    .container p {
-        font-size: 1em;
-    }
-
     .polaroid {
         width: 40vmin;
         height: 60vmin;
