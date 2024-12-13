@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="css/venue.css" />
     <!-- Timer css -->
     <link rel="stylesheet" href="css/timer.css" />
+    <!-- Chatbot css -->
+    <link rel="stylesheet" href="css/chatbot.css" />
   </head>
 
   <body>
@@ -684,7 +686,20 @@
           </a>
         </p>
       </div>
-    </section>    
+    </section>
+    <button id="chatbot-button" class="chatbot-button"></button>
+
+    <div class="chatbot-container" id="chatbot-container">
+      <div class="chatbot-header">
+        Chatbot
+        <span id="close-chat" class="close-chat">X</span>
+      </div>
+      <div class="chatbot-body" id="chat-area"></div>
+      <div class="chatbot-footer">
+        <input type="text" id="chat-input" placeholder="Type a message..." />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
     <!-- Footer Section -->
   </body>
   <script src="js/main.js"></script>
@@ -694,4 +709,5 @@
   <script src="js/timer.js"></script>
   <script src="js/timeline.js"></script>
   <script src="js/popup.js"></script>
+  <script src="js/chatbot.js"></script>
 </html>
