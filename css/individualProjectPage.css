@@ -301,11 +301,15 @@ h2{
     background-color: #0044cc; /* Blue background */
     color: white; /* White text */
     text-align: center; /* Center the text */
-    padding: 10px 0; /* Add vertical padding */
     font-size: 16px; /* Adjust text size */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Add a slight shadow for better visibility */
+    align-items: center;
+    padding: 10px;
   }
-
+  
+  .bottom-text p {
+    margin-bottom: 0; /* Remove margin from paragraphs specifically in .bottom-text */
+}
   .scroll-to-top {
     position: fixed;
     bottom: 20px;
@@ -431,5 +435,28 @@ h2{
 
     .bottom-text {
         font-size: 12px;
+    }
+
+    .header_logo {
+        font-family: 'Brightness1';
+        margin: 0;
+        padding-top: 70px;
+        font-size: 50px;
+        color: #ffffff;
+        transition: .3s;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .header.small .header_logo {
+        padding-top: 50px;
+        font-size: 30px;
+        text-shadow: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header.small{
+        height: fit-content;
     }
 }
