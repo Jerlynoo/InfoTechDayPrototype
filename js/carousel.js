@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         autoScrollInterval = null;
     };
 
-
     const autoScroll = () => {
         currentScroll -= autoScrollSpeed; // Move left
 
