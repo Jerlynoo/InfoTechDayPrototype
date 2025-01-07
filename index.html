@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="css/venue.css" />
     <!-- Timer css -->
     <link rel="stylesheet" href="css/timer.css" />
+    <!-- Chatbot css -->
+    <link rel="stylesheet" href="css/chatbot.css" />
   </head>
 
   <body>
@@ -44,49 +46,54 @@
       <div id="sub-title">Creating Tomorrow's Solutions Today</div>
     </div> -->
     <!-- NAV -->
-    <header>
-      <h1>TP InfoTech Day 2025</h1>
-      <h2>Creating Tomorrow's Solutions Today</h2>
-    </header>
+    <div
+      class="main-container">
+      <header class="event-header">
+        <h1>TP InfoTech Day 2025</h1>
+        <h2>Creating Tomorrow's Solutions Today</h2>
+      </header>
 
-    <div id="app">
-      <div id="prize">
-        <div id="prize-lines" class="prize-filter"></div>
-        <div id="prize-shadow" class="prize-filter"></div>
-        <h2 id="prize-label">
-          <span>COUNTDOWN TO TP INFOTECH DAY 2025</span>
-        </h2>
-        <div id="prize-text">
-          <div class="time-group" id="days-group">
-            <div class="digits" id="days"></div>
-            <span class="label">DAYS</span>
-          </div>
-          <div class="time-group" id="hours-group">
-            <div class="digits" id="hours"></div>
-            <span class="label">HOURS</span>
-          </div>
-          <div class="time-group" id="minutes-group">
-            <div class="digits" id="minutes"></div>
-            <span class="label">MINUTES</span>
-          </div>
-          <div class="time-group" id="seconds-group">
-            <div class="digits" id="seconds"></div>
-            <span class="label">SECONDS</span>
+      <div id="app" class="prize-container">
+        <div id="prize">
+          <div id="prize-lines" class="prize-filter"></div>
+          <div id="prize-shadow" class="prize-filter"></div>
+          <h2 id="prize-label">
+            <span>COUNTDOWN TO TP INFOTECH DAY 2025</span>
+          </h2>
+          <div id="prize-text">
+            <div class="time-group" id="days-group">
+              <div class="digits" id="days"></div>
+              <span class="label">DAYS</span>
+            </div>
+            <div class="time-group" id="hours-group">
+              <div class="digits" id="hours"></div>
+              <span class="label">HOURS</span>
+            </div>
+            <div class="time-group" id="minutes-group">
+              <div class="digits" id="minutes"></div>
+              <span class="label">MINUTES</span>
+            </div>
+            <div class="time-group" id="seconds-group">
+              <div class="digits" id="seconds"></div>
+              <span class="label">SECONDS</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="event-info">
+        <p>
+          <span>23 January (Thurs)</span>
+          <span class="separator"> | </span>
+          <span>3pm - 9pm</span>
+          <span class="separator"> | </span>
+          <span>Temasek Polytechnic</span>
+          <span>Main Foyer & </span>
+          <span>Auditorium 1 & 2</span>
+        </p>
+      </div>
     </div>
-    <div class="event-info">
-      <p class="event-info">
-        <span>23 January (Thurs)</span>
-        <span class="separator"> | </span>
-        <span>3pm - 9pm</span>
-        <span class="separator"> | </span>
-        <span>Temasek Polytechnic</span>
-        <span>Main Foyer & </span>
-        <span>Auditorium 1 & 2 </span>
-      </p>
-    </div>
+
     <div class="registration-buttons">
       <button
         class="general-registration-button"
@@ -140,7 +147,9 @@
             draggable="false"
           />
           <div class="container1">
-            <p>SGH : Development of a Caregiver App for Medication Management</p>
+            <p>
+              SGH : Development of a Caregiver App for Medication Management
+            </p>
           </div>
         </a>
         <a href="pages/project.html" class="polaroid">
@@ -180,7 +189,9 @@
             draggable="false"
           />
           <div class="container1">
-            <p>Augmenting Data Science Tasks with Effective Prompt Engineering</p>
+            <p>
+              Augmenting Data Science Tasks with Effective Prompt Engineering
+            </p>
           </div>
         </a>
         <a href="pages/project.html" class="polaroid">
@@ -270,7 +281,9 @@
             draggable="false"
           />
           <div class="container1">
-            <p>Develop systematic threats for Smart Industry Systems using AI</p>
+            <p>
+              Develop systematic threats for Smart Industry Systems using AI
+            </p>
           </div>
         </a>
         <a href="pages/project.html" class="polaroid">
@@ -674,7 +687,19 @@
         </p>
       </div>
     </section>
+    <button id="chatbot-button" class="chatbot-button"></button>
 
+    <div class="chatbot-container" id="chatbot-container">
+      <div class="chatbot-header">
+        Chatbot
+        <span id="close-chat" class="close-chat">X</span>
+      </div>
+      <div class="chatbot-body" id="chat-area"></div>
+      <div class="chatbot-footer">
+        <input type="text" id="chat-input" placeholder="Type a message..." />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
     <!-- Footer Section -->
   </body>
   <script src="js/main.js"></script>
@@ -684,4 +709,5 @@
   <script src="js/timer.js"></script>
   <script src="js/timeline.js"></script>
   <script src="js/popup.js"></script>
+  <script src="js/chatbot.js"></script>
 </html>

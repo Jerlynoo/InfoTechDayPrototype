@@ -2,39 +2,34 @@
     {
     "Title": "Beating Saber",
     "Filter": "ai",
-    "Description": "Greatest Game Alive!!!",
     "Student": "HO WEI TING JERLYN",
     "Supervisor": "Daryl Chia (DR)",
     "Industrial_Partner": "Temasek Poly"
     },
     {
-    "Title": "Crash",
+    "Title": "Noise Detection IoT Solution",
     "Filter": "digital-solution",
-    "Description": "Greatest Game Alive!!!",
-    "Student": "HO WEI TING JERLYN , JOSHUA TAN , JASMINE ANG",
-    "Supervisor": "Daryl Chia (DR) , HU HUIMEI (MS)",
-    "Industrial_Partner": "Temasek Poly"
+    "Student": "BEINS ISAAC RYAN,RIZQ RAYYAN BIN NORHISYAM,SITI AMIRAH BINTE MUHAMAD BAHARUDDIN,NATHANAEL JOSIAH CHEW RUI AN",
+    "Supervisor": "Lam Su Yi (Ms)",
+    "Industrial_Partner": "Tampines Residents' Network (RN)"
     },
     {
-    "Title": "COVID 19 Analytics Dashboard Harnessing Descriptive and Predictive Analytics",
-    "Filter": "ai",
-    "Description": "Greatest Game Alive!!!",
-    "Student": "HO WEI TING JERLYN",
-    "Supervisor": "Daryl Chia (DR)",
-    "Industrial_Partner": "Temasek Poly"
+    "Title": "Web based File Sharing Application",
+    "Filter": "digital-solution",
+    "Student": "GADHIRAJU REVANTH SRI VARMA,KYTE JAMES AGUS,CHAI WEI CHENG",
+    "Supervisor": "Alfred Teng (Mr)",
+    "Industrial_Partner": "4latest.com"
     },
     {
-    "Title": "AI Chatbot",
+    "Title": "Gamification In Chatbot",
     "Filter": "ai",
-    "Description": "Greatest Game Alive!!!",
-    "Student": "HO WEI TING JERLYN",
-    "Supervisor": "Daryl Chia (DR)",
-    "Industrial_Partner": "Temasek Poly"
+    "Student": "PALANI SUJITHA",
+    "Supervisor": "Fua Ying Huey (Ms)",
+    "Industrial_Partner": "OCBC"
     },
     {
     "Title": "Chatbot",
     "Filter": "ai",
-    "Description": "Greatest Game Alive!!!",
     "Student": "HO WEI TING JERLYN",
     "Supervisor": "Daryl Chia (DR)",
     "Industrial_Partner": "Temasek Poly"
@@ -42,7 +37,6 @@
     {
     "Title": "Hackaholic",
     "Filter": "cybersecurity",
-    "Description": "Greatest Game Alive!!!",
     "Student": "HO WEI TING JERLYN",
     "Supervisor": "Daryl Chia (DR)",
     "Industrial_Partner": "Temasek Poly"
