@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ) {
         container.innerHTML += `
           <div class="item col-md-3 col-sm-6 col-xs-12 ${projectClass}" style="position: relative;">
-            <a href="../project_pages/${project.Title.toLowerCase().replace(
+            <a href="../project_pages/${project.Page.toLowerCase().replace(
               /\s/g,
               "_"
             )}.html" style="display: block; text-decoration: none; color: inherit;">

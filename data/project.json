@@ -1,6 +1,7 @@
 [
     {
     "Title": "Beating Saber",
+    "Page": "Beating Saber",
     "Filter": "ai",
     "Student": "HO WEI TING JERLYN",
     "Supervisor": "Daryl Chia (DR)",
@@ -8,6 +9,7 @@
     },
     {
     "Title": "Noise Detection IoT Solution",
+    "Page": "Noise Detection IoT Solution",
     "Filter": "digital-solution",
     "Student": "BEINS ISAAC RYAN,RIZQ RAYYAN BIN NORHISYAM,SITI AMIRAH BINTE MUHAMAD BAHARUDDIN,NATHANAEL JOSIAH CHEW RUI AN",
     "Supervisor": "Lam Su Yi (Ms)",
@@ -15,6 +17,7 @@
     },
     {
     "Title": "Web based File Sharing Application",
+    "Page": "Web based File Sharing Application",
     "Filter": "digital-solution",
     "Student": "GADHIRAJU REVANTH SRI VARMA,KYTE JAMES AGUS,CHAI WEI CHENG",
     "Supervisor": "Alfred Teng (Mr)",
@@ -22,20 +25,23 @@
     },
     {
     "Title": "Gamification In Chatbot",
+    "Page": "Gamification In Chatbot",
     "Filter": "ai",
     "Student": "PALANI SUJITHA",
     "Supervisor": "Fua Ying Huey (Ms)",
     "Industrial_Partner": "OCBC"
     },
     {
-    "Title": "Chatbot",
+    "Title": "AdvUNet3+: Segmentation of city-scale heterogeneous building façade materials from street view images",
+    "Page": "AdvUNet3+",
     "Filter": "ai",
-    "Student": "HO WEI TING JERLYN",
-    "Supervisor": "Daryl Chia (DR)",
-    "Industrial_Partner": "Temasek Poly"
+    "Student": "TAN JING KAI DANIEL",
+    "Supervisor": "Linda William  (Dr)",
+    "Industrial_Partner": "INSTITUTE OF HIGH-PERFORMANCE COMPUTING (A*STAR)"
     },
     {
     "Title": "Hackaholic",
+    "Page": "Hackaholic",
     "Filter": "cybersecurity",
     "Student": "HO WEI TING JERLYN",
     "Supervisor": "Daryl Chia (DR)",
