@@ -22,6 +22,10 @@
     <link href="../ext/font-awesome.min.css" rel="stylesheet" />
     <!-- main style css -->
     <link rel="stylesheet" href="../css/individualProjectPage.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="../ext/swiper.min.css" />
+    <!-- Swiper JS -->
+    <script src="../ext/swiper.min.js"></script>
     <!-- navbar css -->
     <link rel="stylesheet" href="../css/navbar.css" />
     <!-- footer css -->
@@ -55,8 +59,26 @@
       <!-- Left Column -->
       <div class="left-column">
         <!-- Placeholder Image -->
-        <div class="project-image">
-          <img src="../project_images/beating_saber.jpg" alt="Project Image" />
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../project_images/gamification_in_chatbot.jpg"
+                alt="Project Image 1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="../project_images/ai_chatbot.jpg"
+                alt="Project Image 2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="../project_images/chatbot.jpg" alt="Project Image 3" />
+            </div>
+          </div>
         </div>
 
         <!-- Key Benefits Section -->
@@ -64,20 +86,20 @@
           <h2>Key Benefits</h2>
           <ul>
             <li>
-              <i class="fa fa-truck-fast icon" aria-hidden="true"></i>
-              <span>Efficient</span>
+              <i class="fa fa-handshake icon" aria-hidden="true"></i>
+              <span>Engaging</span>
             </li>
             <li>
-              <i class="fa fa-lightbulb icon" aria-hidden="true"></i>
-              <span>Insightful</span>
+              <i class="fa fa-expand icon" aria-hidden="true"></i>
+              <span>Scalable</span>
             </li>
             <li>
-              <i class="fa fa-plug icon" aria-hidden="true"></i>
-              <span>Interoperable</span>
+              <i class="fa fa-lock icon" aria-hidden="true"></i>
+              <span>Secure</span>
             </li>
             <li>
-              <i class="fa fa-cogs icon" aria-hidden="true"></i>
-              <span>Robustness</span>
+              <i class="fa fa-hand-pointer icon" aria-hidden="true"></i>
+              <span>Interactive</span>
             </li>
           </ul>
         </div>
@@ -87,20 +109,28 @@
           <h2>Key Technologies Used</h2>
           <ul>
             <li>
-              <i class="fa fa-unity icon" aria-hidden="true"></i>
-              <span>Unity</span>
+              <i class="fa fa-coffee icon" aria-hidden="true"></i>
+              <span>Java</span>
             </li>
             <li>
-              <i class="fa fa-random icon" aria-hidden="true"></i>
-              <span>Vortex</span>
+              <i class="fa fa-react icon" aria-hidden="true"></i>
+              <span>React</span>
             </li>
             <li>
-              <i class="fa fa-music icon" aria-hidden="true"></i>
-              <span>Chromapper</span>
+              <i class="fa fa-code icon" aria-hidden="true"></i>
+              <span>Typescript</span>
             </li>
             <li>
-              <i class="fa fa-headset icon" aria-hidden="true"></i>
-              <span>Meta Quest</span>
+              <i class="fa fa-database icon" aria-hidden="true"></i>
+              <span>MongoDB</span>
+            </li>
+            <li>
+              <i class="fa fa-code icon" aria-hidden="true"></i>
+              <span>C#</span>
+            </li>
+            <li>
+              <i class="fa fa-server icon" aria-hidden="true"></i>
+              <span>PostgreSQL</span>
             </li>
           </ul>
         </div>
@@ -124,6 +154,7 @@
             and contextual information is necessary to make 3D models more
             accurate and accessible.
           </p>
+
           <p>
             In response, my research introduces a deep learning framework
             utilizing the AdvUNet3+ model to segment building façade materials
@@ -152,11 +183,17 @@
           <h2>Project Team Members</h2>
           <div class="student-grid">
             <div class="student-image">
-              <img
-                src="../project_member_profiles/beating saber/member1.jpg"
-                alt="Student Name"
-              />
-              <p>TAN JING KAI DANIEL​</p>
+              <a
+                href="https://blinq.me/kKEvYitGoVDY?bs=db ​"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../project_member_profiles/gamification in chatbot/member1.jpg"
+                  alt="TAN JING KAI DANIEL"
+                />
+              </a>
+              <p>TAN JING KAI DANIEL</p>
             </div>
           </div>
         </section>
@@ -164,7 +201,7 @@
         <!-- Supervisor Section -->
         <section class="supervisor">
           <h2>Supervisor</h2>
-          <p>Linda William  (Dr)</p>
+          <p>Linda William (Dr)</p>
         </section>
 
         <!-- Industrial Partner Section -->
@@ -188,4 +225,5 @@
   <script src="../js/footer.js"></script>
   <script src="../js/scroll.js"></script>
   <script src="../js/header.js"></script>
+  <script src="../js/swiper.js"></script>
 </html>
