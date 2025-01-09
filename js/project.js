@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             )}.html" style="display: block; text-decoration: none; color: inherit;">
               <div class="page-preview">
                 <div class="thumb">
-                  <img src="../project_images/${project.Title.toLowerCase().replace(
+                  <img src="../project_images/${project.Page.toLowerCase().replace(
                     /\s/g,
                     "_"
                   )}.jpg" class="img-responsive" alt="${project.Title}" />

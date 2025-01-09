@@ -160,7 +160,8 @@ h2{
 
 .student-image p,
 .supervisor p,
-.industrial-partner p {
+.industrial-partner p,
+.students p {
   text-transform: uppercase;  
   font-weight: bold;          
 }  
@@ -472,6 +473,7 @@ h2{
         transition: .3s;
         padding-left: 10px;
         padding-right: 10px;
+        height: fit-content;
     }
     
     .header.small .header_logo {
