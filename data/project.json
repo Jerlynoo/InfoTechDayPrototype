@@ -1,13 +1,23 @@
 [
     {
     "Title": "Beating Saber",
+    "Page": "Beating Saber",
     "Filter": "ai",
     "Student": "HO WEI TING JERLYN",
     "Supervisor": "Daryl Chia (DR)",
     "Industrial_Partner": "Temasek Poly"
     },
     {
+    "Title": "3D Postion and Posture Measurement System using AR Marker",
+    "Page": "3D Position",
+    "Filter": "ai",
+    "Student": "PUAH SHER YUN",
+    "Supervisor": "Nami Imanishi (Ms)",
+    "Industrial_Partner": "Kumamoto NIT"
+    },
+    {
     "Title": "Noise Detection IoT Solution",
+    "Page": "Noise Detection IoT Solution",
     "Filter": "digital-solution",
     "Student": "BEINS ISAAC RYAN,RIZQ RAYYAN BIN NORHISYAM,SITI AMIRAH BINTE MUHAMAD BAHARUDDIN,NATHANAEL JOSIAH CHEW RUI AN",
     "Supervisor": "Lam Su Yi (Ms)",
@@ -15,6 +25,7 @@
     },
     {
     "Title": "Web based File Sharing Application",
+    "Page": "Web based File Sharing Application",
     "Filter": "digital-solution",
     "Student": "GADHIRAJU REVANTH SRI VARMA,KYTE JAMES AGUS,CHAI WEI CHENG",
     "Supervisor": "Alfred Teng (Mr)",
@@ -22,23 +33,34 @@
     },
     {
     "Title": "Gamification In Chatbot",
+    "Page": "Gamification In Chatbot",
     "Filter": "ai",
     "Student": "PALANI SUJITHA",
     "Supervisor": "Fua Ying Huey (Ms)",
     "Industrial_Partner": "OCBC"
     },
     {
-    "Title": "Chatbot",
+    "Title": "AdvUNet3+: Segmentation of city-scale heterogeneous building façade materials from street view images",
+    "Page": "AdvUNet3+",
     "Filter": "ai",
-    "Student": "HO WEI TING JERLYN",
-    "Supervisor": "Daryl Chia (DR)",
-    "Industrial_Partner": "Temasek Poly"
+    "Student": "TAN JING KAI DANIEL",
+    "Supervisor": "Linda William  (Dr)",
+    "Industrial_Partner": "INSTITUTE OF HIGH-PERFORMANCE COMPUTING (A*STAR)"
     },
     {
-    "Title": "Hackaholic",
+    "Title": "Building & Streamlining an Optimized LiDAR Driver for Smarter Robots",
+    "Page": "Building Streamlining",
+    "Filter": "digital-solution",
+    "Student": " CHEW QI HERN",
+    "Supervisor": "Roselind (Ms)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Developing a GenAI-integrated Threat Intelligence Platform",
+    "Page": "Developing a GenAI integrated Threat Intelligence Platform",
     "Filter": "cybersecurity",
-    "Student": "HO WEI TING JERLYN",
-    "Supervisor": "Daryl Chia (DR)",
-    "Industrial_Partner": "Temasek Poly"
+    "Student": "Mohamad Syaqiq Bin Mohamad Iskandar​,Yin Moe Aye",
+    "Supervisor": " Rosita Jupri (Ms)",
+    "Industrial_Partner": "Resorts World Sentosa"
     }
 ]

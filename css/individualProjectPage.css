@@ -160,7 +160,8 @@ h2{
 
 .student-image p,
 .supervisor p,
-.industrial-partner p {
+.industrial-partner p,
+.students p {
   text-transform: uppercase;  
   font-weight: bold;          
 }  
@@ -186,6 +187,7 @@ h2{
     position: relative; /* Set the parent element as relative */
     margin-bottom: 10px; /* Add space between list items */
     line-height: 1.6; /* Adjust for readability */
+    overflow: hidden; /* Ensure content does not overflow the container */
 }
 
 .key-benefits i.icon, .technologies i.icon {
@@ -193,7 +195,6 @@ h2{
     left: 0; /* Place the icon on the left side */
     top: 50%; /* Center the icon vertically */
     transform: translateY(-50%); /* Adjust for perfect centering */
-    z-index: -1; /* Place the icon behind the text */
     font-size: 2em; /* Adjust icon size */
     color: #000000; /* Light color for a subtle background effect */
     opacity: 0.5; /* Make it semi-transparent */
@@ -201,12 +202,14 @@ h2{
 
 .key-benefits li span, .technologies li span {
     position: relative; /* Ensure text is on top of the icon */
-    margin-left: 40px; /* Add space to the left to accommodate the icon */
+    margin-left: 50px; /* Add space to the left to accommodate the icon */
     font-size: 1.1em; /* Adjust text size if needed */
-    z-index: 1; /* Ensure the text stays above the icon */
-    padding-left: 10px;
+    padding-left: 10px; /* Add some padding */
+    word-wrap: break-word; /* Break long words if necessary */
+    word-break: break-word; /* Break long words if necessary */
+    display: inline-block; /* Allow text wrapping */
+    max-width: calc(100% - 50px); /* Ensure the text stays within bounds */
 }
-
 
 .project-description {
     margin-bottom: 20px;
@@ -468,10 +471,11 @@ h2{
         margin: 0;
         padding-top: 70px;
         font-size: 50px;
-        color: #ffffff;
+        color: #ffffff; 
         transition: .3s;
         padding-left: 10px;
         padding-right: 10px;
+        height: fit-content;
     }
     
     .header.small .header_logo {
@@ -480,6 +484,7 @@ h2{
         text-shadow: none;
         padding-left: 10px;
         padding-right: 10px;
+        height: fit-content;
     }
 
     .header.small{
