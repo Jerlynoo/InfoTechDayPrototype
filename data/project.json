@@ -1,13 +1,5 @@
 [
     {
-    "Title": "Beating Saber",
-    "Page": "Beating Saber",
-    "Filter": "ai",
-    "Student": "HO WEI TING JERLYN",
-    "Supervisor": "Daryl Chia (DR)",
-    "Industrial_Partner": "Temasek Poly"
-    },
-    {
     "Title": "3D Postion and Posture Measurement System using AR Marker",
     "Page": "3D Position",
     "Filter": "ai",
@@ -24,6 +16,22 @@
     "Industrial_Partner": "Tampines Residents' Network (RN)"
     },
     {
+        "Title": "Gamification In Chatbot",
+        "Page": "Gamification In Chatbot",
+        "Filter": "ai",
+        "Student": "PALANI SUJITHA",
+        "Supervisor": "Fua Ying Huey (Ms)",
+        "Industrial_Partner": "OCBC"
+    },
+    {
+        "Title": "GRACE: Development of a Caregiver App for Medication Management",
+        "Page": "GRACE",
+        "Filter": "digital-solution",
+        "Student": "CHIN KAI LUN ,LIEW JUN XIANG ,CHEW HONG SHEN",
+        "Supervisor": "Natasha (Ms)",
+        "Industrial_Partner": "SGH"
+    },
+    {
     "Title": "Web based File Sharing Application",
     "Page": "Web based File Sharing Application",
     "Filter": "digital-solution",
@@ -32,20 +40,44 @@
     "Industrial_Partner": "4latest.com"
     },
     {
-    "Title": "Gamification In Chatbot",
-    "Page": "Gamification In Chatbot",
-    "Filter": "ai",
-    "Student": "PALANI SUJITHA",
-    "Supervisor": "Fua Ying Huey (Ms)",
-    "Industrial_Partner": "OCBC"
-    },
-    {
     "Title": "AdvUNet3+: Segmentation of city-scale heterogeneous building façade materials from street view images",
     "Page": "AdvUNet3+",
     "Filter": "ai",
     "Student": "TAN JING KAI DANIEL",
     "Supervisor": "Linda William  (Dr)",
     "Industrial_Partner": "INSTITUTE OF HIGH-PERFORMANCE COMPUTING (A*STAR)"
+    },
+    {
+    "Title": "Augmenting Data Science Tasks with Effective Prompt Engineering",
+    "Page": "Augmenting Data Science Tasks with Effective Prompt Engineering",
+    "Filter": "ai",
+    "Student": "YEO CHUN TENG LUCAS",
+    "Supervisor": "Zhang Huiyu  (Ms)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Unlocking Potential: A Data-Driven Approach to Job Security in Northeast Singapore",
+    "Page": "Unlocking Potential",
+    "Filter": "ai",
+    "Student": "HO WEI BIN",
+    "Supervisor": "Lim Kok Yau",
+    "Industrial_Partner": "People's Association"
+    },
+    {
+    "Title": "Prompts for Socratic Teaching",
+    "Page": "Prompts for Socratic Teaching",
+    "Filter": "ai",
+    "Student": "TAN ZHI YI FAYE",
+    "Supervisor": "Goh Kai Song",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "AATC Instructor Predictive Dashboard",
+    "Page": "AATC Instructor Predictive Dashboard",
+    "Filter": "digital-solution",
+    "Student": "KHALID ZAINAL",
+    "Supervisor": "Goh Rui Quan",
+    "Industrial_Partner": "AirBus"
     },
     {
     "Title": "Building & Streamlining an Optimized LiDAR Driver for Smarter Robots",
