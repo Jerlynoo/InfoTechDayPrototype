@@ -18,6 +18,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Ra';
     src: url('../fonts/ra-mono/Ra-Mono.otf') format('truetype');
@@ -51,25 +52,25 @@
 
 @keyframes boxShadowPulse {
     0% {
-        box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589);
+        box-shadow: 0rem 0rem 9rem 2rem rgba(112, 169, 255, 0.589);
     }
 
     50% {
-        box-shadow: 0rem 0rem 11rem 5rem rgba(93, 171, 255, 0.824);
+        box-shadow: 0rem 0rem 10rem 3rem rgba(93, 171, 255, 0.824);
     }
 
     100% {
-        box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589);
+        box-shadow: 0rem 0rem 9rem 2rem rgba(112, 169, 255, 0.589);
     }
 }
 
 .welcome-message {
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%; 
-    color: rgba(112, 169, 255, 0.9); 
+    width: 100%;
+    color: rgb(112, 169, 255);
 }
 
 #prize {
@@ -81,7 +82,7 @@
     gap: 0.5rem;
     position: relative;
     z-index: 2;
-    background-color: rgba(var(--darker-rgb), 0.8);
+    background:rgba(5, 0, 58, 0.653);
     padding: 2rem 1rem;
     backdrop-filter: blur(0.5rem);
     animation: boxShadowPulse 2.5s ease-in-out infinite;
@@ -142,7 +143,7 @@
     margin-bottom: 2.5rem;
     max-width: 100%;
     font-family: 'Arsenal';
-    color: rgba(112, 169, 255, 0.9);
+    color: rgb(112, 169, 255);
     text-shadow: 0 0 5px rgba(112, 169, 255, 0.6),
         0 0 10px rgba(112, 169, 255, 0.4);
 }
@@ -166,7 +167,7 @@
     position: relative;
     overflow: hidden;
     border-bottom: 0.25rem solid rgba(112, 169, 255, 0.9);
-    color: rgba(112, 169, 255, 0.9);
+    color: rgb(112, 169, 255);;
 }
 
 #prize-text>.digit>.digit-track {
@@ -247,9 +248,11 @@
         font-size: 6rem;
         line-height: 3.5rem;
     }
+
     #app {
         height: 65%;
     }
+
     .welcome-message {
         font-size: 4rem;
     }
@@ -260,18 +263,22 @@
         font-size: 5rem;
         line-height: 2.5rem;
     }
+
     #app {
         height: 60%;
     }
+
     #prize-label>span {
         font-size: 2.3rem;
         padding-bottom: 40px;
     }
+
     .label {
         font-size: 2rem;
         line-height: 3rem;
         letter-spacing: 0.1rem;
     }
+
     .digits .digit {
         width: 6rem;
     }
