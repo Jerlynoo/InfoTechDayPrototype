@@ -257,6 +257,17 @@ h2{
     padding: 20px;
 }
 
+.student-image p {
+    text-align: center; /* Center-align the text */
+    color: #333; /* Maintain desired text color */
+    margin: 10px 0 0; /* Adjust margin as needed */
+    word-wrap: break-word; /* Allows breaking words if needed */
+    overflow-wrap: break-word; /* Fallback for older browsers */
+    max-width: 200px; /* Set the maximum width for the text container */
+    margin: 0 auto; /* Centers the text block horizontally */
+    line-height: 1.5; /* Improves readability */
+  }
+
 .student p {
     margin: 10px 0 0;
     font-size: 14px;
