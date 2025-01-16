@@ -51,17 +51,14 @@
 
 @keyframes boxShadowPulse {
     0% {
-        /* box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589); */
         box-shadow: 0rem 0rem 9rem 2rem rgba(112, 169, 255, 0.589);
     }
 
     50% {
-        /* box-shadow: 0rem 0rem 11rem 5rem rgba(93, 171, 255, 0.824); */
         box-shadow: 0rem 0rem 10rem 3rem rgba(93, 171, 255, 0.824);
     }
 
     100% {
-        /* box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589); */
         box-shadow: 0rem 0rem 9rem 2rem rgba(112, 169, 255, 0.589);
     }
 }
@@ -84,7 +81,7 @@
     gap: 0.5rem;
     position: relative;
     z-index: 2;
-    background-color: rgba(var(--darker-rgb), 0.8);
+    background-color: rgba(var(--darker-rgb), 0.9);
     padding: 2rem 1rem;
     backdrop-filter: blur(0.5rem);
     animation: boxShadowPulse 2.5s ease-in-out infinite;
