@@ -1,0 +1,234 @@
+[
+    {
+    "Title": "Noise Detection IoT Solution",
+    "Page": "Noise Detection IoT Solution",
+    "Filter": "digital-solution",
+    "Student": "BEINS ISAAC RYAN,RIZQ RAYYAN BIN NORHISYAM,SITI AMIRAH BINTE MUHAMAD BAHARUDDIN,NATHANAEL JOSIAH CHEW RUI AN",
+    "Supervisor": "Lam Su Yi (Ms)",
+    "Industrial_Partner": "Tampines Residents' Network (RN)"
+    },
+    {
+    "Title": "Gamification In Chatbot",
+    "Page": "Gamification In Chatbot",
+    "Filter": "ai",
+    "Student": "PALANI SUJITHA",
+    "Supervisor": "Fua Ying Huey (Ms)",
+    "Industrial_Partner": "OCBC"
+    },
+    {
+    "Title": "GRACE: Development of a Caregiver App for Medication Management",
+    "Page": "GRACE",
+    "Filter": "digital-solution",
+    "Student": "CHIN KAI LUN ,LIEW JUN XIANG ,CHEW HONG SHEN",
+    "Supervisor": "Natasha (Ms)",
+    "Industrial_Partner": "SGH"
+    },
+    {
+    "Title": "Web based File Sharing Application",
+    "Page": "Web based File Sharing Application",
+    "Filter": "digital-solution",
+    "Student": "GADHIRAJU REVANTH SRI VARMA,KYTE JAMES AGUS,CHAI WEI CHENG",
+    "Supervisor": "Alfred Teng (Mr)",
+    "Industrial_Partner": "4latest.com"
+    },
+    {
+    "Title": "AdvUNet3+: Segmentation of city-scale heterogeneous building façade materials from street view images",
+    "Page": "AdvUNet3",
+    "Filter": "ai",
+    "Student": "TAN JING KAI DANIEL",
+    "Supervisor": "Linda William  (Dr)",
+    "Industrial_Partner": "INSTITUTE OF HIGH-PERFORMANCE COMPUTING (A*STAR)"
+    },
+    {
+    "Title": "Detecting Elderly Falls using ArUco Markers",
+    "Page": "3D Position",
+    "Filter": "ai",
+    "Student": "PUAH SHER YUN",
+    "Supervisor": "Nami Imanishi (Ms)",
+    "Industrial_Partner": "Kumamoto NIT"
+    },
+    {
+    "Title": "Augmenting Data Science Tasks with Effective Prompt Engineering",
+    "Page": "Augmenting Data Science",
+    "Filter": "ai",
+    "Student": "YEO CHUN TENG LUCAS",
+    "Supervisor": "Zhang Huiyu  (Ms)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Unlocking Potential: A Data-Driven Approach to Job Security in Northeast Singapore",
+    "Page": "Unlocking Potential",
+    "Filter": "ai",
+    "Student": "HO WEI BIN",
+    "Supervisor": "Lim Kok Yau",
+    "Industrial_Partner": "People's Association"
+    },
+    {
+    "Title": "Prompts for Socratic Teaching",
+    "Page": "Socratic Bot",
+    "Filter": "ai",
+    "Student": "TAN ZHI YI FAYE",
+    "Supervisor": "Goh Kai Song",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "AATC Instructor Predictive Dashboard",
+    "Page": "AATC Instructor Predictive Dashboard",
+    "Filter": "digital-solution",
+    "Student": "KHALID ZAINAL",
+    "Supervisor": "Goh Rui Quan (Mr)",
+    "Industrial_Partner": "AirBus"
+    },
+    {
+    "Title": "Intro to SPED (SEN VR GAME)",
+    "Page": "Intro to SPED",
+    "Filter": "digital-solution",
+    "Student": "LOW TONG EE, THOM, IAN WONG CHONG SHEN, LIM YAN CHUN, YAK LE YANG RYAN",
+    "Supervisor": "Nash Lin (Mr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Cat Feeder Simulator",
+    "Page": "Cat Feeder Simulator",
+    "Filter": "digital-solution",
+    "Student": "TEO JIA XUAN, XAVIER CHAN GUAN HAO, OOI YI KAI, TAN YU PENG",
+    "Supervisor": "Sean Lim (Mr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Hush Hours",
+    "Page": "Hush Hours",
+    "Filter": "digital-solution",
+    "Student": "TIMOTHY ASILO ANOSO, CHIEW WEI CHEONG ELLSON, MAXIMILIAN MACSHIRE LIONEL, MOHAMAD NUR SHAFY",
+    "Supervisor": "Sean Lim (Mr)",
+    "Industrial_Partner": "Municipal Services Office"
+    },
+    {
+    "Title": "First Pet",
+    "Page": "First Pet",
+    "Filter": "digital-solution",
+    "Student": "JASMINE DELA CRUZ TAN, CHAN YE KAI GLENN, KOH KAI WEE, LEE ZI YUAN FABIAN, TEE KAIQI",
+    "Supervisor": "Shamim (Mr)",
+    "Industrial_Partner": "Municipal Services Office"
+    },
+    {
+    "Title": "Develop systematic threats for Smart Industry Systems using AI",
+    "Page": "coming soon",
+    "Filter": "cybersecurity",
+    "Student": "MAHALAKSHMI SARAVANAN AAKASH, MARVIC ONG SHAO JUN, NETANYA RACHAEL PEREIRA CHING YI ZHEN, RON ZEMECKIS WUNG",
+    "Supervisor": "Rosita (Ms)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "DeepVysion",
+    "Page": "coming soon",
+    "Filter": "cybersecurity",
+    "Student": "CHERMAINE LEE SI YING ,FLANDERS EE LIANGKANG ,JOVAN CHUA RUI CHENG ,PEH YONG ZHENG",
+    "Supervisor": "Jet Lim (Mr)",
+    "Industrial_Partner": "CSIT"
+    },
+    {
+    "Title": "Exploration of DevOps & DevSecOps Process Automation",
+    "Page": "coming soon",
+    "Filter": "cybersecurity",
+    "Student": "AN ZHENG YU, GOH LI-EN LYCIA ,HORACE NG HWAI SHERN ,KONG JIA BIN, BENJAMIN",
+    "Supervisor": "Lim Chee Yong (Mr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "ATT&CK Synthesizer",
+    "Page": "coming soon",
+    "Filter": "cybersecurity",
+    "Student": "CHAN WEI HAO, EZRA SOH YAOHENG, ILYAS JIE EN BIN MOHAMMAD SA'AD, ISAAC SOH JING QUAN",
+    "Supervisor": "Hamzah (Mr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    }, 
+    {
+    "Title": "Hexplosive C2 Framework",
+    "Page": "coming soon",
+    "Filter": "cybersecurity",
+    "Student": "CHAN WEI HAO, EZRA SOH YAOHENG, ILYAS JIE EN BIN MOHAMMAD SA'AD, ISAAC SOH JING QUAN",
+    "Supervisor": "Hamzah (Mr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },    
+    {
+    "Title": "Deepfake Detection System",
+    "Page": "coming soon",
+    "Filter": "cybersecurity",
+    "Student": "AUNG KAUNG MYAT, NIGEL CHEE YI, NUR HIDAYAH BINTE JOHAR, YEE YI YANG KENNETH",
+    "Supervisor": "Jet Lim (Mr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    }, 
+    {
+    "Title": "Cipher Champions",
+    "Page": "coming soon",
+    "Filter": "cybersecurity",
+    "Student": "TANG JIAN CHENG, TAY DANZEL, TEO RUI HANG, ETHAN, ZHANG HAO RAN",
+    "Supervisor": "Simon Chan (Mr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Virtual Assistant for Hotel Administration",
+    "Page": "Virtual Assistant for Hotel Administration",
+    "Filter": "ai",
+    "Student": "TAN JIN YAN",
+    "Supervisor": "Yanyan Liu (Dr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Smart Serious Game Analytics",
+    "Page": "Smart Serious Game Analytics",
+    "Filter": "ai",
+    "Student": "",
+    "Supervisor": "Linda Williams (Dr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Presentation Coach",
+    "Page": "Presentation Coach",
+    "Filter": "ai",
+    "Student": "MANFRED KHO AN, POH SHENG BAO, ETHAN LOW KIM ER",
+    "Supervisor": "Yanyan Liu (Dr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Facial Recognition using Smart Glasses",
+    "Page": "coming soon",
+    "Filter": "ai",
+    "Student": "YOGKAN S/O DEVENDRAN, BRYAN TAN WEI TONG",
+    "Supervisor": "Shuyun Cheng (Ms)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "JurisAI: GenAI Powered Legal Technology",
+    "Page": "coming soon",
+    "Filter": "ai",
+    "Student": "LIM JUN WEI BAVIER, ARUMUGAM S/O SANGARAPANDY",
+    "Supervisor": "Chaw Poh Chia (Dr)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },    
+    {
+    "Title": "Building & Streamlining an Optimized LiDAR Driver for Smarter Robots",
+    "Page": "Building Streamlining",
+    "Filter": "digital-solution",
+    "Student": " CHEW QI HERN",
+    "Supervisor": "Roselind (Ms)",
+    "Industrial_Partner": "Temasek Polytechnic"
+    },
+    {
+    "Title": "Developing a GenAI-integrated Threat Intelligence Platform",
+    "Page": "Developing a GenAI integrated Threat Intelligence Platform",
+    "Filter": "cybersecurity",
+    "Student": "Mohamad Syaqiq Bin Mohamad Iskandar​,Yin Moe Aye",
+    "Supervisor": " Rosita Jupri (Ms)",
+    "Industrial_Partner": "Resorts World Sentosa"
+    },
+    {
+    "Title": "Smart Card Chip Shape Design using Gen-AI",
+    "Page": "Smart Card Chip Shape Design using GenAI",
+    "Filter": "ai",
+    "Student": "BRENDA LAU ZHUO MIN",
+    "Supervisor": " Josh Liao (Mr)",
+    "Industrial_Partner": "Resorts World Sentosa"
+    }
+]

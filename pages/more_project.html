@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Join us at TP Infotech Day 2025 to discover our project showcase, featuring a curated collection of innovative projects developed by our students. Perfect for industry professionals, collaborators, and enthusiasts looking for inspiration and insight."
+    />
+    <title>Projects</title>
+    <link rel="icon" href="../images/favicon.png" type="image/png" />
+    <!-- jquery -->
+    <script src="../ext/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../ext/bootstrap.min.css" />
+    <!-- Bootstrap JS -->
+    <script src="../ext/bootstrap.min.js"></script>
+    <!-- Fontawesome JS -->
+    <script src="../ext/3b161c540c.js" crossorigin="anonymous"></script>
+    <!-- Fontawesome CSS -->
+    <link href="../ext/font-awesome.min.css" rel="stylesheet" />
+    <!-- popper -->
+    <script src="../ext/popper.min.js"></script>
+    <!-- page -->
+    <script src="../ext/imagesloaded.pkgd.min.js"></script>
+    <script src="../ext/isotope.pkdg.min.js"></script>
+    <!-- navbar css -->
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <!-- page css -->
+    <link rel="stylesheet" href="../css/moreProjectPage.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="../css/footer.css" />
+    <!-- Title -->
+    <link rel="stylesheet" href="../css/title.css" />
+  </head>
+
+  <body>
+    <!--Title-->
+    <section>
+      <div class="hero-container">
+        <div class="environment"></div>
+        <h2 class="hero glitch layers"><span>All Projects</span></h2>
+      </div>
+    </section>
+    <!-- Pagination of "Other Projects" -->
+    <section class="paginationproj">
+      <div class="paginationcontainer">
+        <!-- Search Bar and Filter Button Row -->
+        <div class="header_wrap">
+          <div class="tb_search">
+            <input
+              type="text"
+              id="search_input_all"
+              placeholder="Search.."
+              class="form-control clearable"
+            />
+          </div>
+
+          <button id="filter-icon" class="filter-icon">
+            <i class="fas fa-filter"></i>
+          </button>
+        </div>
+
+        <!-- Filter Panel -->
+        <div id="filter-panel" style="display: none; margin-top: 10px">
+          <!-- <h3>Filter Options</h3> -->
+
+          <!-- Filter by Subject -->
+          <div class="filter-section">
+            <!-- <label>Filter by Subject:</label> -->
+            <label
+              ><input
+                type="checkbox"
+                value="Next Gen Digital Transformation"
+                class="subject-filter"
+              />
+              Next Gen Digital Transformation</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="AI-Driven Trends and Innovations"
+                class="subject-filter"
+              />
+              AI-Driven Trends and Innovations</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="Future-Oriented Cybersecurity"
+                class="subject-filter"
+              />
+              Future-Oriented Cybersecurity</label
+            >
+          </div>
+
+          <!-- Manual Row Input for Number of Rows -->
+          <div class="filter-section">
+            <label for="manualRowInput">Enter number of rows to display:</label>
+            <input
+              type="number"
+              id="manualRowInput"
+              placeholder="Enter number of rows"
+              min="1"
+              class="form-control"
+            />
+          </div>
+
+          <!-- Optional Max Rows Select Dropdown -->
+          <div class="filter-section">
+            <label for="maxRows">Select number of rows to display:</label>
+            <select class="form-control" name="state" id="maxRows">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="200">Show ALL Rows</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Table Structure -->
+        <table class="table table-striped table-class" id="table-id">
+          <thead>
+            <tr>
+              <th>Project Title</th>
+              <th>Domain</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- Rows will be added here dynamically -->
+          </tbody>
+        </table>        
+
+        <!-- Pagination Section -->
+        <div id="pagination" class="pagination-container">
+          <nav>
+            <ul class="pagination-button"></ul>
+          </nav>
+        </div>
+        <p id="entry-count"></p>
+      </div>
+    </section>
+    <!-- Footer Section -->
+  </body>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/project_modal.js"></script>
+</html>

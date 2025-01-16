@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Temasek Polytechnic (TP) InfoTech Day is an annual event organised by the School of Informatics & IT. It comprises seminars and a showcase of student projects. The displays at the event feature innovative technology projects completed by final-year students. The TP InfoTech Day 2025 microsite offers an online platform for visitors to experience the innovations developed by our students."
+    />
+    <title>TP InfoTech Day 2025</title>
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <!-- Footer scripts -->
+    <!-- jquery -->
+    <script src="./ext/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./ext/bootstrap.min.css" />
+    <!-- Bootstrap JS -->
+    <script src="./ext/bootstrap.min.js"></script>
+    <!-- Fontawesome JS -->
+    <script src="./ext/3b161c540c.js" crossorigin="anonymous"></script>
+    <!-- Fontawesome CSS -->
+    <link href="./ext/font-awesome.min.css" rel="stylesheet" />
+    <!-- main style css -->
+    <link rel="stylesheet" href="css/homePage.css" />
+    <!-- navbar css -->
+    <link rel="stylesheet" href="css/navbar.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- opening css -->
+    <link rel="stylesheet" href="css/opening.css" />
+    <!-- timeline css -->
+    <link rel="stylesheet" href="css/timeline.css" />
+    <!-- Venue css -->
+    <link rel="stylesheet" href="css/venue.css" />
+    <!-- Timer css -->
+    <link rel="stylesheet" href="css/timer.css" />
+    <!-- Chatbot css -->
+    <link rel="stylesheet" href="css/chatbot.css" />
+  </head>
+
+  <body>
+    <!-- Opening Sequence
+    <div id="opening-sequence">
+      <div id="main-title">TP InfoTech Day 2025</div>
+      <div id="sub-title">Creating Tomorrow's Solutions Today</div>
+    </div> -->
+    <!-- NAV -->
+    <div class="main-container">
+      <header class="event-header">
+        <h1>TP InfoTech Day 2025</h1>
+        <h2>Creating Tomorrow's Solutions Today</h2>
+      </header>
+
+      <div id="app" class="prize-container">
+        <div id="prize">
+          <div id="prize-lines" class="prize-filter"></div>
+          <div id="prize-shadow" class="prize-filter"></div>
+          <h2 id="prize-label">
+            <span>COUNTDOWN TO TP INFOTECH DAY 2025</span>
+          </h2>
+          <div id="prize-text">
+            <div class="time-group" id="days-group">
+              <div class="digits" id="days"></div>
+              <span class="label">DAYS</span>
+            </div>
+            <div class="time-group" id="hours-group">
+              <div class="digits" id="hours"></div>
+              <span class="label">HOURS</span>
+            </div>
+            <div class="time-group" id="minutes-group">
+              <div class="digits" id="minutes"></div>
+              <span class="label">MINUTES</span>
+            </div>
+            <div class="time-group" id="seconds-group">
+              <div class="digits" id="seconds"></div>
+              <span class="label">SECONDS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-info">
+        <p>
+          <span>23 January (Thurs)</span>
+          <span class="separator"> | </span>
+          <span>4PM - 8.30PM</span>
+          <span class="separator"> | </span>
+          <span>Temasek Polytechnic</span>
+          <span>Main Foyer & </span>
+          <span>Auditorium 1 & 2</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="registration-buttons">
+      <button
+        class="general-registration-button"
+        onclick="window.open('https://forms.office.com/r/DWZ2MPwmC8', '_blank');"
+      >
+        REGISTER NOW<br /><span>(General)</span>
+      </button>
+
+      <button
+        class="student-registration-button"
+        onclick="window.open('https://forms.office.com/r/0EcC8xjCi6', '_blank');"
+      >
+        REGISTER NOW<br /><span>(For TP Students Only)</span>
+      </button>
+    </div>
+    <div class="description">
+      <p>
+        The Temasek Polytechnic (TP) InfoTech Day is an annual event organised
+        by the School of Informatics & IT. It comprises seminars and a showcase
+        of student projects. The displays at the event feature innovative
+        technology projects completed by final year students. The TP InfoTech
+        Day 2025 microsite offers an online platform for visitors to experience
+        the innovations developed by our students. This microsite enables
+        visitors to view the seminar details and projects online. All projects
+        have been undertaken in collaboration with industry partners and various
+        government agencies, employing the latest technologies in critical areas
+        such as AI-Driven Trends and Innovations, Future-Oriented Cybersecurity,
+        and Next-Gen Digital Transformation.
+      </p>
+    </div>
+    <hr />
+    <div class="header-title">
+      <h1>Featured Projects</h1>
+    </div>
+    <div id="carousel-container">
+      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/noise_detection_iot_solution.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Noise Detection IoT Solution</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="./project_images/gamification_in_chatbot2.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>
+              Gamification In Chatbot
+            </p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="./project_images/grace2.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>GRACE</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/web_based_file_sharing_application_carousel.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Web-based File Storage Application</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/AdvUNet3.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>AdvUNet3+: Segmentation of city-scale heterogeneous building façade materials from street view images</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/Unlocking_Potential.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>
+              Unlocking Potential: A Data-Driven Approach to Job Security in Northeast Singapore
+            </p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/Augmenting_Data_Science.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Augmenting Data Science Tasks with Effective Prompt Engineering</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/Socratic_Bot.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Prompts for Socratic Teaching</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/AATC_Instructor_Predictive_Dashboard.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>AATC Instructor Predictive Dashboard</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/Intro_to_SPED.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Intro to SPED (SEN VR GAME)</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/Cat_Feeder_Simulator.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Cat Feeder Simulator</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/Hush_Hours.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Hush Hours</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/First_Pet.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>First Pet</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/Virtual_Assistant_for_Hotel_Administration.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>
+              Virtual Assistant for Hotel Administration
+            </p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/Smart_Serious_Game_Analytics.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Smart Serious Game Analytics</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/presentation_coach_carousel.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Presentation Coach</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/building_streamlining.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Building & Streamlining an Optimized LiDAR Driver for Smarter Robots</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/developing_a_genai_integrated_threat_intelligence_platform3.png"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Developing a GenAI-integrated Threat Intelligence Platform</p>
+          </div>
+        </a>
+        <a href="pages/project.html" class="polaroid">
+          <img
+            class="image"
+            src="project_images/Smart_Card_Chip_Shape_Design_using_GenAI.jpg"
+            draggable="false"
+          />
+          <div class="container1">
+            <p>Smart Card Chip Shape Design using Gen-AI</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Seminars Section -->
+    <svg display="none">
+      <symbol id="arrow">
+        <polyline
+          points="7 10,12 15,17 10"
+          fill="none"
+          stroke="currentcolor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </symbol>
+    </svg>
+    <h1>Seminars</h1>
+    <div id="timeline" class="timeline">
+      <div class="btn-group">
+        <button class="btn" type="button" data-action="expand">
+          Expand All
+        </button>
+        <button class="btn" type="button" data-action="collapse">
+          Collapse All
+        </button>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item1"
+            aria-labelledby="item1-name"
+            aria-expanded="false"
+            aria-controls="item1-ctrld"
+            aria-haspopup="true"
+            data-item="1"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item1-name" class="timeline__meta">
+            <time class="timeline__date" datetime="1970-01-01">4.40PM</time
+            ><br />
+            <strong class="timeline__title"
+              >Securing what matters in the Age of AI</strong
+            >
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item1-ctrld"
+          role="region"
+          aria-labelledby="item1"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <!-- Placeholder Name -->
+            <p class="timeline__item-p">Ms. Cheryl Chan Wei Ling</p>
+            <!-- Current Position -->
+            <p>
+              Group Chief Strategy & Sustainability Officer and President New
+              Ventures
+            </p>
+            <!-- Company Name -->
+            <p>ST Engineering</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item2"
+            aria-labelledby="item2-name"
+            aria-expanded="false"
+            aria-controls="item2-ctrld"
+            aria-haspopup="true"
+            data-item="2"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item2-name" class="timeline__meta">
+            <time class="timeline__date" datetime="1973-10-17">5.00PM</time
+            ><br />
+            <strong class="timeline__title"
+              >Defense Against the Dark Arts: Understanding Hacking, and
+              Defending Against Hackers.</strong
+            >
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item2-ctrld"
+          role="region"
+          aria-labelledby="item2"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <!-- Placeholder Name -->
+            <p class="timeline__item-p">Mr. Donavan Cheah</p>
+            <!-- Current Position -->
+            <p>Senior Cybersecurity Consultant</p>
+            <!-- Company Name -->
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item3"
+            aria-labelledby="item3-name"
+            aria-expanded="false"
+            aria-controls="item3-ctrld"
+            aria-haspopup="true"
+            data-item="3"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item3-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2001-09-09">5.20PM</time
+            ><br />
+            <strong class="timeline__title"
+              >Extending Zero Trust Framework with SASE?
+            </strong>
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item3-ctrld"
+          role="region"
+          aria-labelledby="item3"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <!-- Placeholder Name -->
+            <p class="timeline__item-p">Mr. Dominic Chng</p>
+            <!-- Current Position -->
+            <p>Solution Architect (Security)</p>
+            <!-- Company Name -->
+            <p>Singapore & Brunei Fortinet, Inc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item4"
+            aria-labelledby="item4-name"
+            aria-expanded="false"
+            aria-controls="item4-ctrld"
+            aria-haspopup="true"
+            data-item="4"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item4-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2009-02-13">5.40PM</time
+            ><br />
+            <strong class="timeline__title"
+              >Operation Diplomatic Spector: An Active Cyberespionage Campaign
+              in Asia</strong
+            >
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item4-ctrld"
+          role="region"
+          aria-labelledby="item4"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <!-- Placeholder Name -->
+            <p class="timeline__item-p">Miss Jolene Lim</p>
+            <!-- Current Position -->
+            <p>Domain Consultant (Cortex)</p>
+            <!-- Company Name -->
+            <p>Palo Alto Networks</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item5"
+            aria-labelledby="item5-name"
+            aria-expanded="false"
+            aria-controls="item5-ctrld"
+            aria-haspopup="true"
+            data-item="5"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item5-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2033-05-18">7.05PM</time
+            ><br />
+            <strong class="timeline__title"
+              >TurboCharging AI Transformation</strong
+            >
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item5-ctrld"
+          role="region"
+          aria-labelledby="item5"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <!-- Placeholder Name -->
+            <p class="timeline__item-p">Ms. Elsie Tan</p>
+            <!-- Current Position -->
+            <p>Country Manager</p>
+            <!-- Company Name -->
+            <p>Worldwide Public Sector AWS Singapore</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item6"
+            aria-labelledby="item6-name"
+            aria-expanded="false"
+            aria-controls="item6-ctrld"
+            aria-haspopup="true"
+            data-item="6"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item6-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2038-01-19">7.30PM</time
+            ><br />
+            <strong class="timeline__title"
+              >The Present Is the Future: How AI is Changing
+              Cybersecurity</strong
+            >
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item6-ctrld"
+          role="region"
+          aria-labelledby="item6"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <!-- Placeholder Name -->
+            <p class="timeline__item-p">Mr. Yu Pengfei</p>
+            <!-- Current Position -->
+            <p>
+              Association of Infocomm Security Professions (AiSP) Student
+              Volunteer Recognition Programme EXCO Lead
+            </p>
+            <!-- Company Name -->
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item7"
+            aria-labelledby="item7-name"
+            aria-expanded="false"
+            aria-controls="item7-ctrld"
+            aria-haspopup="true"
+            data-item="7"
+          >
+            <svg
+              class="timeline__arrow-icon"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item7-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2033-05-18">7.55PM</time
+            ><br />
+            <strong class="timeline__title"
+              >Principles of Responsible AI: Bridging Innovation and
+              Ethics</strong
+            >
+          </span>
+        </div>
+        <div
+          class="timeline__item-body"
+          id="item7-ctrld"
+          role="region"
+          aria-labelledby="item7"
+          aria-hidden="true"
+        >
+          <div class="timeline__item-body-content">
+            <!-- Placeholder Name -->
+            <p class="timeline__item-p">Ms. Ivy Young</p>
+            <!-- Current Position -->
+            <p>
+              Freelance Researcher for Responsible AI and Information Systems
+              Member of the Organising Committee, AI Ethics and Governance
+              Special Interest Group, Singapore Computer Society
+            </p>
+            <!-- Company Name -->
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Venue Section -->
+    <section class="header-title">
+      <h1>Venue Information</h1>
+      <div class="tp-map">
+        <img
+          class="tp-map-img"
+          src="./images/TP-Map.png"
+          draggable="false"
+          onclick="openModal()"
+        />
+      </div>
+      <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="expandedImage" />
+        <div id="caption"></div>
+      </div>
+      <div class="venue-info">
+        <p class="compact-line-height"><strong>Venue Details:</strong></p>
+        <p>23 January 2025 (Thursday), 4PM - 8.30PM</p>
+        <p>Temasek Polytechnic Main Foyer & Auditorium 1 & 2</p>
+        <p>
+          <a href="https://maps.app.goo.gl/QPNgcZdAfEHjNQda8" target="_blank">
+            21 Tampines Avenue 1, Singapore 529757
+          </a>
+        </p>
+        <p class="compact-line-height">Nearest Parking:</p>
+        <p><strong>Carpark C</strong></p>
+        <p>
+          <a
+            class="mapDownload locationClick"
+            href="./images/TP-Map.png"
+            target="_blank"
+            download
+          >
+            Download TP Campus Map
+          </a>
+        </p>
+      </div>
+    </section>
+    <!-- <button id="chatbot-button" class="chatbot-button"></button>
+
+    <div class="chatbot-container" id="chatbot-container">
+      <div class="chatbot-header">
+        Chatbot
+        <span id="close-chat" class="close-chat">X</span>
+      </div>
+      <div class="chatbot-body" id="chat-area"></div>
+      <div class="chatbot-footer">
+        <input type="text" id="chat-input" placeholder="Type a message..." />
+        <button id="send-button">Send</button>
+      </div>
+    </div> -->
+    <!-- Footer Section -->
+  </body>
+  <script src="js/main.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/navbar_home.js"></script>
+  <script src="js/footer_home.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/popup.js"></script>
+  <!-- <script src="js/chatbot.js"></script> -->
+</html>

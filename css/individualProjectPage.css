@@ -1,0 +1,493 @@
+/* @font-face {
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'Brightness1';
+    src: url('../fonts/brightness-2/Brightness.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Styles */
+body {
+    height: 1500px;
+    /* background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png); */
+    font-family: 'Overpass';
+}
+
+h2{
+    font-weight: bold;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    width: 100%;
+    height: 250px;
+    font-weight: bold;
+    text-align: center;
+    background: #100954;
+    transition: .3s;
+    z-index: 10; /* Ensure header is on top of other content */
+    padding: 10px 0; /* To provide space at the top and bottom */
+}
+
+.header-logo {
+    position: absolute;
+    top: 20px; /* Adjust to align with the header */
+    right: 20px; /* Adjust to place it on the right edge */
+    height: 50px; /* Size of the logo */
+    width: auto;
+    padding-bottom: 20px;
+}
+
+/* When header becomes small, adjust offset padding */
+.header.small + .offset {
+    padding-top: 120px; /* Adjust according to the reduced header height */
+}
+
+/* If header shrinks to a small size, adjust padding in .offset */
+.offset {
+    padding-top: 270px; /* Initial padding when header is not shrunk */
+    transition: .3s;
+}
+
+/* If you want to adjust the small header more */
+.header.small {
+    height: 70px; /* Smaller header height */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding-top: 10px; /* Adjust top padding to make room for logo */
+    height: fit-content;
+}
+
+.header_logo {
+    font-family: 'Brightness1';
+    margin: 0;
+    padding-top: 70px;
+    font-size: 70px;
+    color: #ffffff;
+    transition: .3s;
+    padding-left: 50px;
+    padding-right: 130px;
+}
+
+.header.small .header_logo {
+    padding-top: 10px;
+    font-size: 30px;
+    text-shadow: none;
+}
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.title-section h1 {
+    font-size: 36px;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    color: #555; /* Neutral color for breadcrumbs */
+    padding-left: 20px;
+    text-align: left; /* Align breadcrumbs to the left */
+}
+
+.breadcrumbs a {
+    color: #1e3ec0; /* Blue for links */
+    text-decoration: none;
+    margin-right: 5px; /* Space between breadcrumb links */
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.breadcrumbs span {
+    color: #333; /* Darker color for the current page */
+}  
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.left-column {
+    flex: 1.2;  
+}
+
+.right-column {
+    flex: 1.8; 
+}
+
+.project-image img {
+    width: 100%;     
+    max-width: 450px;      
+    height: 250px;          
+    border: 3px solid #ccc;
+    object-fit: cover;     
+    margin-bottom: 20px;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 450px;      
+    height: 250px;          
+    border: 3px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;  /* Ensure the image fills the container's height */
+    object-fit: cover;  /* This ensures the image covers the container while maintaining aspect ratio */
+    display: block;
+    border-radius: 8px;
+}  
+
+.student-image p,
+.supervisor p,
+.industrial-partner p,
+.students p {
+  text-transform: uppercase;  
+  font-weight: bold;          
+}  
+
+/* Key Benefits, Technologies Section */
+.key-benefits, .technologies {
+    margin-bottom: 20px;
+}
+
+.key-benefits h2, .technologies h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4b3dc8;
+}
+
+.key-benefits ul, .technologies ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.key-benefits li, .technologies li {
+    position: relative; /* Set the parent element as relative */
+    margin-bottom: 10px; /* Add space between list items */
+    line-height: 1.6; /* Adjust for readability */
+    overflow: hidden; /* Ensure content does not overflow the container */
+}
+
+.key-benefits i.icon, .technologies i.icon {
+    position: absolute; /* Position the icon absolutely */
+    left: 0; /* Place the icon on the left side */
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    font-size: 2em; /* Adjust icon size */
+    color: #000000; /* Light color for a subtle background effect */
+    opacity: 0.5; /* Make it semi-transparent */
+}
+
+.key-benefits li span, .technologies li span {
+    position: relative; /* Ensure text is on top of the icon */
+    margin-left: 50px; /* Add space to the left to accommodate the icon */
+    font-size: 1.1em; /* Adjust text size if needed */
+    padding-left: 10px; /* Add some padding */
+    word-wrap: break-word; /* Break long words if necessary */
+    word-break: break-word; /* Break long words if necessary */
+    display: inline-block; /* Allow text wrapping */
+    max-width: calc(100% - 50px); /* Ensure the text stays within bounds */
+}
+
+.project-description {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.students, .supervisor, .industrial-partner {
+    margin-bottom: 20px;
+}
+
+.students h2, .supervisor h2, .industrial-partner h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.student p, .supervisor p, .industrial-partner p {
+    text-transform: uppercase;
+}
+
+.supervisor h2, .industrial-partner h2 {
+    margin-bottom: 5px; /* Reduce space below the heading */
+}
+
+.supervisor p, .industrial-partner p {
+    margin-top: 0; /* Remove extra space above the paragraph */
+    line-height: 1.2; /* Adjust line height for finer spacing */
+}
+
+/* Students Grid */
+.student-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.student {
+    text-align: center;
+    width: 100px;
+}
+
+.student-image img {
+    width: 300px; 
+    height: auto;
+    border-radius: 0;
+    padding: 20px;
+}
+
+.student p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #ccc;
+    font-size: 14px;
+}
+
+/* General icon styling */
+.icon {
+    font-size: 1.5em; /* Uniform icon size */
+    margin-right: 10px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent icon shrinking */
+    vertical-align: middle; /* Align icon with the text baseline */
+}
+
+/* Key Technologies Section Styling */
+.key-technologies {
+    margin-top: 20px;
+}
+
+.key-technologies h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.technology-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.2em; /* Adjust text size for better consistency */
+    line-height: 1.6; /* Better line spacing for readability */
+}
+
+.technology-item i {
+    font-size: 1.5em; /* Ensure the icon size matches the text */
+}
+
+.key-technologies .technology-item:last-child {
+    margin-bottom: 0; /* Remove margin for the last item */
+}
+
+/* Go Back Btn */
+.go-back-button {
+    position: center;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+  
+.go-back-button:hover {
+    background-color: #555;
+}
+
+.bottom-text {
+    width: 100%; /* Make it span the entire width */
+    background-color: #0044cc; /* Blue background */
+    color: white; /* White text */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Adjust text size */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Add a slight shadow for better visibility */
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .bottom-text p {
+    margin-bottom: 0; /* Remove margin from paragraphs specifically in .bottom-text */
+}
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background: #007bff; /* Solid base blue */
+    color: white;
+    font-size: 30px; /* Larger arrow */
+    text-align: center;
+    line-height: 70px; /* Center text vertically */
+    border: 3px solid #ffffff; /* Clean white border */
+    border-radius: 50%; /* Perfect circle */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle depth */
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    transform: scale(1.3); /* Grow on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+    background: #0056b3; /* Darker blue on hover */
+  }
+  
+  .scroll-to-top::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Initial small outline */
+    width: 90px;
+    height: 90px;
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Light glow outline */
+    border-radius: 50%;
+    opacity: 0;
+    animation: pulse 1s infinite; /* Pulsating animation */
+  }
+  
+  .scroll-to-top:hover::after {
+    opacity: 1; /* Visible when hovered */
+    animation: none; /* Stop pulsating when hovered */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0.7;
+    }
+  }  
+  
+ /* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .content-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .left-column, .right-column, .project-description, .project-image, 
+    .key-benefits, .technologies, .students, .supervisor, .industrial-partner {
+        flex: 1; /* Ensure both columns take up equal space */
+    }
+
+    .project-description {
+        order: 1; /* First in mobile view */
+    }
+
+    .project-image {
+        order: 2; /* Second in mobile view */
+        text-align: center; /* Center the image */
+    }
+
+    .project-image img {
+        max-width: 100%; /* Adjust image size for smaller screens */
+        height: auto;
+    }
+
+    .key-benefits {
+        order: 3; /* Third in mobile view */
+    }
+
+    .key-benefits ul {
+        display: flex; /* Set to flex container */
+        flex-direction: column; /* Stack list items vertically */
+        padding-left: 0; /* Remove default padding */
+        margin: 0; /* Remove any margin */
+    }
+
+    .technologies {
+        order: 4; /* Fourth in mobile view */
+    }
+
+    .students {
+        order: 5; /* Fifth in mobile view */
+    }
+
+    .student-grid {
+        justify-content: center; /* Center the grid items */
+        flex-direction: column; /* Stack student items */
+        align-items: center;
+    }
+
+    .student {
+        margin-bottom: 20px; /* Add spacing between students */
+    }
+
+    .supervisor {
+        order: 6; /* Sixth in mobile view */
+    }
+
+    .industrial-partner {
+        order: 7; /* Last in mobile view */
+    }
+
+    .bottom-text {
+        font-size: 12px;
+    }
+
+    .header_logo {
+        font-family: 'Brightness1';
+        margin: 0;
+        padding-top: 70px;
+        font-size: 50px;
+        color: #ffffff; 
+        transition: .3s;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: fit-content;
+    }
+    
+    .header.small .header_logo {
+        padding-top: 50px;
+        font-size: 30px;
+        text-shadow: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: fit-content;
+    }
+
+    .header.small{
+        height: fit-content;
+    }
+}

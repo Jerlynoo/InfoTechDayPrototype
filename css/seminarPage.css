@@ -1,0 +1,131 @@
+/* @font-face {
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Overpass';
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    overflow-x: hidden;
+    --activeColor: #f0f0f0;
+    --navBgColor: #010029;
+    --navTextColor: #c7c7c7;
+    --mainBg: #010029;
+    min-height: 100vh;
+    color: #010029;
+    background: var(--mainBg);
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overscroll-behavior: contain;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+section:not(.sectionFooter) {
+    --h: calc(var(--i) * 30);
+    min-height: 105vh;
+    padding: 8rem 0 max(5vh, 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--h, 0), 75%, 60%);
+    width: 100vw;
+    margin: 0;
+}
+
+.seminar-container {
+    width: 100%;
+    padding: 0 0;
+    transform-style: perspective-3d;
+    perspective: 900px;
+}
+
+@media (min-width: 32em) {
+    .seminar-container {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}
+
+.section__heading {
+    font-size: clamp(2rem, 12vmin, 7rem);
+    color: #010029;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    margin: 0 0 1rem;
+    grid-row: 1;
+    grid-column: 1/span 7;
+    align-self: end;
+    position: relative;
+    z-index: 1;
+}
+
+.section__heading span {
+    display: block;
+}
+
+.section__heading span:first-child {
+    font-size: clamp(1rem, 10vmin, 5rem);
+}
+
+.section__heading span:nth-child(2) {
+    word-break: break-word;
+}
+
+.section__image {
+    grid-row: 1;
+    grid-column: 5/span 3;
+    position: relative;
+    box-shadow: 0.45rem 0.45rem 8rem rgba(0, 0, 0, 0.3);
+    align-self: center;
+}
+
+.section__image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: hsl(var(--h, 0), 50%, 50%);
+    mix-blend-mode: screen;
+}
+
+.section__image img {
+    filter: brightness(1) grayscale(100%);
+}

@@ -1,0 +1,287 @@
+/* @font-face {
+    font-family: 'Arsenal';
+    src: url('../fonts/Arsenal/Arsenal-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass/static/Overpass-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'Brightness2';
+    src: url('../fonts/brightness-2/BrightnessBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* @font-face {
+    font-family: 'Ra';
+    src: url('../fonts/ra-mono/Ra-Mono.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+:root {
+    --dark-rgb: 23 28 28;
+    --darker-rgb: 8 13 7;
+
+    --fluorescent-blue: 90 150 255;
+    --background-rgb: 30 30 30;
+    --theme-rgb: var(--fluorescent-blue);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5;
+}
+
+#app {
+    width: 100%;
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes boxShadowPulse {
+    0% {
+        /* box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589); */
+        box-shadow: 0rem 0rem 9rem 2rem rgba(112, 169, 255, 0.589);
+    }
+
+    50% {
+        /* box-shadow: 0rem 0rem 11rem 5rem rgba(93, 171, 255, 0.824); */
+        box-shadow: 0rem 0rem 10rem 3rem rgba(93, 171, 255, 0.824);
+    }
+
+    100% {
+        /* box-shadow: 0rem 0rem 10rem 4rem rgba(112, 169, 255, 0.589); */
+        box-shadow: 0rem 0rem 9rem 2rem rgba(112, 169, 255, 0.589);
+    }
+}
+
+.welcome-message {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    color: rgb(112, 169, 255); 
+}
+
+#prize {
+    width: 90%;
+    max-width: 100rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(var(--darker-rgb), 0.8);
+    padding: 2rem 1rem;
+    backdrop-filter: blur(0.5rem);
+    animation: boxShadowPulse 2.5s ease-in-out infinite;
+    border-radius: 4rem;
+    overflow: hidden;
+}
+
+.label {
+    color: rgba(var(--theme-rgb), 0.8);
+    font-size: 2.5rem;
+    line-height: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.label-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+#prize-labels {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#prize-label>span {
+    display: inline-flex;
+    font-size: 3rem;
+    padding-bottom: 40px;
+    color: rgba(112, 169, 255, 0.9);
+    text-shadow: 0 0 5px rgba(112, 169, 255, 0.6)
+}
+
+#prize-label>.asterisk {
+    padding-top: 0.25em;
+    line-height: 0.5em;
+}
+
+#prize-label,
+#prize-text {
+    color: rgb(var(--theme-rgb));
+    text-align: center;
+}
+
+#prize-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    height: auto;
+    line-height: 8rem;
+    font-size: 10rem;
+    margin-bottom: 2.5rem;
+    max-width: 100%;
+    font-family: 'Arsenal';
+    color: rgb(112, 169, 255);
+    text-shadow: 0 0 5px rgba(112, 169, 255, 0.6),
+        0 0 10px rgba(112, 169, 255, 0.4);
+}
+
+.time-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.digits {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.digits .digit {
+    font-family: 'Ra';
+    line-height: 1em;
+    width: 8rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 0.25rem solid rgba(112, 169, 255, 0.9);
+    color: rgb(112, 169, 255);
+}
+
+#prize-text>.digit>.digit-track {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: translateY(0rem);
+    transition: transform 3000ms cubic-bezier(.1, .67, 0, 1);
+    color: rgba(112, 169, 255, 0.8);
+}
+
+.prize-filter {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    pointer-events: none;
+}
+
+@keyframes pan-lines {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 0% -100%;
+    }
+}
+
+#prize-lines {
+    background: linear-gradient(rgb(var(--darker-rgb) / 15%) 0%,
+            rgb(var(--darker-rgb) / 75%) 28%,
+            rgb(var(--darker-rgb) / 15%) 56%,
+            rgb(var(--darker-rgb) / 5%) 56%,
+            rgb(var(--darker-rgb) / 5%) 100%);
+    background-size: 100% 7px;
+    z-index: 2;
+    animation: pan-lines 150s infinite linear;
+}
+
+#prize-shadow {
+    background: radial-gradient(rgb(var(--theme-rgb) / 8%) 40%,
+            rgb(var(--darker-rgb) / 80%) 95%);
+    z-index: 5;
+}
+
+@media (min-width: 1700px) {
+    #app {
+        height: 85%;
+    }
+}
+
+@media (max-width: 1700px) {
+    #app {
+        height: 80%;
+    }
+}
+
+@media (max-width: 1300px) {
+    #app {
+        height: 75%;
+    }
+}
+
+@media (max-width: 900px) {
+    #app {
+        height: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    #prize-text {
+        font-size: 6rem;
+        line-height: 3.5rem;
+    }
+    #app {
+        height: 65%;
+    }
+    .welcome-message {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #prize-text {
+        font-size: 5rem;
+        line-height: 2.5rem;
+    }
+    #app {
+        height: 60%;
+    }
+    #prize-label>span {
+        font-size: 2.3rem;
+        padding-bottom: 40px;
+    }
+    .label {
+        font-size: 2rem;
+        line-height: 3rem;
+        letter-spacing: 0.1rem;
+    }
+    .digits .digit {
+        width: 6rem;
+    }
+}
+
+@media (max-width: 300px) {
+    #app {
+        height: 55%;
+    }
+}
