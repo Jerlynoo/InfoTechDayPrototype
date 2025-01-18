@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const targetDate = new Date("2025-01-23T15:00:00");
+  const targetDate = new Date("2025-01-23T16:00:00");
   const eventEndDate = new Date("2025-01-24T00:00:00"); // After midnight, event is over
   const config = {
     transitionDuration: 3000,
