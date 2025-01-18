@@ -216,6 +216,16 @@ h2{
     font-size: 18px;
 }
 
+.project-enhancement {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.project-enhancement h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 .students, .supervisor, .industrial-partner {
     margin-bottom: 20px;
 }
@@ -417,7 +427,7 @@ h2{
         flex-direction: column; /* Stack sections vertically */
     }
 
-    .left-column, .right-column, .project-description, .project-image, 
+    .left-column, .right-column, .project-description, .project-enhancement, .project-image, 
     .key-benefits, .technologies, .students, .supervisor, .industrial-partner {
         flex: 1; /* Ensure both columns take up equal space */
     }
