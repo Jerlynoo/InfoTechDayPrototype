@@ -116,6 +116,7 @@ h2{
     font-size: 14px;
     color: #555; /* Neutral color for breadcrumbs */
     padding-left: 20px;
+    padding-right: 20px;
     text-align: left; /* Align breadcrumbs to the left */
 }
 
